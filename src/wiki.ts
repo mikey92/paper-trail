@@ -125,7 +125,8 @@ const NOT_VISUAL =
 /** How much a sentence says about what to look or listen for. */
 export function visualScore(s: string): number {
   if (NOT_VISUAL.test(s) || numbers(s) > 3) return 0;
-  return (s.match(VISUAL) ?? []).length * 2 - numbers(s) - (s.match(JARGON) ?? []).length;
+  const plain = s.replace(/\b(white|brown)[- ]rot\b/gi, ""); // a kind of decay, not a colour
+  return (plain.match(VISUAL) ?? []).length * 2 - numbers(s) - (s.match(JARGON) ?? []).length;
 }
 
 /**

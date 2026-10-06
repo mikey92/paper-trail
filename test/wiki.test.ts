@@ -87,6 +87,7 @@ describe("visualSentences", () => {
     expect(visualSentences("It was described in 1801 from a red specimen.")).toEqual([]);
     expect(visualSentences("Unlike the snowy egret, it has a yellow bill and black legs.")).toEqual([]);
     expect(visualSentences("The flesh is soft, white to yellowish, with a mild or sour taste.")).toEqual([]);
+    expect(visualSentences("Pycnoporus coccineus is a saprophytic, white-rot decomposer fungus.")).toEqual([]);
   });
 
   it("brings along the sentence an 'It is…' sentence depends on", () => {
