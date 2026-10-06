@@ -68,13 +68,21 @@ function numbersIn(text: string): string[] {
   return (text.match(/\d+(?:\.\d+)?/g) ?? []).map((n) => String(Number(n)));
 }
 
+/** Size, shape and texture words between a colour and its part: "red small round berries". */
+const MODIFIERS = new Set(
+  (
+    "small large big tiny little huge long short thin thick broad narrow wide round rounded oval flat tall low " +
+    "smooth rough soft hard scaly fine coarse dense sparse fleshy waxy hairy fuzzy shaggy sticky"
+  ).split(" "),
+);
+
 /** "red cap", "white wings" (from "black and white wings"): each mark with the part it describes. */
 export function colourPairs(tip: string): [string, string][] {
   const ws = words(tip);
   const pairs: [string, string][] = [];
   ws.forEach((w, i) => {
     if (!MARKS.has(w)) return;
-    const part = ws.slice(i + 1, i + 4).find((x) => !MARKS.has(x) && !STOP.has(x) && x.length >= 3);
+    const part = ws.slice(i + 1, i + 5).find((x) => !MARKS.has(x) && !MODIFIERS.has(x) && !STOP.has(x) && x.length >= 3);
     if (part) pairs.push([w, part]);
   });
   return pairs;
@@ -103,18 +111,30 @@ export function checkTip(tip: string, source: string): Grounding {
   for (const m of tip.match(UNSAFE) ?? []) unsupported.push(m.toLowerCase());
   if (/\b(listen|hear)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
   if (unsupported.length === 0) {
-    // A sentence that starts "It is…" also gets the part named in the sentence before it.
     const raw = source.split(/(?<=[.!?])\s+|\n+/).filter((x) => x.trim());
-    const sentences = raw.map((x, i) => {
-      const own = words(x).map(stem);
-      return new Set(i > 0 && /^(it|its|they|their|this|these)\b/i.test(x.trim()) ? [...own, ...words(raw[i - 1]).map(stem)] : own);
-    });
+    const sentences = raw.map((x) => words(x).map(stem));
     for (const [colour, part] of colourPairs(tip)) {
-      const together = sentences.some((s) => s.has(stem(colour)) && s.has(stem(part)));
+      const c = stem(colour);
+      const p = stem(part);
+      const together = sentences.some(
+        (s, i) =>
+          near(s, c, p) ||
+          // "The cap is convex. It is smooth and sulphur yellow": the pronoun stands for the cap.
+          (i > 0 && /^(it|its|they|their|this|these)\b/i.test(raw[i].trim()) && s.includes(c) && sentences[i - 1].includes(p)),
+      );
       if (!together) unsupported.push(`${colour} ${part}`);
     }
   }
   return { ok: unsupported.length === 0, unsupported: [...new Set(unsupported)] };
+}
+
+/**
+ * Within eight words of each other in one sentence: close enough for "white forehead, throat,
+ * belly and rump", too far for "the neck is rusty-gray, with black and white streaking down
+ * the front; the head is paler".
+ */
+function near(sentence: string[], a: string, b: string, window = 8): boolean {
+  return sentence.some((w, i) => w === a && sentence.some((v, j) => v === b && Math.abs(i - j) <= window));
 }
 
 export const MAX_WORDS = 18;

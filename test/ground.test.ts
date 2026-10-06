@@ -69,6 +69,13 @@ describe("checkTip", () => {
     expect(checkTip("Look for yellow gills.", tuft).unsupported).toEqual(["yellow gills"]);
   });
 
+  it("wants the colour near its part, not just somewhere in a long sentence", () => {
+    const heron =
+      "Notable features include slaty flight feathers, red-brown thighs; the neck is rusty-gray, with black and white streaking down the front; the head is paler.";
+    expect(checkTip("Look for slaty flight feathers and a rusty-gray neck.", heron).ok).toBe(true);
+    expect(checkTip("Look for slaty flight feathers and a rusty gray head.", heron).unsupported).toEqual(["rusty head", "gray head"]);
+  });
+
   it("flags a tone moved to another part", () => {
     expect(checkTip("Look for a dark forehead and red cap.", WOODPECKER).unsupported).toEqual(["dark forehead"]);
   });
@@ -88,6 +95,13 @@ describe("colourPairs", () => {
       ["black", "wings"],
       ["white", "wings"],
       ["red", "cap"],
+    ]);
+  });
+
+  it("skips size and texture words to reach the part", () => {
+    expect(colourPairs("reddish-brown small round berries")).toEqual([
+      ["reddish", "berries"],
+      ["brown", "berries"],
     ]);
   });
 });
