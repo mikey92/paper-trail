@@ -257,9 +257,13 @@ const unit = prefs.unit ?? (/-(US|LR|MM)$/i.test(navigator.language) ? "F" : "C"
 (form.querySelector(`input[name=unit][value=${unit}]`) as HTMLInputElement | null)?.click();
 
 void pickDevice().then(({ device }) => {
-  if (device === "wasm" && !prefs.model) modelInput.value = "gemma-3-270m";
+  // Without WebGPU, Gemma runs on one CPU thread: minutes per card. Quoting Wikipedia is the
+  // honest default there, and the models stay one click away.
+  if (device === "wasm" && !prefs.model) modelInput.value = "none";
   $<HTMLSpanElement>("#device").textContent =
-    device === "webgpu" ? "Your browser has WebGPU, so Gemma runs on your graphics chip." : "No WebGPU here, so Gemma runs on the CPU (slower; the 270M model is picked).";
+    device === "webgpu"
+      ? "This browser has WebGPU, so Gemma runs on your own graphics chip."
+      : "This browser has no WebGPU, so Gemma would run slowly on the CPU. The card will quote Wikipedia unless you pick a model.";
 });
 
 form.addEventListener("submit", (e) => {
