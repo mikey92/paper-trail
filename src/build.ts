@@ -44,7 +44,7 @@ export async function gather(where: Where, date: string, minutes: number, unit: 
   const candidates = pick(sightings, want + 4);
   const read = await mapLimit(candidates, 4, async (s) => {
     const extract = s.wikipediaUrl ? await wikiExtract(titleFromUrl(s.wikipediaUrl), fetcher).catch(() => "") : "";
-    const sentences = extract ? visualSentences(descriptionOf(extract)) : [];
+    const sentences = extract ? visualSentences(descriptionOf(extract), 600, s.common) : [];
     const caution = s.group === "bird" ? null : cautionOf(extract);
     return { sighting: s, sentences, caution };
   });

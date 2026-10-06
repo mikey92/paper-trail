@@ -120,7 +120,7 @@ function numbers(s: string): number {
  * taste, which no card should send anyone to check.
  */
 const NOT_VISUAL =
-  /\b(1[5-9]\d\d|20\d\d)\b|\bIUCN\b|red list|conservation status|least concern|endangered|\bunlike\b|similar to|resembl|confused with|\bthan (the|a|an|other)\b|\b(taste[sd]?|tasting|edible|flavou?r)\b/i;
+  /\b(1[5-9]\d\d|20\d\d)\b|\bIUCN\b|red list|conservation status|least concern|endangered|\bunlike\b|similar to|resembl|confused with|\bthan (the|a|an|other|that|those)\b|\b(taste[sd]?|tasting|edible|flavou?r)\b/i;
 
 /** How much a sentence says about what to look or listen for. */
 export function visualScore(s: string): number {
@@ -133,9 +133,19 @@ export function visualScore(s: string): number {
  * maxChars. Measurement-heavy sentences (weights, wing chords) are what make a 1 B model
  * write numbers it cannot check, so they go first; jargon costs a point too.
  */
-export function visualSentences(description: string, maxChars = 600): string[] {
+/**
+ * "The snowy egret is readily distinguished from the great egret …" is about the snowy egret,
+ * though it sits in the great egret's article: the species itself comes after from/than.
+ */
+export function aboutAnother(sentence: string, name: string): boolean {
+  if (!name) return false;
+  const n = name.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\b(from|than|unlike)\\s+((that|those) of\\s+)?(the\\s+)?${n}`, "i").test(sentence);
+}
+
+export function visualSentences(description: string, maxChars = 600, name = ""): string[] {
   const all = splitSentences(description);
-  const scored = all.map((s, i) => ({ s, i, score: visualScore(s) }));
+  const scored = all.map((s, i) => ({ s, i, score: aboutAnother(s, name) ? 0 : visualScore(s) }));
   const keep = scored.filter((x) => x.score > 0).sort((a, b) => b.score - a.score || a.i - b.i);
   const chosen: typeof keep = [];
   let used = 0;

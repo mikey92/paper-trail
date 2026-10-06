@@ -97,6 +97,17 @@ describe("visualSentences", () => {
     ]);
   });
 
+  it("leaves out sentences about other species from the comparison", () => {
+    const d = [
+      "Apart from size, the great egret can be distinguished from other white egrets by its yellow bill and black legs.",
+      "The snowy egret is readily distinguished from the great egret because it has a black bill and yellow feet.",
+      "The great blue heron is a bit larger, and has a thicker bill than that of the great egret.",
+    ].join(" ");
+    expect(visualSentences(d, 600, "Great Egret")).toEqual([
+      "Apart from size, the great egret can be distinguished from other white egrets by its yellow bill and black legs.",
+    ]);
+  });
+
   it("returns nothing when no sentence says what to look or listen for", () => {
     expect(visualSentences("The palm warbler is a small songbird in the New World warbler family.")).toEqual([]);
   });
