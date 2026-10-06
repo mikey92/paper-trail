@@ -33,7 +33,8 @@ describe("places", () => {
 
   it("rounds coordinates to about a kilometre", () => {
     expect(rankPlaces("prospect park", rows)[0]).toMatchObject({ lat: 40.66, lng: -73.97 });
-    expect(here(37.3349871, -122.0890123)).toMatchObject({ lat: 37.33, lng: -122.09, radiusKm: 3 });
+    expect(here(37.3349871, -122.0890123)).toMatchObject({ label: "37.33° N 122.09° W", lat: 37.33, lng: -122.09, radiusKm: 3 });
+    expect(here(-33.86, 151.21).label).toBe("33.86° S 151.21° E");
     expect(round2(-0.005)).toBe(-0);
   });
 

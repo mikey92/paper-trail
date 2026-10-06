@@ -55,7 +55,9 @@ export async function searchPlaces(query: string, fetcher: Fetch = fetch): Promi
 }
 
 export function here(lat: number, lng: number): Where {
-  return { label: `near ${round2(lat).toFixed(2)}, ${round2(lng).toFixed(2)}`, lat: round2(lat), lng: round2(lng), radiusKm: 3 };
+  // Named like a field notebook: "37.33° N 122.09° W". No comma, so the card keeps it as one title.
+  const deg = (v: number, pos: string, neg: string) => `${Math.abs(round2(v)).toFixed(2)}° ${round2(v) < 0 ? neg : pos}`;
+  return { label: `${deg(lat, "N", "S")} ${deg(lng, "E", "W")}`, lat: round2(lat), lng: round2(lng), radiusKm: 3 };
 }
 
 /** Research-grade species counts within radiusKm of the centre, in the given month (1–12). */
