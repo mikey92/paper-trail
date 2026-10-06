@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { checkTip, cleanTip, colourPairs, fallbackTip, stem } from "../src/ground.ts";
+import { checkTip, cleanTip, colourPairs, compoundColours, fallbackTip, stem } from "../src/ground.ts";
 
 const WOODPECKER = [
   "Acorn Woodpecker.",
@@ -83,6 +83,12 @@ describe("checkTip", () => {
     expect(checkTip("Look for brown cheeks on females.", warbler).ok).toBe(true);
     const swapped = "Males and females differ, the former being black and the latter having brown or gray cheeks.";
     expect(checkTip("Look for black cheeks on females.", swapped).unsupported).toEqual(["black cheeks"]);
+  });
+
+  it("reads 'bottle-green' as green, so 'glossy … head' still meets its head", () => {
+    const mallard = "The breeding male mallard is unmistakable, with a glossy bottle-green head and a white collar.";
+    expect(checkTip("Look for a glossy green head and a white collar.", mallard).ok).toBe(true);
+    expect(compoundColours("a glossy bottle-green head, reddish-brown bark")).toBe("a glossy green head, reddish-brown bark");
   });
 
   it("flags a tone moved to another part", () => {

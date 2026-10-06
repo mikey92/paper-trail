@@ -112,7 +112,7 @@ export function checkTip(tip: string, source: string): Grounding {
   if (/\b(listen|hear)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
   if (unsupported.length === 0) {
     const raw = source.split(/(?<=[.!?])\s+|\n+/).filter((x) => x.trim());
-    const sentences = raw.map((x) => words(x).map(stem));
+    const sentences = raw.map((x) => words(compoundColours(x)).map(stem));
     for (const [colour, part] of colourPairs(tip)) {
       const c = stem(colour);
       const p = stem(part);
@@ -129,6 +129,13 @@ export function checkTip(tip: string, source: string): Grounding {
 }
 
 const MARK_STEMS = new Set([...MARKS].map(stem));
+
+/** "glossy bottle-green head" → "glossy green head": the "bottle-" belongs to the colour. */
+export function compoundColours(text: string): string {
+  return text.replace(/\b([A-Za-z]+)-([A-Za-z]+)\b/g, (m, first: string, second: string) =>
+    MARKS.has(second.toLowerCase()) && !MARKS.has(first.toLowerCase()) ? second : m,
+  );
+}
 const LINKS = new Set(["and", "or", "to"]);
 
 /**
