@@ -89,7 +89,7 @@ export function renderCard(card: Card, footer: Footer): string {
     .map(({ g, entries }) => {
       const note = g === "fungus" ? `<p class="note">Never eat a wild mushroom because of this card.</p>` : "";
       const items = entries.map(entryHtml).join("");
-      return `<section class="group"><h2>${HEADINGS[g]}</h2>${note}<ul>${items}</ul></section>`;
+      return `<section class="group"><h3>${HEADINGS[g]}</h3>${note}<ul>${items}</ul></section>`;
     })
     .join("");
   const quoted = card.entries.filter((e) => e.by === "wikipedia").length;
@@ -102,7 +102,7 @@ export function renderCard(card: Card, footer: Footer): string {
     // A short list leaves room on the page: give it to the sketch box.
     `<article class="card${card.entries.length <= 12 ? " roomy" : ""}">` +
     `<header><p class="brand">Paper Trail</p>` +
-    `<h1>${esc(title)}</h1>` +
+    `<h2 class="title">${esc(title)}</h2>` +
     (rest.length ? `<p class="region">${esc(rest.join(", "))}</p>` : "") +
     `<p class="when">${esc(longDate(card.date))} · ${card.minutes}-minute walk</p>` +
     weatherLine(card) +

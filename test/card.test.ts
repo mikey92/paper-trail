@@ -29,10 +29,10 @@ describe("renderCard", () => {
     const { card } = await gather(PARK, "2026-10-11", 60, "F", fixtureFetch);
     card.entries.forEach((e, i) => (e.by = i % 3 ? "gemma" : "wikipedia"));
     const html = renderCard(card, { modelLabel: "Gemma 3 1B", seconds: 41 });
-    expect(html).toContain("<h1>Rancho San Antonio County Park and Open Space Preserve</h1>");
+    expect(html).toContain('<h2 class="title">Rancho San Antonio County Park and Open Space Preserve</h2>');
     expect(html).toContain("High 74°F, low 51°F · 10% chance of rain · sunrise 7:14 am · sunset 6:41 pm");
     expect(html).toContain("start by <b>5:26 pm</b>");
-    expect(html).toContain("<h2>Birds</h2>");
+    expect(html).toContain("<h3>Birds</h3>");
     expect(html).toContain("Never eat a wild mushroom because of this card.");
     expect(html).toContain("Toxic and irritates skin: don’t touch or taste");
     expect(html).toContain("11 of the 30 species people reported within 3 km in past Octobers");
