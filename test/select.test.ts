@@ -9,6 +9,7 @@ describe("fromSpeciesCounts", () => {
   it("title-cases common names and maps iconic taxa to groups", () => {
     const brush = all.find((s) => s.scientific === "Baccharis pilularis")!;
     expect(brush.common).toBe("Coyote Brush");
+    expect(all.find((s) => s.scientific === "Zonotrichia atricapilla")!.common).toBe("Golden-crowned Sparrow");
     expect(brush.group).toBe("plant");
     expect(groupOf("Arachnida")).toBe("insect");
     expect(groupOf("Mammalia")).toBe("other");

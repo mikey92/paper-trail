@@ -82,30 +82,55 @@ describe("visualSentences", () => {
     expect(s).toContain("bright red");
   });
 
+  it("returns nothing when no sentence says what to look or listen for", () => {
+    expect(visualSentences("The palm warbler is a small songbird in the New World warbler family.")).toEqual([]);
+  });
+
   it("stays within the length budget and keeps the article's order", () => {
+    let empty = 0;
     for (const { desc: d } of Object.values(fixture.descriptions)) {
       const s = visualSentences(d);
-      expect(s.length).toBeGreaterThan(0);
+      if (!s.length) empty++;
       if (s.length > 1) expect(s.join(" ").length).toBeLessThanOrEqual(600 + s.length);
       const all = splitSentences(d);
       const at = s.map((x) => all.indexOf(x));
       expect([...at].sort((a, b) => a - b)).toEqual(at);
     }
+    expect(empty).toBe(1); // the wild turkey snapshot stops mid-sentence, before any colour
+    expect(visualSentences(desc(906))).toEqual([]);
   });
 });
 
 describe("cautionOf", () => {
-  it("reads a rash warning as don't-touch", () => {
-    expect(cautionOf("Poison oak.\n\n== Toxicity ==\nUrushiol causes an itchy rash.")).toBe("touch");
+  it("reads stinging hairs in the description as don't-touch", () => {
+    expect(cautionOf("A plant.\n\n== Description ==\nThe leaves carry stinging hairs.")).toBe("touch");
+  });
+
+  it("reads a rash under a Toxicity heading as both", () => {
+    expect(cautionOf("Poison oak.\n\n== Toxicity ==\nUrushiol causes an itchy rash.")).toBe("touch-eat");
   });
 
   it("reads poisonous seeds as don't-eat", () => {
     expect(cautionOf(desc(53348))).toBe("eat");
   });
 
-  it("finds a Toxicity section deep in the article", () => {
-    const article = "A shrub.\n\n== Description ==\nRed berries.\n\n== Toxicity ==\nThe leaves contain cyanogenic glycosides and are toxic.";
+  it("takes a Toxicity heading deep in the article as the warning", () => {
+    const article = "A shrub.\n\n== Description ==\nRed berries.\n\n== Uses ==\nJelly.\n\n== Toxicity ==\nThe seeds contain cyanogenic glycosides.";
     expect(cautionOf(article)).toBe("eat");
+  });
+
+  it("ignores harm that belongs to other species or other uses", () => {
+    expect(cautionOf("A puffball.\n\n== Similar species ==\nIt resembles the poisonous common earthball.")).toBeNull();
+    expect(cautionOf("A tree.\n\n== Associated species ==\nThe poisonous death cap grows around the trunk.")).toBeNull();
+    expect(cautionOf("A fern.\n\n== Utility ==\nHikers rub it on a rash from nettles.")).toBeNull();
+  });
+
+  it("ignores a section that says the species is not toxic", () => {
+    expect(cautionOf("A shrub.\n\n== Toxicity ==\nThe berries are not toxic to people.")).toBeNull();
+  });
+
+  it("finds a venomous sting in the description", () => {
+    expect(cautionOf("An ant.\n\n== Description ==\nAdults have a venom-laced sting.")).toBe("bite");
   });
 
   it("says nothing for a harmless article", () => {

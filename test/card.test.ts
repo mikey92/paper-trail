@@ -34,8 +34,8 @@ describe("renderCard", () => {
     expect(html).toContain("start by <b>5:26 pm</b>");
     expect(html).toContain("<h2>Birds</h2>");
     expect(html).toContain("Never eat a wild mushroom because of this card.");
-    expect(html).toContain("Can irritate skin: don’t touch");
-    expect(html).toContain("12 of the 30 species people reported within 3 km in past Octobers");
+    expect(html).toContain("Toxic and irritates skin: don’t touch or taste");
+    expect(html).toContain("11 of the 30 species people reported within 3 km in past Octobers");
     expect(html).toContain("the 4 in quotation marks are those sentences");
     expect(html).toContain("This card took 41 seconds of screen time.");
     expect(html).toContain("CC BY-SA 4.0");

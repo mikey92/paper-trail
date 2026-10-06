@@ -42,6 +42,7 @@ const HEADINGS: Record<Group, string> = {
 const CAUTION: Record<Caution, string> = {
   touch: "Can irritate skin: don’t touch",
   eat: "Toxic: don’t taste",
+  "touch-eat": "Toxic and irritates skin: don’t touch or taste",
   bite: "Venomous: keep your distance",
 };
 

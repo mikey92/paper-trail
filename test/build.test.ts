@@ -49,14 +49,16 @@ const PARK: Where = { label: "Rancho San Antonio County Park and Open Space Pres
 describe("gather", () => {
   it("builds an hour's card from the species that have a usable article", async () => {
     const { card, missing } = await gather(PARK, "2026-10-11", 60, "F", fixtureFetch);
-    expect(card.entries).toHaveLength(12);
-    expect(missing).toBe(4);
+    // Of 16 candidates, 4 have no article in the fixture and the wild turkey's snapshot is cut
+    // off before its first full sentence about colour, so 11 make the card.
+    expect(card.entries).toHaveLength(11);
+    expect(missing).toBe(5);
     expect(card.entries.map((e) => e.sighting.group)).toEqual([
-      "bird", "bird", "bird", "bird",
+      "bird", "bird", "bird",
       "plant", "plant", "plant", "plant", "plant", "plant", "plant",
       "fungus",
     ]);
-    expect(card.entries[0].sighting.common).toBe("Wild Turkey");
+    expect(card.entries[0].sighting.common).toBe("Acorn Woodpecker");
     expect(card.entries.every((e) => e.sentences.length > 0 && e.by === "pending")).toBe(true);
     expect(card.weather).toMatchObject({ high: 74, sunset: "18:41" });
     expect(card.pool).toBe(30);
@@ -65,7 +67,7 @@ describe("gather", () => {
   it("warns about poison oak and toyon, and never about a bird", async () => {
     const { card } = await gather(PARK, "2026-10-11", 60, "F", fixtureFetch);
     const caution = Object.fromEntries(card.entries.map((e) => [e.sighting.common, e.caution]));
-    expect(caution["Pacific Poison Oak"]).toBe("touch");
+    expect(caution["Pacific Poison Oak"]).toBe("touch-eat");
     expect(caution["Toyon"]).toBe("eat");
     expect(caution["California Buckeye"]).toBe("eat");
     expect(caution["Acorn Woodpecker"]).toBeNull();

@@ -29,23 +29,39 @@ export function descriptionOf(extract: string): string {
   return [...parts, lead].filter((t) => t.length > 0).join("\n");
 }
 
-export type Caution = "touch" | "eat" | "bite";
+export type Caution = "touch" | "eat" | "touch-eat" | "bite";
 
 const TOUCH = /\b(urushiol|dermatitis|rash(es)?|blisters?|skin irritation|irritates? the skin|stinging hairs?)\b/i;
 const EAT = /\b(poisonous|toxic|toxicity|toxins?|poisoning)\b/i;
 const BITE = /\b(venomous|venom)\b/i;
+const NOT_HARMFUL = /\b(non-?toxic|not (toxic|poisonous|venomous))\b/i;
+const HARM_SECTION = /toxic|poison|venom|hazard|danger|safety|edib/i;
 
 /**
- * What the article warns about, if anything: a rash from touching, poison if eaten, or a
- * venomous bite. Read from the start of every section, so a "Toxicity" section deep in
- * the article still counts. Callers skip birds, whose articles mention lead poisoning.
+ * What the article warns about for the species itself: a rash from touching, poison if eaten,
+ * or a venomous bite or sting. Only the lead, the description and sections about toxicity
+ * count; "Similar species", "Uses" and the like talk about other things ("resembles the
+ * poisonous earthball", "toxic to native ladybirds"). Callers skip birds.
  */
 export function cautionOf(extract: string): Caution | null {
-  const text = sections(extract).map((s) => s.title + "\n" + s.text.slice(0, 1500)).join("\n");
-  if (TOUCH.test(text)) return "touch";
-  if (BITE.test(text)) return "bite";
-  if (EAT.test(text)) return "eat";
-  return null;
+  const all = sections(extract);
+  const d = all.findIndex((s) => DESCRIPTION.test(s.title));
+  const inDescription = (j: number) => d >= 0 && j >= d && all.slice(d + 1, j + 1).every((s) => s.level > all[d].level);
+  const sentences: string[] = [];
+  all.forEach((s, j) => {
+    const harmSection = HARM_SECTION.test(s.title);
+    if (j > 0 && !harmSection && !inDescription(j)) return;
+    const text = s.text.slice(0, 2000);
+    const said = text.split(/(?<=[.!?])\s+/).filter((x) => !NOT_HARMFUL.test(x));
+    // A "Toxicity" heading is itself the warning, unless the section says the opposite.
+    if (harmSection && !NOT_HARMFUL.test(text)) said.push(s.title);
+    sentences.push(...said);
+  });
+  const touch = sentences.some((x) => TOUCH.test(x));
+  const eat = sentences.some((x) => EAT.test(x));
+  if (touch) return eat ? "touch-eat" : "touch";
+  if (sentences.some((x) => BITE.test(x))) return "bite";
+  return eat ? "eat" : null;
 }
 
 const VISUAL = new RegExp(
@@ -107,8 +123,9 @@ export function visualSentences(description: string, maxChars = 600): string[] {
     chosen.push(x);
     used += x.s.length + 1;
   }
-  const result = chosen.sort((a, b) => a.i - b.i).map((x) => x.s);
-  return result.length ? result : all.slice(0, 2);
+  // Nothing to look or listen for (a lead that only gives the family): no sentences, and the
+  // species makes way for one with a usable description.
+  return chosen.sort((a, b) => a.i - b.i).map((x) => x.s);
 }
 
 /** "http://en.wikipedia.org/wiki/Wild_turkey" → "Wild turkey" */

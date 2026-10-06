@@ -39,7 +39,8 @@ export function fromSpeciesCounts(rows: CountRow[]): Sighting[] {
 }
 
 function titleCase(name: string): string {
-  return name.replace(/(^|[\s-])([a-z])/g, (_m, sep: string, ch: string) => sep + ch.toUpperCase());
+  // "dark-eyed junco" → "Dark-eyed Junco": the style field guides use.
+  return name.replace(/(^|\s)([a-z])/g, (_m, sep: string, ch: string) => sep + ch.toUpperCase());
 }
 
 export const ORDER: Group[] = ["bird", "plant", "fungus", "insect", "other"];
