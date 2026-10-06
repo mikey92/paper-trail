@@ -1,14 +1,14 @@
 // Does the grounding check earn its place, and which Gemma should the page default to?
 //
-//   node eval/run.ts fetch            gather six places once (iNaturalist, Wikipedia) into eval/cache
-//   node eval/run.ts tips <model>     write every tip with gemma-3-1b or gemma-3-270m, on the CPU
-//   node eval/run.ts report           eval/EVAL.md from whatever results exist
-//   node eval/run.ts sample           public/sample-card.json, the example card on the page
+//   node eval/run.ts fetch                 gather six places once (iNaturalist, Wikipedia) into eval/cache
+//   node eval/run.ts tips <model> [tag]    write every tip with gemma-3-1b or gemma-3-270m, on the CPU
+//   node eval/run.ts report                eval/EVAL.md from every run in eval/results
+//   node eval/run.ts sample <run>          public/sample-card.json (the page's example) from one run
 //
 // The tips go through the same writeTips() the page uses. Only the runtime differs: here it is
 // onnxruntime-node with the q4 weights; the page uses WebGPU with q4f16 where it can.
 
-import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { gather, writeTips, type Card } from "../src/build.ts";
 import type { Where } from "../src/data.ts";
 import { MODELS, sourceText, type ChatMessage, type Generate, type ModelKey } from "../src/llm.ts";
@@ -46,7 +46,7 @@ async function fetchPlaces() {
   }
 }
 
-async function runModel(key: ModelKey) {
+async function runModel(key: ModelKey, tag: string) {
   const { pipeline } = await import("@huggingface/transformers");
   const started = Date.now();
   const generator = await pipeline("text-generation", MODELS[key].id, { dtype: "q4", device: "cpu" });
@@ -68,7 +68,7 @@ async function runModel(key: ModelKey) {
     cards[p.key] = card;
   }
   await generator.dispose();
-  writeFileSync(new URL(`${key}.json`, RESULTS), JSON.stringify(cards, null, 1));
+  writeFileSync(new URL(`${key}${tag ? `-${tag}` : ""}.json`, RESULTS), JSON.stringify(cards, null, 1));
 }
 
 /** Longest run of consecutive tip words found in that order in the source, as a share of the tip. */
@@ -98,7 +98,13 @@ function pct(n: number, d: number): string {
 
 function report() {
   const lines: string[] = ["# Paper Trail evaluation", ""];
-  const keys = (Object.keys(MODELS) as ModelKey[]).filter((k) => existsSync(new URL(`${k}.json`, RESULTS)));
+  // One row per run file: "gemma-3-1b-v1.json" is Gemma 3 1B with prompt v1.
+  const runs = readdirSync(RESULTS).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort();
+  const labelOf = (run: string) => {
+    const key = (Object.keys(MODELS) as ModelKey[]).find((k) => run.startsWith(k))!;
+    const tag = run.slice(key.length + 1);
+    return `${MODELS[key].label}${tag ? `, prompt ${tag}` : ""}`;
+  };
   lines.push(
     `Six places, ${DATE} (October), a ${MINUTES}-minute card each: the species, Wikipedia sentences and cautions were fetched once`,
     "(`node eval/run.ts fetch`) so every model sees exactly the same input. Tips were written by `writeTips()` from `src/build.ts`,",
@@ -109,7 +115,7 @@ function report() {
   );
   const rejected: Record<string, Map<string, number>> = {};
   const examples: Record<string, string[]> = {};
-  for (const key of keys) {
+  for (const key of runs) {
     const cards = readJson<Record<string, Card>>(new URL(`${key}.json`, RESULTS));
     const entries = Object.values(cards).flatMap((c) => c.entries);
     const first = entries.filter((e) => e.by === "gemma").length;
@@ -120,7 +126,7 @@ function report() {
     const meanWords = written.reduce((t, e) => t + words(e.tip).length, 0) / Math.max(1, written.length);
     const copies = written.filter((e) => copied(e.tip, sourceText(e.sighting, e.sentences)) >= 0.8).length;
     lines.push(
-      `| ${MODELS[key].label} | ${entries.length} | ${first} (${pct(first, entries.length)}) | ${first + retry} (${pct(first + retry, entries.length)}) | ${quoted} (${pct(quoted, entries.length)}) | ${median(secs).toFixed(1)} | ${meanWords.toFixed(1)} | ${copies} of ${written.length} |`,
+      `| ${labelOf(key)} | ${entries.length} | ${first} (${pct(first, entries.length)}) | ${first + retry} (${pct(first + retry, entries.length)}) | ${quoted} (${pct(quoted, entries.length)}) | ${median(secs).toFixed(1)} | ${meanWords.toFixed(1)} | ${copies} of ${written.length} |`,
     );
     const counts = new Map<string, number>();
     for (const e of entries) for (const a of e.result?.attempts ?? []) for (const w of a.unsupported) counts.set(w, (counts.get(w) ?? 0) + 1);
@@ -133,31 +139,31 @@ function report() {
         return `- **${e.sighting.common}**: “${a[0].tip || a[0].raw.trim()}” → rejected (${a[0].unsupported.join(", ") || "not one short sentence"}); final [${e.by}]: “${e.tip}”`;
       });
   }
-  for (const key of keys) {
+  for (const key of runs) {
     const top = [...rejected[key].entries()].sort((a, b) => b[1] - a[1]).slice(0, 25);
-    lines.push("", `## ${MODELS[key].label}: words the check rejected most`, "", top.map(([w, n]) => `${w} (${n})`).join(", ") || "none");
+    lines.push("", `## ${labelOf(key)}: words the check rejected most`, "", top.map(([w, n]) => `${w} (${n})`).join(", ") || "none");
     lines.push("", `### First tries that failed, and what was printed instead`, "", ...examples[key]);
   }
   writeFileSync(new URL("./EVAL.md", import.meta.url), lines.join("\n") + "\n");
   console.log(lines.join("\n"));
 }
 
-function sample() {
-  const cards = readJson<Record<string, Card>>(new URL("gemma-3-1b.json", RESULTS));
+function sample(run: string) {
+  const cards = readJson<Record<string, Card>>(new URL(`${run}.json`, RESULTS));
   const card = cards.rancho;
   for (const e of card.entries) delete e.result;
   // No screen-time claim: this card was written on a CPU by the eval, not in a browser.
-  const sampleCard = { card, modelLabel: MODELS["gemma-3-1b"].label, seconds: null };
+  const sampleCard = { card, modelLabel: card.model, seconds: null };
   writeFileSync(new URL("../public/sample-card.json", import.meta.url), JSON.stringify(sampleCard, null, 1));
   console.log(`wrote public/sample-card.json (${card.entries.length} species)`);
 }
 
-const [command, arg] = process.argv.slice(2);
+const [command, arg, tag = ""] = process.argv.slice(2);
 if (command === "fetch") await fetchPlaces();
-else if (command === "tips" && arg && arg in MODELS) await runModel(arg as ModelKey);
+else if (command === "tips" && arg && arg in MODELS) await runModel(arg as ModelKey, tag);
 else if (command === "report") report();
-else if (command === "sample") sample();
+else if (command === "sample" && arg) sample(arg);
 else {
-  console.error("usage: node eval/run.ts fetch | tips <gemma-3-1b|gemma-3-270m> | report | sample");
+  console.error("usage: node eval/run.ts fetch | tips <gemma-3-1b|gemma-3-270m> [tag] | report | sample <run>");
   process.exit(1);
 }

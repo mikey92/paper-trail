@@ -82,6 +82,12 @@ describe("visualSentences", () => {
     expect(s).toContain("bright red");
   });
 
+  it("does not take the IUCN Red List or a year for something to see", () => {
+    expect(visualSentences("As of 2025, the western honey bee was assessed as Data Deficient on the IUCN Red List.")).toEqual([]);
+    expect(visualSentences("It was described in 1801 from a red specimen.")).toEqual([]);
+    expect(visualSentences("Unlike the snowy egret, it has a yellow bill and black legs.")).toEqual([]);
+  });
+
   it("returns nothing when no sentence says what to look or listen for", () => {
     expect(visualSentences("The palm warbler is a small songbird in the New World warbler family.")).toEqual([]);
   });

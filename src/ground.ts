@@ -1,6 +1,6 @@
 // A small model writes the tips, so every tip is checked against the text it was given:
-// each content word must come from the species' description (or its names), every number
-// must appear there too, and a colour must sit next to the same part in at least one source
+// each content word must come from the species' description (or its names), there are no
+// numbers, and a colour or pattern must sit next to the same part in at least one source
 // sentence. A tip that adds a colour, a body part or a habit the source never mentions, or
 // moves the red from the cap to the back, is thrown away, however plausible it sounds.
 
@@ -20,15 +20,17 @@ const POINTERS = new Set(
   (
     "look looking listen listening watch watching spot spotting find finding notice noticing check search seek scan " +
     "see seen hear heard tell telling recognize recognise identify identified sign signs field tip clue clues key " +
-    "near nearby close look-for out up down"
+    "observe observing keep eye eyes ear ears out up down"
   ).split(" "),
 );
 
-const COLOURS = new Set(
+/** Colours, tones and patterns: each must sit next to the same part in the source. */
+const MARKS = new Set(
   (
     "red reddish orange orangish yellow yellowish green greenish blue bluish purple purplish pink pinkish white whitish " +
     "black blackish brown brownish gray grey grayish greyish golden gold bronze buff rufous chestnut olive tan cream rusty " +
-    "maroon crimson scarlet silver silvery"
+    "maroon crimson scarlet silver silvery dark pale light bright deep glossy iridescent spotted striped streaked barred " +
+    "mottled banded speckled"
   ).split(" "),
 );
 
@@ -37,15 +39,25 @@ function undouble(w: string): string {
   return /([^aeiouylsz])\1$/.test(w) ? w.slice(0, -1) : w;
 }
 
+/**
+ * A crude stemmer, enough to match a tip's words with the source's: plurals, -ing, -ed, -ly,
+ * colour words in -ish ("reddish" backs "red") and a final e ("lobed" and "lobes" meet at "lob").
+ */
+const IRREGULAR: Record<string, string> = {
+  leaves: "leaf", feet: "foot", teeth: "tooth", geese: "goose", mice: "mouse", wolves: "wolf", halves: "half", calves: "calf",
+};
+
 export function stem(word: string): string {
   let w = word.toLowerCase();
+  if (IRREGULAR[w]) return IRREGULAR[w];
   if (w.length > 4 && w.endsWith("ies")) return w.slice(0, -3) + "y";
   if (w.length > 4 && /(ches|shes|sses|xes|zes)$/.test(w)) return w.slice(0, -2);
   if (w.length > 3 && w.endsWith("s") && !w.endsWith("ss") && !w.endsWith("us") && !w.endsWith("is")) w = w.slice(0, -1);
-  if (w.length > 5 && w.endsWith("ing")) return undouble(w.slice(0, -3));
-  if (w.length > 4 && w.endsWith("ed")) return undouble(w.slice(0, -2));
-  if (w.length > 5 && w.endsWith("ly")) return w.slice(0, -2);
-  return w;
+  if (w.length > 5 && w.endsWith("ing")) w = undouble(w.slice(0, -3));
+  else if (w.length > 4 && w.endsWith("ed")) w = undouble(w.slice(0, -2));
+  else if (w.length > 5 && w.endsWith("ish")) w = undouble(w.slice(0, -3));
+  else if (w.length > 5 && w.endsWith("ly")) w = w.slice(0, -2);
+  return w.length > 3 && w.endsWith("e") ? w.slice(0, -1) : w;
 }
 
 export function words(text: string): string[] {
@@ -56,13 +68,13 @@ function numbersIn(text: string): string[] {
   return (text.match(/\d+(?:\.\d+)?/g) ?? []).map((n) => String(Number(n)));
 }
 
-/** "red cap", "white wings" (from "black and white wings"): each colour with the part it describes. */
+/** "red cap", "white wings" (from "black and white wings"): each mark with the part it describes. */
 export function colourPairs(tip: string): [string, string][] {
   const ws = words(tip);
   const pairs: [string, string][] = [];
   ws.forEach((w, i) => {
-    if (!COLOURS.has(w)) return;
-    const part = ws.slice(i + 1, i + 4).find((x) => !COLOURS.has(x) && !STOP.has(x) && x.length >= 3);
+    if (!MARKS.has(w)) return;
+    const part = ws.slice(i + 1, i + 4).find((x) => !MARKS.has(x) && !STOP.has(x) && x.length >= 3);
     if (part) pairs.push([w, part]);
   });
   return pairs;
@@ -73,13 +85,14 @@ export interface Grounding { ok: boolean; unsupported: string[] }
 /** Which words, numbers and colour–part pairs of the tip are not backed by the source text. */
 export function checkTip(tip: string, source: string): Grounding {
   const known = new Set(words(source).map(stem));
-  const nums = new Set(numbersIn(source));
   const unsupported: string[] = [];
   for (const w of words(tip)) {
     if (w.length < 3 || STOP.has(w) || POINTERS.has(w)) continue;
     if (!known.has(stem(w)) && !known.has(w)) unsupported.push(w);
   }
-  for (const n of numbersIn(tip)) if (!nums.has(n)) unsupported.push(n);
+  // No numbers at all, even ones the source has: "persists for 107.3 days" is true and useless
+  // on a walk, and sizes are what a small model garbles.
+  for (const n of numbersIn(tip)) unsupported.push(n);
   if (unsupported.length === 0) {
     const sentences = source.split(/(?<=[.!?])\s+|\n+/).map((s) => new Set(words(s).map(stem)));
     for (const [colour, part] of colourPairs(tip)) {
@@ -102,7 +115,9 @@ export function cleanTip(raw: string, name = ""): string {
   }
   t = t.replace(/^["'“”‘’]+|["'“”‘’]+$/g, "").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
   if (!t) return "";
-  if (words(t).length > MAX_WORDS) return "";
+  // "Look for X. It also Y …": keep the first sentence when the whole answer is too long.
+  if (words(t).length > MAX_WORDS) t = t.split(/(?<=[.!?])\s+/)[0];
+  if (words(t).length > MAX_WORDS || words(t).length < 4) return "";
   if (!/[.!?]$/.test(t)) t += ".";
   return t[0].toUpperCase() + t.slice(1);
 }

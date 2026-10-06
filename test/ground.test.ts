@@ -7,6 +7,7 @@ const WOODPECKER = [
   "The adult acorn woodpecker has a brownish-black head, back, wings and tail, white forehead, throat, belly and rump.",
   "The bird is mostly black, with adult males have a red cap starting at the forehead.",
   "White circles on their wings are visible when in flight.",
+  "The eyes are initially dark in fledglings, turning to white within a few months.",
   "Acorn woodpeckers have a call that sounds almost like they are laughing.",
 ].join("\n");
 
@@ -19,6 +20,11 @@ describe("stem", () => {
     expect(stem("hopping")).toBe(stem("hops"));
     expect(stem("spotted")).toBe(stem("spots"));
     expect(stem("falling")).toBe(stem("falls"));
+    expect(stem("lobed")).toBe(stem("lobes"));
+    expect(stem("reddish")).toBe(stem("red"));
+    expect(stem("orangish")).toBe(stem("orange"));
+    expect(stem("bluish")).toBe(stem("blue"));
+    expect(stem("leaves")).toBe(stem("leaf"));
   });
 });
 
@@ -33,14 +39,23 @@ describe("checkTip", () => {
     expect(r.unsupported).toEqual(expect.arrayContaining(["bright", "yellow", "drums", "trees"]));
   });
 
-  it("flags a number that is not in the source", () => {
+  it("flags any number, even one the source has", () => {
     expect(checkTip("It has 3 white circles on its wings.", WOODPECKER).unsupported).toContain("3");
+    expect(checkTip("Dark red fruit persists for 107.3 days.", "Dark red fruit persists for 107.3 days.").unsupported).toEqual(["107.3"]);
   });
 
   it("flags a colour moved to another part", () => {
     const r = checkTip("Look for a red back and white wings.", WOODPECKER);
     expect(r.ok).toBe(false);
     expect(r.unsupported).toEqual(["red back"]);
+  });
+
+  it("flags a tone moved to another part", () => {
+    expect(checkTip("Look for a dark forehead and red cap.", WOODPECKER).unsupported).toEqual(["dark forehead"]);
+  });
+
+  it("lets the tip say how to look", () => {
+    expect(checkTip("Observe the red cap and keep an eye out for white circles on the wings.", WOODPECKER).ok).toBe(true);
   });
 
   it("accepts a colour shared by two parts named in one sentence", () => {
@@ -65,9 +80,16 @@ describe("cleanTip", () => {
     expect(cleanTip("Acorn Woodpecker: look for the red cap.", "Acorn Woodpecker")).toBe("Look for the red cap.");
   });
 
+  it("keeps the first sentence of an answer that runs on", () => {
+    expect(cleanTip("Look for the red cap and white throat. It also has white circles on its wings that show in flight.")).toBe(
+      "Look for the red cap and white throat.",
+    );
+  });
+
   it("refuses an answer that is too long to be one line on the card", () => {
     expect(cleanTip("word ".repeat(30))).toBe("");
     expect(cleanTip("   \n  ")).toBe("");
+    expect(cleanTip("Red cap.")).toBe("");
   });
 });
 

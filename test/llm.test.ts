@@ -20,17 +20,20 @@ function scripted(...answers: string[]) {
 }
 
 describe("tipMessages", () => {
-  it("shows one worked example, then the species and its sentences", () => {
+  it("shows two worked examples, then the species and its sentences", () => {
     const m = tipMessages(JUNCO, SENTENCES);
-    expect(m.map((x) => x.role)).toEqual(["user", "assistant", "user"]);
-    expect(m[2].content).toContain("Species: Dark-eyed Junco (Junco hyemalis)");
-    expect(m[2].content).toContain("- The bill is usually pale pinkish.");
+    expect(m.map((x) => x.role)).toEqual(["user", "assistant", "user", "assistant", "user"]);
+    expect(m[4].content).toContain("Species: Dark-eyed Junco (Junco hyemalis)");
+    expect(m[4].content).toContain("- The bill is usually pale pinkish.");
   });
 
-  it("uses an example answer that passes its own check", () => {
-    const [ask, answer] = tipMessages(JUNCO, SENTENCES);
-    const source = ask.content.split("Source:")[1].split("\n\n")[0];
-    expect(checkTip(answer.content, "American Robin. Turdus migratorius.\n" + source).ok).toBe(true);
+  it("uses example answers that pass their own check", () => {
+    const m = tipMessages(JUNCO, SENTENCES);
+    for (const i of [0, 2]) {
+      const names = m[i].content.match(/Species: (.+) \((.+)\)/)!;
+      const source = m[i].content.split("Source:")[1].split("\n\n")[0];
+      expect(checkTip(m[i + 1].content, `${names[1]}. ${names[2]}.\n${source}`)).toEqual({ ok: true, unsupported: [] });
+    }
   });
 });
 
@@ -53,12 +56,15 @@ describe("writeTip", () => {
     expect(seen[1].at(-2)).toEqual({ role: "assistant", content: "Look for a black hood and yellow bill." });
   });
 
-  it("quotes Wikipedia when both answers fail", async () => {
+  it("quotes the most visual short sentence when both answers fail", async () => {
     const { generate } = scripted("A tiny blue bird with a crest.", "It has a long curved red beak.");
     const r = await writeTip(generate, JUNCO, SENTENCES);
     expect(r.by).toBe("wikipedia");
     expect(r.tip).toBe("The white outer tail feathers flash distinctively in flight and while hopping on the ground.");
     expect(r.attempts).toHaveLength(2);
+    const bland = ["Juncos are common.", "The white outer tail feathers flash in flight."];
+    const twice = scripted("A tiny blue bird with a crest.", "A tiny blue bird with a crest.");
+    expect((await writeTip(twice.generate, JUNCO, bland)).tip).toBe("The white outer tail feathers flash in flight.");
   });
 
   it("treats an empty or rambling answer as a failure", async () => {

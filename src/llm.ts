@@ -3,6 +3,7 @@
 // both hand it a `generate` function, so the eval measures exactly what the page does.
 
 import { checkTip, cleanTip, fallbackTip } from "./ground.ts";
+import { visualScore } from "./wiki.ts";
 
 export interface ChatMessage { role: "user" | "assistant"; content: string }
 
@@ -28,31 +29,39 @@ function request(s: Species, sentences: string[]): string {
     "Source:",
     ...sentences.map((x) => `- ${x}`),
     "",
-    "Write ONE sentence of at most 15 words that tells a walker what to look or listen for.",
-    "Use only words and facts from the source. No numbers. Do not start with the species name.",
+    'Write ONE sentence of at most 15 words, starting with "Look for" or "Listen for".',
+    "Use only words and facts from the source. No numbers. Do not name the species.",
     "Reply with the sentence only.",
   ].join("\n");
 }
 
-// One worked example, a species that is not on any card, so the model sees the length and
-// the tone. Every word of the answer is in the example's source.
-const EXAMPLE: ChatMessage[] = [
-  {
-    role: "user",
-    content: request({ common: "American Robin", scientific: "Turdus migratorius" }, [
-      "The American robin has a gray back and an orange-red breast.",
-      "Its song is a cheerful, rising and falling carol, often heard at dawn.",
-    ]),
-  },
-  { role: "assistant", content: "Look for an orange-red breast under a gray back, and listen for a cheerful dawn song." },
+// Two worked examples, a bird and a plant, so the model sees the length and the tone without
+// latching on to one pattern. Every word of each answer is in its own source.
+const EXAMPLES: [Species, string[], string][] = [
+  [
+    { common: "American Robin", scientific: "Turdus migratorius" },
+    ["The American robin has a gray back and an orange-red breast.", "Its song is a cheerful, rising and falling carol, often heard at dawn."],
+    "Look for an orange-red breast under a gray back, and listen for a cheerful dawn song.",
+  ],
+  [
+    { common: "Paper Birch", scientific: "Betula papyrifera" },
+    ["The bark is bright white and peels in thin papery strips.", "The leaves are oval with a toothed edge and turn yellow in autumn."],
+    "Look for bright white bark peeling in papery strips, and oval toothed leaves.",
+  ],
 ];
 
 export function tipMessages(s: Species, sentences: string[]): ChatMessage[] {
-  return [...EXAMPLE, { role: "user", content: request(s, sentences) }];
+  return [
+    ...EXAMPLES.flatMap(([species, source, answer]): ChatMessage[] => [
+      { role: "user", content: request(species, source) },
+      { role: "assistant", content: answer },
+    ]),
+    { role: "user", content: request(s, sentences) },
+  ];
 }
 
 function retryRequest(tip: string, unsupported: string[]): string {
-  if (!tip) return "That was not one short sentence. Write ONE sentence of at most 15 words, using only the source.";
+  if (!tip) return 'That was not one short sentence. Write ONE sentence of at most 15 words, starting with "Look for" or "Listen for", using only the source.';
   return (
     `The source does not say: ${unsupported.map((w) => `"${w}"`).join(", ")}. ` +
     "Write the tip again using only words and facts from the source. Reply with the sentence only."
@@ -94,5 +103,7 @@ export async function writeTip(generate: Generate, s: Species, sentences: string
       { role: "user", content: retryRequest(tip, check.unsupported) },
     ];
   }
-  return { tip: fallbackTip(sentences), by: "wikipedia", attempts };
+  // Quote the most visual sentence that fits on a line.
+  const best = sentences.map((x, i) => ({ x, i })).sort((a, b) => visualScore(b.x) - visualScore(a.x) || a.i - b.i);
+  return { tip: fallbackTip(best.map((b) => b.x)), by: "wikipedia", attempts };
 }

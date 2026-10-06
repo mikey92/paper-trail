@@ -115,18 +115,27 @@ function numbers(s: string): number {
 }
 
 /**
+ * Not about what this species looks like: years and conservation status ("the IUCN Red List"
+ * is not red), and comparisons, which describe the other species ("unlike the snowy egret").
+ */
+const NOT_VISUAL =
+  /\b(1[5-9]\d\d|20\d\d)\b|\bIUCN\b|red list|conservation status|least concern|endangered|\bunlike\b|similar to|resembl|confused with|\bthan (the|a|an|other)\b/i;
+
+/** How much a sentence says about what to look or listen for. */
+export function visualScore(s: string): number {
+  if (NOT_VISUAL.test(s) || numbers(s) > 3) return 0;
+  return (s.match(VISUAL) ?? []).length * 2 - numbers(s) - (s.match(JARGON) ?? []).length;
+}
+
+/**
  * The sentences that say what to look or listen for, in their original order, up to
  * maxChars. Measurement-heavy sentences (weights, wing chords) are what make a 1 B model
  * write numbers it cannot check, so they go first; jargon costs a point too.
  */
 export function visualSentences(description: string, maxChars = 600): string[] {
   const all = splitSentences(description);
-  const scored = all.map((s, i) => ({
-    s,
-    i,
-    score: (s.match(VISUAL) ?? []).length * 2 - numbers(s) - (s.match(JARGON) ?? []).length,
-  }));
-  const keep = scored.filter((x) => numbers(x.s) <= 3 && x.score > 0).sort((a, b) => b.score - a.score || a.i - b.i);
+  const scored = all.map((s, i) => ({ s, i, score: visualScore(s) }));
+  const keep = scored.filter((x) => x.score > 0).sort((a, b) => b.score - a.score || a.i - b.i);
   const chosen: typeof keep = [];
   let used = 0;
   for (const x of keep) {

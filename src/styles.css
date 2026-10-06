@@ -342,6 +342,12 @@ progress {
   height: 17pt;
   border-bottom: 0.8pt solid #888;
 }
+.roomy .sketch {
+  min-height: 2.6in;
+}
+.roomy .notes i {
+  height: 26pt;
+}
 .card footer {
   margin-top: 6pt;
   padding-top: 4pt;

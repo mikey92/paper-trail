@@ -58,7 +58,7 @@ function weatherLine(card: Card): string {
   return `<p class="weather">${esc(parts.join(" · "))}.${startLine}</p>`;
 }
 
-function entryHtml(e: Entry, month: string): string {
+function entryHtml(e: Entry): string {
   const s = e.sighting;
   const quoted = e.by === "wikipedia";
   const tip = quoted ? `“${esc(e.tip)}”` : esc(e.tip);
@@ -69,7 +69,7 @@ function entryHtml(e: Entry, month: string): string {
     `<span class="box" aria-hidden="true"></span>` +
     `<div><p class="name"><b>${esc(s.common)}</b> <i>${esc(s.scientific)}</i>${caution}</p>` +
     `<p class="tip">${tip}</p>` +
-    `<p class="seen">${s.count} sighting${s.count === 1 ? "" : "s"} here in past ${esc(month)}s</p></div></li>`
+    `<p class="seen">${s.count} sighting${s.count === 1 ? "" : "s"}</p></div></li>`
   );
 }
 
@@ -88,7 +88,7 @@ export function renderCard(card: Card, footer: Footer): string {
   const lists = groups
     .map(({ g, entries }) => {
       const note = g === "fungus" ? `<p class="note">Never eat a wild mushroom because of this card.</p>` : "";
-      const items = entries.map((e) => entryHtml(e, month)).join("");
+      const items = entries.map(entryHtml).join("");
       return `<section class="group"><h2>${HEADINGS[g]}</h2>${note}<ul>${items}</ul></section>`;
     })
     .join("");
@@ -99,7 +99,8 @@ export function renderCard(card: Card, footer: Footer): string {
     : "Tips are quoted from Wikipedia.";
   const time = footer.seconds != null ? ` This card took ${footer.seconds} seconds of screen time. Now go outside.` : "";
   return (
-    `<article class="card">` +
+    // A short list leaves room on the page: give it to the sketch box.
+    `<article class="card${card.entries.length <= 12 ? " roomy" : ""}">` +
     `<header><p class="brand">Paper Trail</p>` +
     `<h1>${esc(title)}</h1>` +
     (rest.length ? `<p class="region">${esc(rest.join(", "))}</p>` : "") +
