@@ -11,7 +11,8 @@ const STOP = new Set(
     "when where which who whom whose what than then there here they them their theirs he she his her him you your we our " +
     "has have had having do does did done can could may might must shall should will would not no yes very more most some " +
     "any each every other another such only just also even both either neither much many few lot lots one ones like " +
-    "often usually sometimes typically generally commonly mostly mainly especially quite rather fairly"
+    "often usually sometimes typically generally commonly mostly mainly especially quite rather fairly " +
+    "atop beneath behind beside besides inside outside within upon toward towards against through throughout underneath"
   ).split(" "),
 );
 
@@ -60,8 +61,15 @@ export function stem(word: string): string {
   return w.length > 3 && w.endsWith("e") ? w.slice(0, -1) : w;
 }
 
+/** British and American spellings meet: "colouration" in the source backs "coloration" in a tip. */
+const SPELLING: Record<string, string> = {
+  colour: "color", colours: "colors", coloured: "colored", colouration: "coloration", grey: "gray", greyish: "grayish",
+  centre: "center", centres: "centers", metre: "meter", metres: "meters", mould: "mold", moulds: "molds",
+};
+
 export function words(text: string): string[] {
-  return text.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").match(/[a-z]+/g) ?? [];
+  const ws = text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").match(/[a-z]+/g) ?? [];
+  return ws.map((w) => SPELLING[w] ?? w);
 }
 
 function numbersIn(text: string): string[] {
@@ -78,11 +86,22 @@ const MODIFIERS = new Set(
 
 /** "red cap", "white wings" (from "black and white wings"): each mark with the part it describes. */
 export function colourPairs(tip: string): [string, string][] {
-  const ws = words(tip);
+  // Words and clause marks: a comma ends the search unless an adjective chain carries on past it
+  // ("gray, scaly bark"), so "the bark is light gray, leaves are dark green" pairs gray with nothing.
+  const tokens = (tip.toLowerCase().match(/[a-z]+|[,;:.]/g) ?? []).map((t) => SPELLING[t] ?? t);
+  const isWord = (t: string | undefined) => !!t && /^[a-z]/.test(t);
   const pairs: [string, string][] = [];
-  ws.forEach((w, i) => {
+  tokens.forEach((w, i) => {
     if (!MARKS.has(w)) return;
-    for (const x of ws.slice(i + 1, i + 5)) {
+    let seen = 0;
+    for (let j = i + 1; j < tokens.length && seen < 4; j++) {
+      const x = tokens[j];
+      if (!isWord(x)) {
+        const next = tokens[j + 1];
+        if (isWord(next) && (MARKS.has(next!) || MODIFIERS.has(next!))) continue;
+        return;
+      }
+      seen++;
       // "…green to light red, and observe the flowers": the colour's part came before it.
       if (POINTERS.has(x)) return;
       if (MARKS.has(x) || MODIFIERS.has(x) || STOP.has(x) || x.length < 3) continue;

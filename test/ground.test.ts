@@ -127,6 +127,19 @@ describe("colourPairs", () => {
     expect(colourPairs("Look for leaves from green to light red, and identify the bark")).toEqual([]);
   });
 
+  it("stops at a comma unless an adjective chain carries on", () => {
+    // Found reading v1: "The bark is light gray, leaves are dark green" was rejected as "gray leaves".
+    expect(colourPairs("The bark is light gray, leaves are dark green, and flowers are white.")).toEqual([]);
+    expect(colourPairs("Look for gray, scaly bark and red, round berries.")).toEqual([
+      ["gray", "bark"],
+      ["red", "berries"],
+    ]);
+  });
+
+  it("reads British and American spellings as one", () => {
+    expect(checkTip("Look for orange or red coloration and grey legs.", "Its colouration is orange or red, and the legs are gray.").ok).toBe(true);
+  });
+
   it("skips size and texture words to reach the part", () => {
     expect(colourPairs("reddish-brown small round berries")).toEqual([
       ["reddish", "berries"],
