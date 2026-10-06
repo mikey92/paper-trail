@@ -1,0 +1,275 @@
+{
+ "card": {
+  "where": {
+   "key": "rancho",
+   "unit": "F",
+   "label": "Rancho San Antonio County Park and Open Space Preserve, US, CA",
+   "lat": 37.33,
+   "lng": -122.12,
+   "radiusKm": 3
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 3,
+  "pool": 189,
+  "weather": {
+   "unit": "F",
+   "high": 70,
+   "low": 46,
+   "rain": 1,
+   "sunrise": "07:12",
+   "sunset": "18:36"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 906,
+     "count": 21,
+     "group": "bird",
+     "common": "Wild Turkey",
+     "scientific": "Meleagris gallopavo",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Wild_turkey"
+    },
+    "sentences": [
+     "Fully-grown wild turkeys have long, reddish-yellow to grayish-green legs.",
+     "The body feathers are generally blackish and dark, sometimes gray-brown, overall, with a coppery sheen that becomes more complex in older males.",
+     "Mature males have a large, featherless, reddish head and red throat, with red wattles on the throat and neck.",
+     "When toms are excited, a fleshy flap on the bill (called a snood) expands, and this, the wattles and the bare skin of the head and neck all become red with enhanced flow of blood to the head.",
+     "Males have a long, dark, fan-shaped tail and glossy, bronze wings."
+    ],
+    "caution": null,
+    "tip": "Fully-grown wild turkeys have long, reddish-yellow to grayish-green legs.",
+    "by": "wikipedia"
+   },
+   {
+    "sighting": {
+     "id": 18209,
+     "count": 13,
+     "group": "bird",
+     "common": "Acorn Woodpecker",
+     "scientific": "Melanerpes formicivorus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Acorn_woodpecker"
+    },
+    "sentences": [
+     "The adult acorn woodpecker has a brownish-black head, back, wings and tail, white forehead, throat, belly and rump.",
+     "The eyes are initially dark in fledglings, turning to white within a few months.",
+     "The bird is mostly black, with adult males have a red cap starting at the forehead, whereas females have a black area between the forehead and the cap.",
+     "The white neck, throat, and forehead patches are distinctive identifiers.",
+     "White circles on their wings are visible when in flight.",
+     "Acorn woodpeckers have a call that sounds almost like they are laughing."
+    ],
+    "caution": null,
+    "tip": "Look for a brownish-black head, white forehead, and red cap in males.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 10094,
+     "count": 12,
+     "group": "bird",
+     "common": "Dark-eyed Junco",
+     "scientific": "Junco hyemalis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Dark-eyed_junco"
+    },
+    "sentences": [
+     "Adult dark-eyed juncos generally have gray heads, necks, and breasts, gray or brown backs and wings, and a white belly, but show a confusing amount of variation in plumage details.",
+     "The white outer tail feathers flash distinctively in flight and while hopping on the ground.",
+     "The bill is usually pale pinkish.",
+     "Calls include tick sounds and very high-pitched tinkling chips.",
+     "It is known among bird song practitioners as an excellent bird to study for learning \"bird language\".",
+     "The dark-eyed junco (Junco hyemalis) is a species of junco, a group of small, grayish New World sparrows."
+    ],
+    "caution": null,
+    "tip": "Look for gray heads and breasts, and observe the white belly in its plumage.",
+    "by": "gemma-retry"
+   },
+   {
+    "sighting": {
+     "id": 9185,
+     "count": 11,
+     "group": "bird",
+     "common": "Golden-crowned Sparrow",
+     "scientific": "Zonotrichia atricapilla",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Golden-crowned_sparrow"
+    },
+    "sentences": [
+     "Like all Zonotrichia sparrows, it has a relatively long, square-tipped tail and a slightly peaked crown.",
+     "Other than a plain gray nape, the adult's upperparts are grayish-brown, with broad brownish-black streaks on the back and scapulars, and an unstreaked rump.",
+     "Its underparts are gray, slightly paler on the belly and buffier on the flanks.",
+     "Its wings and tail are brown, and it shows two white wing bars.",
+     "Its legs are pale brown, and its bill is dark, with the upper mandible darker than the lower.",
+     "Its iris is brown.",
+     "In the breeding season, the golden-crowned sparrow has a broad yellow central crown stripe which becomes pale gray towards the back of the head.",
+     "The golden-crowned sparrow (Zonotrichia atricapilla) is a large New World sparrow found in the western part of North America."
+    ],
+    "caution": null,
+    "tip": "Look for a square-tipped tail, and observe grayish-brown upperparts.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 5206,
+     "count": 9,
+     "group": "bird",
+     "common": "Red-shouldered Hawk",
+     "scientific": "Buteo lineatus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Red-shouldered_hawk"
+    },
+    "sentences": [
+     "Adults have brownish heads, reddish chests, and pale bellies with reddish bars.",
+     "Their tails, which are quite long by Buteo standards, are marked with narrow white bars.",
+     "Red \"shoulders\" are visible when the birds are perched.",
+     "These hawks' upper parts are dark with pale spots and they have long yellow legs.",
+     "The wings of adults are more heavily barred on the upper side.",
+     "That species is larger and bulkier, with more even-sized, broad wings, and is paler underneath, with a reddish tail often apparent.",
+     "The red-tail is also more likely to soar steadily, with wings in a slight dihedral."
+    ],
+    "caution": null,
+    "tip": "Adults have brownish heads, reddish chests, and pale bellies with reddish bars.",
+    "by": "wikipedia"
+   },
+   {
+    "sighting": {
+     "id": 53359,
+     "count": 28,
+     "group": "plant",
+     "common": "Coyote Brush",
+     "scientific": "Baccharis pilularis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Baccharis_pilularis"
+    },
+    "sentences": [
+     "The Baccharis pilularis shrub is generally smaller than 3 metres in height.",
+     "Erect plants are generally mixed with (and sometimes grow to become) prostrate plants.",
+     "Its leaves are smooth, without spines or hairs, and generally sticky to the touch.",
+     "The stems are prostrate to erect with branches spreading or ascending.",
+     "The leaves are 8–55 millimetres long and are entire to toothed and oblanceolate to obovate, with three principal veins.",
+     "The flower heads are in a leafy panicle.",
+     "Baccharis pilularis, called coyote brush (or bush), chaparral broom, and bush baccharis, is an evergreen shrub in the family Asteraceae native to California, Oregon, Washington, and Baja California."
+    ],
+    "caution": null,
+    "tip": "Its leaves are smooth, without spines or hairs, and generally sticky to the touch.",
+    "by": "wikipedia"
+   },
+   {
+    "sighting": {
+     "id": 53348,
+     "count": 24,
+     "group": "plant",
+     "common": "California Buckeye",
+     "scientific": "Aesculus californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Aesculus_californica"
+    },
+    "sentences": [
+     "The bark is light gray and smooth.",
+     "The leaves are dark green above and paler on the underside and may have downy veins.",
+     "The flowers are borne on dense, erect panicles 15–20 cm long and 5–8 cm broad.",
+     "They are fragrant, white to pale pink, and individual flowers are 1-2.5cm long.",
+     "Only the bisexual flowers are capable of developing into fruit.",
+     "As it matures, the capsule turns brown and splits revealing one large, glossy brown seed, measuring 2–7 cm.",
+     "The seeds are poisonous.",
+     "It is a large shrub or small tree, often with several trunks and a broad, rounded crown.",
+     "It has palmately compound leaves are among the earliest in spring, followed by erect flower clusters of white to pale pink flowers in late spring and large, pear shapes fruit capsules in late summer."
+    ],
+    "caution": "eat",
+    "tip": "Look for a light gray bark, dark green leaves, and fragrant white flowers.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 48807,
+     "count": 23,
+     "group": "plant",
+     "common": "California Bay",
+     "scientific": "Umbellularia californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Umbellularia"
+    },
+    "sentences": [
+     "It is an evergreen tree or shrub growing to up to 30 metres tall with a trunk up to 90 centimetres in diameter.",
+     "The thin bark is smooth and gray-brown when young, later turning reddish brown and scaly.",
+     "The leaves are green, and lighter on the underside.",
+     "The flowers are small, yellow or yellowish-green, produced in small umbels (hence the scientific name Umbellularia, \"little umbel\").",
+     "The fruit, also known as \"California bay nut\", is a round and green drupe 2–2.5 cm long and 2 cm broad, lightly spotted with yellow, maturing purple."
+    ],
+    "caution": null,
+    "tip": "Look for a smooth, gray-brown bark, and observe the green leaves.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 56960,
+     "count": 18,
+     "group": "plant",
+     "common": "Hayfield Tarweed",
+     "scientific": "Hemizonia congesta",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Hemizonia_congesta"
+    },
+    "sentences": [
+     "Most of the long, narrow, pointed leaves are located on the lower portion of the stem below the branching flower stalks.",
+     "The inflorescences are covered in glandular hairs and hold daisy-like flower heads.",
+     "Each head has a center of yellowish dark-tipped disc florets and a fringe of bright yellow to white ray florets, often with purplish striping on the undersides."
+    ],
+    "caution": null,
+    "tip": "Look for long, narrow leaves below the flower stalks, and identify the yellowish-dark disc florets.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 53405,
+     "count": 17,
+     "group": "plant",
+     "common": "Toyon",
+     "scientific": "Heteromeles arbutifolia",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Heteromeles"
+    },
+    "sentences": [
+     "In the early summer it produces small white flowers 6–10 millimeters diameter in dense terminal corymbs.",
+     "The five petals are rounded.",
+     "The fruit is a small pome, 5–10 mm across, bright red and berry-like, produced in large quantities, developing in August or September and maturing in December.",
+     "Heteromeles arbutifolia (, more commonly  by Californian botanists), commonly known as toyon, is a perennial evergreen shrub or small tree with distinctive red fruits native to California, Oregon and Mexico."
+    ],
+    "caution": "eat",
+    "tip": "Look for small white flowers in dense terminal corymbs, and red fruits developing in December.",
+    "by": "gemma"
+   },
+   {
+    "sighting": {
+     "id": 120154,
+     "count": 12,
+     "group": "fungus",
+     "common": "Western Hardwood Sulphur Shelf",
+     "scientific": "Laetiporus gilbertsonii",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Laetiporus_gilbertsonii"
+    },
+    "sentences": [
+     "The yellow to orangish cap is 20–30 centimetres wide, becoming lobed and zonate with age.",
+     "The spore print is white."
+    ],
+    "caution": null,
+    "tip": "The yellow to orangish cap is 20–30 centimetres wide, becoming lobed and zonate with age.",
+    "by": "wikipedia"
+   },
+   {
+    "sighting": {
+     "id": 67560,
+     "count": 6,
+     "group": "insect",
+     "common": "California Sister",
+     "scientific": "Adelpha californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Adelpha_californica"
+    },
+    "sentences": [
+     "The upper surfaces of the wings of A. californica are a dark brown to black.",
+     "It has two large orange patches near the tip of the forewings and wide postdiscal creamy-white bands on both wings.",
+     "The ventral surfaces of the wings are generally similar but with blue bands along the edges of both wings, as well as blue and orange patterns on the corners near the body.",
+     "The upper surfaces of their wings are dark brown to black with wide cream white bands dissecting both wings and two orange patches near the tips of the forewings."
+    ],
+    "caution": null,
+    "tip": "Look for dark brown wing surfaces and orange patches near the tips of the forewings.",
+    "by": "gemma-retry"
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "modelLabel": "Gemma 3 1B",
+ "seconds": null
+}
