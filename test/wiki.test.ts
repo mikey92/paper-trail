@@ -125,6 +125,10 @@ describe("cautionOf", () => {
     expect(cautionOf("A fern.\n\n== Utility ==\nHikers rub it on a rash from nettles.")).toBeNull();
     expect(cautionOf("A bee.\n\n== Pesticide toxicity ==\nNeonicotinoids are toxic to bees.")).toBeNull();
     expect(cautionOf("A puffball.\n\n== Edibility ==\nYoung ones can be mistaken for poisonous amanitas.")).toBeNull();
+    const puffball = "A puffball.\n\n== Description ==\nWhite and round.\n\n=== Similar species ===\nIt resembles the poisonous earthball.";
+    expect(cautionOf(puffball)).toBeNull();
+    expect(descriptionOf(puffball)).not.toContain("earthball");
+    expect(cautionOf("Western honey bees are used in studies of pesticide toxicity.")).toBeNull();
   });
 
   it("ignores a section that says the species is not toxic", () => {

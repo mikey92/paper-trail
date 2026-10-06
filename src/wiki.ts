@@ -15,6 +15,9 @@ export function sections(extract: string): Section[] {
 
 const DESCRIPTION = /^(description|identification|appearance|morphology|characteristics|field marks|plumage)$/i;
 
+/** Subsections that describe other species: "Similar species", "Lookalikes", "Confusion with…". */
+const OTHER_SPECIES = /similar|look-?alike|confus|distinguish|related species|hybrid/i;
+
 /**
  * The article's description section with its subsections ("=== Leaf ===" under
  * "== Description =="), followed by the lead. Without a description section, the lead.
@@ -25,7 +28,9 @@ export function descriptionOf(extract: string): string {
   const i = all.findIndex((s) => DESCRIPTION.test(s.title));
   if (i < 0) return lead;
   const parts = [all[i].text];
-  for (let j = i + 1; j < all.length && all[j].level > all[i].level; j++) parts.push(all[j].text);
+  for (let j = i + 1; j < all.length && all[j].level > all[i].level; j++) {
+    if (!OTHER_SPECIES.test(all[j].title)) parts.push(all[j].text);
+  }
   return [...parts, lead].filter((t) => t.length > 0).join("\n");
 }
 
@@ -35,6 +40,8 @@ const TOUCH = /\b(urushiol|dermatitis|rash(es)?|blisters?|skin irritation|irrita
 const EAT = /\b(poisonous|toxic|toxicity|toxins?|poisoning)\b/i;
 const BITE = /\b(venomous|venom)\b/i;
 const NOT_HARMFUL = /\b(non-?toxic|not (toxic|poisonous|venomous))\b/i;
+/** Harm done to the species rather than by it: "used in studies of pesticide toxicity". */
+const AGENT = /\b(pesticides?|insecticides?|herbicides?|fungicides?|miticides?|lead shot|heavy metals?|pollutants?|pollution)\b/i;
 // "Toxicity", "Toxicity and uses", "Poisoning"; not "Pesticide toxicity" (harm done *to* the
 // species) or "Edibility" (mostly about poisonous look-alikes).
 const HARM_SECTION = /^(toxic|poison|venom|hazard|danger|safety)/i;
@@ -42,8 +49,9 @@ const HARM_SECTION = /^(toxic|poison|venom|hazard|danger|safety)/i;
 /**
  * What the article warns about for the species itself: a rash from touching, poison if eaten,
  * or a venomous bite or sting. Only the lead, the description and sections about toxicity
- * count; "Similar species", "Uses" and the like talk about other things ("resembles the
- * poisonous earthball", "toxic to native ladybirds"). Callers skip birds.
+ * count, minus subsections about look-alikes; "Uses", "Ecology" and the like talk about
+ * other things ("resembles the poisonous earthball", "toxic to native ladybirds"). Callers
+ * skip birds.
  */
 export function cautionOf(extract: string): Caution | null {
   const all = sections(extract);
@@ -53,8 +61,9 @@ export function cautionOf(extract: string): Caution | null {
   all.forEach((s, j) => {
     const harmSection = HARM_SECTION.test(s.title);
     if (j > 0 && !harmSection && !inDescription(j)) return;
+    if (OTHER_SPECIES.test(s.title)) return;
     const text = s.text.slice(0, 2000);
-    const said = text.split(/(?<=[.!?])\s+/).filter((x) => !NOT_HARMFUL.test(x));
+    const said = text.split(/(?<=[.!?])\s+/).filter((x) => !NOT_HARMFUL.test(x) && !AGENT.test(x));
     // A "Toxicity" heading is itself the warning, unless the section says the opposite.
     if (harmSection && !NOT_HARMFUL.test(text)) said.push(s.title);
     sentences.push(...said);
