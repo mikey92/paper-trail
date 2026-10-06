@@ -121,6 +121,11 @@ describe("colourPairs", () => {
     ]);
   });
 
+  it("does not take a pointing word for a part", () => {
+    // Found reading the v4 run: "leaves green to light red, and identify …" failed as "red identify".
+    expect(colourPairs("Look for leaves from green to light red, and identify the bark")).toEqual([]);
+  });
+
   it("skips size and texture words to reach the part", () => {
     expect(colourPairs("reddish-brown small round berries")).toEqual([
       ["reddish", "berries"],

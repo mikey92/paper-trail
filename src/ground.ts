@@ -82,8 +82,13 @@ export function colourPairs(tip: string): [string, string][] {
   const pairs: [string, string][] = [];
   ws.forEach((w, i) => {
     if (!MARKS.has(w)) return;
-    const part = ws.slice(i + 1, i + 5).find((x) => !MARKS.has(x) && !MODIFIERS.has(x) && !STOP.has(x) && x.length >= 3);
-    if (part) pairs.push([w, part]);
+    for (const x of ws.slice(i + 1, i + 5)) {
+      // "…green to light red, and observe the flowers": the colour's part came before it.
+      if (POINTERS.has(x)) return;
+      if (MARKS.has(x) || MODIFIERS.has(x) || STOP.has(x) || x.length < 3) continue;
+      pairs.push([w, x]);
+      return;
+    }
   });
   return pairs;
 }
