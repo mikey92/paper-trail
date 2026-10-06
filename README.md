@@ -2,7 +2,7 @@
 
 **A printed field card for this week's walk, written by Gemma in your browser.**
 
-Live: **https://paper-trail.mikey9220.workers.dev** · Evaluation: [eval/EVAL.md](eval/EVAL.md) · Hand review: [eval/REVIEW.md](eval/REVIEW.md)
+Live: **https://paper-trail.mikey9220.workers.dev** · Write-up: [on DEV](https://dev.to/mike_kim_692aa79c288bfed8/paper-trail-gemma-writes-your-walk-a-field-card-then-the-screen-goes-away-3mf4) · Evaluation: [eval/EVAL.md](eval/EVAL.md) · Hand review: [eval/REVIEW.md](eval/REVIEW.md)
 
 Tell it where and when. It finds the species people actually reported there in past years at this
 time of year (iNaturalist), reads what each one looks like (Wikipedia), and has **Gemma 3 1B, running
