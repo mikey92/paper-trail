@@ -35,7 +35,9 @@ function loadPrefs(): Record<string, string> {
 function savePrefs() {
   try {
     const unit = (form.elements.namedItem("unit") as RadioNodeList).value;
-    localStorage.setItem(PREFS, JSON.stringify({ place: placeInput.value, minutes: minutesInput.value, model: modelInput.value, unit }));
+    // "Current Location" is not a place to look up next time; keep the last typed one.
+    const place = useLocation ? (loadPrefs().place ?? "") : placeInput.value;
+    localStorage.setItem(PREFS, JSON.stringify({ place, minutes: minutesInput.value, model: modelInput.value, unit }));
   } catch {
     /* private mode: nothing to remember */
   }
@@ -129,8 +131,11 @@ function where(): Promise<Where> {
   });
 }
 
+// "Use Current Location" fills the place field; the card is made only when the reader asks.
+const CURRENT = "Current Location";
 let useLocation = false;
 let running = false;
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 async function run(chosen?: Where) {
   if (running) return;
@@ -163,7 +168,7 @@ async function run(chosen?: Where) {
         place = await where();
       } else {
         const query = placeInput.value.trim();
-        if (!query) throw new Error("Type a park, preserve or town, or use your location.");
+        if (!query) throw new Error("Type a park, preserve or town, or use your current location.");
         say(`Looking up “${query}”…`);
         const found = await searchPlaces(query);
         if (!found.length) throw new Error(`iNaturalist knows no place called “${query}”. Try the park's full name or a nearby town.`);
@@ -225,21 +230,28 @@ function show(card: Card, modelLabel: string | null, seconds: number | null, mad
 function showOthers(list: Where[]) {
   others.replaceChildren();
   if (!list.length) return;
-  const label = document.createElement("span");
-  label.textContent = "Not the right place? ";
-  others.append(label);
+  const title = document.createElement("h2");
+  title.className = "inset-title";
+  title.id = "others-title";
+  title.textContent = "Not the right place?";
+  const group = document.createElement("div");
+  group.className = "inset";
+  group.setAttribute("role", "group");
+  group.setAttribute("aria-labelledby", title.id);
   for (const place of list.slice(0, 4)) {
     const b = document.createElement("button");
     b.type = "button";
-    b.className = "link";
+    b.className = "cell cell-button chevron";
     b.textContent = place.label;
     b.addEventListener("click", () => {
       placeInput.value = place.label;
+      useLocation = false;
       others.replaceChildren();
       void run(place);
     });
-    others.append(b);
+    group.append(b);
   }
+  others.append(title, group);
 }
 
 // ---------- wiring ----------
@@ -260,23 +272,26 @@ void pickDevice().then(({ device }) => {
   // Without WebGPU, Gemma runs on one CPU thread: minutes per card. Quoting Wikipedia is the
   // honest default there, and the models stay one click away.
   if (device === "wasm" && !prefs.model) modelInput.value = "none";
-  $<HTMLSpanElement>("#device").textContent =
+  $<HTMLParagraphElement>("#device").textContent =
     device === "webgpu"
-      ? "This browser has WebGPU, so Gemma runs on your own graphics chip."
-      : "This browser has no WebGPU, so Gemma would run slowly on the CPU. The card will quote Wikipedia unless you pick a model.";
+      ? "Gemma runs on this device's graphics chip. The first card downloads the model once: 0.8 GB for 1B, 0.3 GB for 270M."
+      : "This browser has no WebGPU, so Gemma would run slowly on the CPU. With No Model, the card quotes Wikipedia.";
 });
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  useLocation = false;
   others.replaceChildren();
   void run();
 });
 
 $<HTMLButtonElement>("#locate").addEventListener("click", () => {
   useLocation = true;
+  placeInput.value = CURRENT;
   others.replaceChildren();
-  void run();
+  makeButton.focus();
+});
+placeInput.addEventListener("input", () => {
+  useLocation = false;
 });
 
 $<HTMLButtonElement>("#print").addEventListener("click", () => window.print());
@@ -290,7 +305,7 @@ $<HTMLButtonElement>("#example").addEventListener("click", async () => {
     show(sample.card, sample.modelLabel, sample.seconds, sample.madeWhere);
     say(`An example: ${sample.card.where.label.split(", ")[0]}, written by ${sample.modelLabel}. Make your own above.`);
     actions.hidden = false;
-    output.scrollIntoView({ behavior: "smooth", block: "start" });
+    output.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "start" });
   } catch (err) {
     say(`Could not load the example: ${err instanceof Error ? err.message : String(err)}`);
   }

@@ -2,99 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Paper Trail</title>
-    <meta name="description" content="A printed field card for this week's walk: what people actually see there this month, with one-line tips written by Gemma in your browser." />
+    <meta name="description" content="A printed field card for your walk: what people have seen there this month, with one-line tips written by Gemma in your browser." />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f5d3a'/%3E%3Cpath d='M9 23c0-8 5-14 14-15-1 9-7 14-14 15zm0 0 7-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f7a35'/%3E%3Cpath d='M9 23c0-8 5-14 14-15-1 9-7 14-14 15zm0 0 7-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
   </head>
   <body>
     <main>
-      <header class="site">
-        <p class="kicker">Paper Trail</p>
-        <h1>A field card for this week's walk.</h1>
-        <p class="pitch">
-          Tell it where and when. It finds what people actually reported there in past years at this time of year, asks
-          Gemma, running inside this tab, for one line on how to recognise each, and gives you a single page to print.
-          Then the phone goes back in your pocket.
+      <header class="masthead column">
+        <h1>Paper Trail</h1>
+        <p>
+          Print a field card for your walk: the species people have seen there at this time of year, each with one line
+          on how to recognise it. Gemma writes the lines here, in your browser.
         </p>
       </header>
 
-      <form id="plan" novalidate>
-        <div class="field wide">
-          <label for="place">Where are you walking?</label>
-          <div class="row">
-            <input id="place" name="place" type="text" placeholder="A park, preserve or town" autocomplete="off" spellcheck="false" />
-            <button type="button" id="locate" class="secondary">Use my location</button>
+      <form id="plan" class="column" novalidate>
+        <h2 class="inset-title" id="walk-title">Walk</h2>
+        <div class="inset" role="group" aria-labelledby="walk-title">
+          <div class="cell">
+            <label for="place">Place</label>
+            <input id="place" name="place" type="text" placeholder="Park, preserve or town" autocomplete="off" spellcheck="false" enterkeyhint="go" />
+          </div>
+          <button type="button" id="locate" class="cell cell-button tinted">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M17.6 2.4 2.9 8.6c-.6.3-.5 1.1.1 1.3l5.9 1.2 1.2 5.9c.2.6 1 .7 1.3.1l6.2-14.7c.2-.5-.3-1-.8-.8Z" /></svg>
+            Use Current Location
+          </button>
+          <div class="cell">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" />
+          </div>
+          <div class="cell">
+            <label for="minutes">Length</label>
+            <select id="minutes" name="minutes">
+              <option value="30">30 Minutes</option>
+              <option value="60" selected>1 Hour</option>
+              <option value="120">2 Hours or More</option>
+            </select>
+          </div>
+          <div class="cell">
+            <span id="unit-label">Temperature</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="unit-label">
+              <label><input type="radio" name="unit" value="F" /><span>°F</span></label>
+              <label><input type="radio" name="unit" value="C" checked /><span>°C</span></label>
+            </div>
           </div>
         </div>
-        <div class="field">
-          <label for="date">When</label>
-          <input id="date" name="date" type="date" />
+
+        <h2 class="inset-title" id="tips-title">Tips</h2>
+        <div class="inset" role="group" aria-labelledby="tips-title">
+          <div class="cell">
+            <label for="model">Written By</label>
+            <select id="model" name="model">
+              <option value="gemma-3-1b">Gemma 3 1B</option>
+              <option value="gemma-3-270m">Gemma 3 270M</option>
+              <option value="none">No Model</option>
+            </select>
+          </div>
         </div>
-        <div class="field">
-          <label for="minutes">For how long</label>
-          <select id="minutes" name="minutes">
-            <option value="30">About 30 minutes</option>
-            <option value="60" selected>About an hour</option>
-            <option value="120">Two hours or more</option>
-          </select>
-        </div>
-        <fieldset class="field units">
-          <legend>Temperatures in</legend>
-          <label><input type="radio" name="unit" value="F" /> °F</label>
-          <label><input type="radio" name="unit" value="C" checked /> °C</label>
-        </fieldset>
-        <div class="field wide">
-          <label for="model">Who writes the tips</label>
-          <select id="model" name="model">
-            <option value="gemma-3-1b">Gemma 3 1B (0.8 GB, downloaded once)</option>
-            <option value="gemma-3-270m">Gemma 3 270M (0.3 GB, rougher)</option>
-            <option value="none">No model: quote Wikipedia</option>
-          </select>
-          <span id="device" class="hint"></span>
-        </div>
-        <div class="field wide submit">
-          <button id="make" type="submit">Make my card</button>
-          <button id="example" type="button" class="link">or see an example card first</button>
+        <p class="inset-footer" id="device"></p>
+
+        <div class="buttons">
+          <button id="make" type="submit" class="filled">Make Card</button>
+          <button id="example" type="button" class="plain">See an Example</button>
         </div>
       </form>
 
-      <section class="progress" aria-label="Progress">
+      <section class="progress column" aria-label="Progress">
         <p id="status" role="status" aria-live="polite"></p>
         <progress id="bar" hidden></progress>
         <div id="others"></div>
       </section>
 
-      <div id="actions" hidden>
-        <button id="print" type="button">Print the card</button>
+      <div id="actions" class="buttons column" hidden>
+        <button id="print" type="button" class="filled">Print Card</button>
       </div>
 
       <div id="output"></div>
 
-      <footer class="site">
-        <h2>How it works</h2>
-        <ol>
-          <li>
-            <b>What's there.</b> iNaturalist's research-grade observations near the place, in the same month of every year,
-            grouped so the card isn't all birds.
-          </li>
-          <li>
-            <b>What it looks like.</b> The description section of each species' Wikipedia article, cut down to the
-            sentences about colours, shapes, sounds and smells.
-          </li>
-          <li>
-            <b>One line each.</b> Gemma 3 turns those sentences into a tip, in a Web Worker on your own GPU (or CPU). Every
-            word of the tip has to appear in the sentences, and every colour has to sit next to the same part; a tip that
-            fails is retried once with the offending words named, then replaced by a quote.
-          </li>
-          <li><b>Paper.</b> Weather and sunset from Open-Meteo, a box to sketch in, and the sources at the bottom.</li>
-        </ol>
+      <footer class="about column">
+        <h2>About</h2>
         <p>
-          The page has no server of its own. It remembers your last choices in your own browser and nothing anywhere else.
-          A location from your device is rounded to about a kilometre before it is sent to iNaturalist and Open-Meteo; the
-          model never sees it. Code and evaluation:
-          <a href="https://github.com/mikey92/paper-trail">github.com/mikey92/paper-trail</a> (MIT).
+          The species come from research-grade iNaturalist observations near the place, in the same month of past years.
+          Each line starts from the sentences in the species' Wikipedia description. Gemma 3 rewrites them on your
+          device, and a line that uses a word, number or colour those sentences don't back up is tried once more, then
+          replaced by a quote.
+        </p>
+        <p>
+          There is no server. Your last choices stay in this browser. A location from your device is rounded to about a
+          kilometre before it goes to iNaturalist and Open-Meteo, and the model never sees it.
+          <a href="https://github.com/mikey92/paper-trail">Source and evaluation on GitHub</a> (MIT).
         </p>
       </footer>
     </main>
