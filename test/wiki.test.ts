@@ -86,6 +86,15 @@ describe("visualSentences", () => {
     expect(visualSentences("As of 2025, the western honey bee was assessed as Data Deficient on the IUCN Red List.")).toEqual([]);
     expect(visualSentences("It was described in 1801 from a red specimen.")).toEqual([]);
     expect(visualSentences("Unlike the snowy egret, it has a yellow bill and black legs.")).toEqual([]);
+    expect(visualSentences("The flesh is soft, white to yellowish, with a mild or sour taste.")).toEqual([]);
+  });
+
+  it("brings along the sentence an 'It is…' sentence depends on", () => {
+    const d = "The cap is convex at first, then flat. It is smooth and sulphur yellow with an orange-brown centre and whitish margin. The stem is long.";
+    expect(visualSentences(d, 90)).toEqual([
+      "The cap is convex at first, then flat.",
+      "It is smooth and sulphur yellow with an orange-brown centre and whitish margin.",
+    ]);
   });
 
   it("returns nothing when no sentence says what to look or listen for", () => {
@@ -97,7 +106,8 @@ describe("visualSentences", () => {
     for (const { desc: d } of Object.values(fixture.descriptions)) {
       const s = visualSentences(d);
       if (!s.length) empty++;
-      if (s.length > 1) expect(s.join(" ").length).toBeLessThanOrEqual(600 + s.length);
+      // The budget, plus at most the sentences that "It is…" sentences depend on.
+      if (s.length > 1) expect(s.join(" ").length).toBeLessThanOrEqual(900);
       const all = splitSentences(d);
       const at = s.map((x) => all.indexOf(x));
       expect([...at].sort((a, b) => a - b)).toEqual(at);

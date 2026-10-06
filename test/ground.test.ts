@@ -50,6 +50,25 @@ describe("checkTip", () => {
     expect(r.unsupported).toEqual(["red back"]);
   });
 
+  it("never lets a tip send anyone to taste something, even when the source says it", () => {
+    const shelf = "The flesh is soft, white to yellowish, with a mild or sour taste.";
+    expect(checkTip("Look for white flesh with a mild taste.", shelf).unsupported).toEqual(["taste"]);
+    expect(checkTip("The flesh is edible and sour.", "The flesh is edible and sour.").unsupported).toEqual(["edible", "sour"]);
+  });
+
+  it("only lets a tip listen for a sound", () => {
+    expect(checkTip("Look for a red cap and listen for pink flowers.", WOODPECKER + "\nPink flowers.").unsupported).toEqual([
+      "listen for (nothing to hear)",
+    ]);
+    expect(checkTip("Look for a red cap and listen for a laughing call.", WOODPECKER).ok).toBe(true);
+  });
+
+  it("reads 'It is … yellow' with the part named just before", () => {
+    const tuft = "The cap is convex at first.\nIt is smooth and sulphur yellow with an orange-brown centre.\nThe gills are crowded.";
+    expect(checkTip("Look for a sulphur yellow cap with an orange-brown centre.", tuft).ok).toBe(true);
+    expect(checkTip("Look for yellow gills.", tuft).unsupported).toEqual(["yellow gills"]);
+  });
+
   it("flags a tone moved to another part", () => {
     expect(checkTip("Look for a dark forehead and red cap.", WOODPECKER).unsupported).toEqual(["dark forehead"]);
   });

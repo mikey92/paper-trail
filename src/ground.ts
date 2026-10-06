@@ -82,6 +82,13 @@ export function colourPairs(tip: string): [string, string][] {
 
 export interface Grounding { ok: boolean; unsupported: string[] }
 
+/** "Listen for" needs something to hear: "listen for pink flowers" is not a tip. */
+const SOUND =
+  /\b(calls?|calling|songs?|sings?|singing|whistles?|whistling|trills?|sounds?|voice|notes?|chirps?|chatter\w*|drum\w*|buzz\w*|croak\w*|quack\w*|honk\w*|hoot\w*|scream\w*|laugh\w*|cry|cries|rattl\w*|squeal\w*|coo|cooing|gobbl\w*|bugl\w*|howl\w*|hum|humming|click\w*)\b/i;
+
+/** Never on a card, whatever the source says: a walker should not taste anything to identify it. */
+const UNSAFE = /\b(tast\w*|edible|eat|eaten|eating|flavou?r\w*|chew\w*|bite into|sweet|sour|bitter)\b/gi;
+
 /** Which words, numbers and colour–part pairs of the tip are not backed by the source text. */
 export function checkTip(tip: string, source: string): Grounding {
   const known = new Set(words(source).map(stem));
@@ -93,8 +100,15 @@ export function checkTip(tip: string, source: string): Grounding {
   // No numbers at all, even ones the source has: "persists for 107.3 days" is true and useless
   // on a walk, and sizes are what a small model garbles.
   for (const n of numbersIn(tip)) unsupported.push(n);
+  for (const m of tip.match(UNSAFE) ?? []) unsupported.push(m.toLowerCase());
+  if (/\b(listen|hear)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
   if (unsupported.length === 0) {
-    const sentences = source.split(/(?<=[.!?])\s+|\n+/).map((s) => new Set(words(s).map(stem)));
+    // A sentence that starts "It is…" also gets the part named in the sentence before it.
+    const raw = source.split(/(?<=[.!?])\s+|\n+/).filter((x) => x.trim());
+    const sentences = raw.map((x, i) => {
+      const own = words(x).map(stem);
+      return new Set(i > 0 && /^(it|its|they|their|this|these)\b/i.test(x.trim()) ? [...own, ...words(raw[i - 1]).map(stem)] : own);
+    });
     for (const [colour, part] of colourPairs(tip)) {
       const together = sentences.some((s) => s.has(stem(colour)) && s.has(stem(part)));
       if (!together) unsupported.push(`${colour} ${part}`);

@@ -116,10 +116,11 @@ function numbers(s: string): number {
 
 /**
  * Not about what this species looks like: years and conservation status ("the IUCN Red List"
- * is not red), and comparisons, which describe the other species ("unlike the snowy egret").
+ * is not red), comparisons, which describe the other species ("unlike the snowy egret"), and
+ * taste, which no card should send anyone to check.
  */
 const NOT_VISUAL =
-  /\b(1[5-9]\d\d|20\d\d)\b|\bIUCN\b|red list|conservation status|least concern|endangered|\bunlike\b|similar to|resembl|confused with|\bthan (the|a|an|other)\b/i;
+  /\b(1[5-9]\d\d|20\d\d)\b|\bIUCN\b|red list|conservation status|least concern|endangered|\bunlike\b|similar to|resembl|confused with|\bthan (the|a|an|other)\b|\b(taste[sd]?|tasting|edible|flavou?r)\b/i;
 
 /** How much a sentence says about what to look or listen for. */
 export function visualScore(s: string): number {
@@ -143,10 +144,18 @@ export function visualSentences(description: string, maxChars = 600): string[] {
     chosen.push(x);
     used += x.s.length + 1;
   }
+  // "It is smooth and sulphur yellow" means nothing without the sentence before it ("The cap
+  // is convex…"), so that one comes along, even past the budget.
+  for (const x of [...chosen]) {
+    const before = scored[x.i - 1];
+    if (PRONOUN_START.test(x.s) && before && !chosen.includes(before)) chosen.push(before);
+  }
   // Nothing to look or listen for (a lead that only gives the family): no sentences, and the
   // species makes way for one with a usable description.
   return chosen.sort((a, b) => a.i - b.i).map((x) => x.s);
 }
+
+export const PRONOUN_START = /^(it|its|they|their|this|these)\b/i;
 
 /** "http://en.wikipedia.org/wiki/Wild_turkey" → "Wild turkey" */
 export function titleFromUrl(url: string): string {
