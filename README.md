@@ -12,7 +12,9 @@ is retried once with the rejected words named, and if it fails again the card qu
 instead. You get one page with checkboxes, a box to sketch in, the weather and the time to start by
 to finish in daylight. Print it and put the phone away.
 
-![A Paper Trail card](docs/card.png)
+![The example card: Rancho San Antonio, a 60-minute walk in October](public/media/card.png)
+
+![Making a card: type a place, Gemma writes twelve tips on the GPU, print](public/media/demo.gif)
 
 ## Run it
 
