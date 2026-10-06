@@ -3,10 +3,9 @@
 
 import { forecast, mapLimit, sightingsNear, wikiExtract, type Weather, type Where } from "./data.ts";
 import type { Generate, TipResult } from "./llm.ts";
-import { writeTip } from "./llm.ts";
+import { quoteFor, writeTip } from "./llm.ts";
 import { pick, speciesFor, type Sighting } from "./select.ts";
 import { cautionOf, descriptionOf, titleFromUrl, visualSentences, type Caution } from "./wiki.ts";
-import { fallbackTip } from "./ground.ts";
 
 export interface Entry {
   sighting: Sighting;
@@ -52,7 +51,7 @@ export async function gather(where: Where, date: string, minutes: number, unit: 
   const keep = new Set(pick(usable.map((r) => r.sighting), want));
   const entries: Entry[] = usable
     .filter((r) => keep.has(r.sighting))
-    .map((r) => ({ ...r, tip: fallbackTip(r.sentences), by: "pending" as const }));
+    .map((r) => ({ ...r, tip: quoteFor(r.sentences), by: "pending" as const }));
   const card: Card = {
     where,
     date,

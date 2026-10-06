@@ -103,7 +103,18 @@ export async function writeTip(generate: Generate, s: Species, sentences: string
       { role: "user", content: retryRequest(tip, check.unsupported) },
     ];
   }
-  // Quote the most visual sentence that fits on a line.
-  const best = sentences.map((x, i) => ({ x, i })).sort((a, b) => visualScore(b.x) - visualScore(a.x) || a.i - b.i);
-  return { tip: fallbackTip(best.map((b) => b.x)), by: "wikipedia", attempts };
+  return { tip: quoteFor(sentences), by: "wikipedia", attempts };
+}
+
+/**
+ * The quote a card prints when no tip passes: the most visual sentence that fits on a line.
+ * Sentences that only came along as context ("The duckling is able to fly…" before "Its
+ * feathers…") are not candidates.
+ */
+export function quoteFor(sentences: string[]): string {
+  const visual = sentences.filter((x) => visualScore(x) > 0);
+  const ranked = (visual.length ? visual : sentences)
+    .map((x, i) => ({ x, i }))
+    .sort((a, b) => visualScore(b.x) - visualScore(a.x) || a.i - b.i);
+  return fallbackTip(ranked.map((r) => r.x));
 }

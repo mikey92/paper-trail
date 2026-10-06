@@ -67,6 +67,12 @@ describe("writeTip", () => {
     expect((await writeTip(twice.generate, JUNCO, bland)).tip).toBe("The white outer tail feathers flash in flight.");
   });
 
+  it("never quotes a sentence that only came along as context", async () => {
+    const context = ["The duckling is able to fly 50–60 days after hatching.", "Its body feathers are a mottled brown and the bill is orange."];
+    const { generate } = scripted("A tiny blue bird with a crest.", "A tiny blue bird with a crest.");
+    expect((await writeTip(generate, JUNCO, context)).tip).toBe("Its body feathers are a mottled brown and the bill is orange.");
+  });
+
   it("treats an empty or rambling answer as a failure", async () => {
     const { generate, seen } = scripted("", "word ".repeat(40));
     const r = await writeTip(generate, JUNCO, SENTENCES);

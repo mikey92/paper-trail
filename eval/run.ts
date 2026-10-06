@@ -11,7 +11,7 @@
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { gather, writeTips, type Card } from "../src/build.ts";
 import type { Where } from "../src/data.ts";
-import { MODELS, sourceText, type ChatMessage, type Generate, type ModelKey } from "../src/llm.ts";
+import { MODELS, quoteFor, sourceText, type ChatMessage, type Generate, type ModelKey } from "../src/llm.ts";
 import { words } from "../src/ground.ts";
 
 const DATE = "2026-10-11";
@@ -110,8 +110,8 @@ function report() {
     "(`node eval/run.ts fetch`) so every model sees exactly the same input. Tips were written by `writeTips()` from `src/build.ts`,",
     "the code the page runs, with greedy decoding, on a Mac CPU through onnxruntime-node (q4 weights).",
     "",
-    "| Model | Tips | Passed first try | Passed after one retry | Quoted from Wikipedia | Median s per tip (CPU) | Mean words | Mostly copied (≥ 80% one run of source words) |",
-    "|---|---|---|---|---|---|---|---|",
+    "| Run | Tips | Passed first try | Passed after one retry | Quoted from Wikipedia | Median s per tip (CPU) | Median s per card (CPU) | Mean words | Mostly copied (≥ 80% one run of source words) |",
+    "|---|---|---|---|---|---|---|---|---|",
   );
   const rejected: Record<string, Map<string, number>> = {};
   const examples: Record<string, string[]> = {};
@@ -122,11 +122,12 @@ function report() {
     const retry = entries.filter((e) => e.by === "gemma-retry").length;
     const quoted = entries.filter((e) => e.by === "wikipedia").length;
     const secs = entries.map((e) => (e.result?.attempts ?? []).reduce((t, a) => t + a.ms, 0) / 1000);
+    const perCard = Object.values(cards).map((c) => c.entries.reduce((t, e) => t + (e.result?.attempts ?? []).reduce((u, a) => u + a.ms, 0), 0) / 1000);
     const written = entries.filter((e) => e.by !== "wikipedia");
     const meanWords = written.reduce((t, e) => t + words(e.tip).length, 0) / Math.max(1, written.length);
     const copies = written.filter((e) => copied(e.tip, sourceText(e.sighting, e.sentences)) >= 0.8).length;
     lines.push(
-      `| ${labelOf(key)} | ${entries.length} | ${first} (${pct(first, entries.length)}) | ${first + retry} (${pct(first + retry, entries.length)}) | ${quoted} (${pct(quoted, entries.length)}) | ${median(secs).toFixed(1)} | ${meanWords.toFixed(1)} | ${copies} of ${written.length} |`,
+      `| ${labelOf(key)} | ${entries.length} | ${first} (${pct(first, entries.length)}) | ${first + retry} (${pct(first + retry, entries.length)}) | ${quoted} (${pct(quoted, entries.length)}) | ${median(secs).toFixed(1)} | ${Math.round(median(perCard))} | ${meanWords.toFixed(1)} | ${copies} of ${written.length} |`,
     );
     const counts = new Map<string, number>();
     for (const e of entries) for (const a of e.result?.attempts ?? []) for (const w of a.unsupported) counts.set(w, (counts.get(w) ?? 0) + 1);
@@ -144,6 +145,13 @@ function report() {
     lines.push("", `## ${labelOf(key)}: words the check rejected most`, "", top.map(([w, n]) => `${w} (${n})`).join(", ") || "none");
     lines.push("", `### First tries that failed, and what was printed instead`, "", ...examples[key]);
   }
+  lines.splice(
+    lines.indexOf("") + 1,
+    0,
+    "Prompt v1 is the first version; v2 and v3 are what changed after reading every v1 and v2 tip (see the commit",
+    "messages and [REVIEW.md](REVIEW.md), which also has a hand check of every tip the final run printed).",
+    "",
+  );
   writeFileSync(new URL("./EVAL.md", import.meta.url), lines.join("\n") + "\n");
   console.log(lines.join("\n"));
 }
@@ -151,7 +159,10 @@ function report() {
 function sample(run: string) {
   const cards = readJson<Record<string, Card>>(new URL(`${run}.json`, RESULTS));
   const card = cards.rancho;
-  for (const e of card.entries) delete e.result;
+  for (const e of card.entries) {
+    delete e.result;
+    if (e.by === "wikipedia") e.tip = quoteFor(e.sentences); // the quote the page would print today
+  }
   // No screen-time claim: this card was written on a CPU by the eval, not in a browser.
   const sampleCard = { card, modelLabel: card.model, seconds: null };
   writeFileSync(new URL("../public/sample-card.json", import.meta.url), JSON.stringify(sampleCard, null, 1));
