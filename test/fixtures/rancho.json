@@ -1,0 +1,491 @@
+{
+ "species_counts": [
+  {
+   "count": 28,
+   "taxon": {
+    "id": 906,
+    "name": "Meleagris gallopavo",
+    "preferred_common_name": "Wild Turkey",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Wild_turkey"
+   }
+  },
+  {
+   "count": 24,
+   "taxon": {
+    "id": 56960,
+    "name": "Hemizonia congesta",
+    "preferred_common_name": "Hayfield Tarweed",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Hemizonia_congesta"
+   }
+  },
+  {
+   "count": 22,
+   "taxon": {
+    "id": 53359,
+    "name": "Baccharis pilularis",
+    "preferred_common_name": "coyote brush",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Baccharis_pilularis"
+   }
+  },
+  {
+   "count": 21,
+   "taxon": {
+    "id": 48807,
+    "name": "Umbellularia californica",
+    "preferred_common_name": "California bay",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Umbellularia"
+   }
+  },
+  {
+   "count": 17,
+   "taxon": {
+    "id": 53348,
+    "name": "Aesculus californica",
+    "preferred_common_name": "California buckeye",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Aesculus_californica"
+   }
+  },
+  {
+   "count": 14,
+   "taxon": {
+    "id": 53405,
+    "name": "Heteromeles arbutifolia",
+    "preferred_common_name": "Toyon",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Heteromeles"
+   }
+  },
+  {
+   "count": 14,
+   "taxon": {
+    "id": 120154,
+    "name": "Laetiporus gilbertsonii",
+    "preferred_common_name": "Western Hardwood Sulphur Shelf",
+    "iconic_taxon_name": "Fungi",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Laetiporus_gilbertsonii"
+   }
+  },
+  {
+   "count": 13,
+   "taxon": {
+    "id": 18209,
+    "name": "Melanerpes formicivorus",
+    "preferred_common_name": "Acorn Woodpecker",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Acorn_woodpecker"
+   }
+  },
+  {
+   "count": 12,
+   "taxon": {
+    "id": 47850,
+    "name": "Quercus agrifolia",
+    "preferred_common_name": "coast live oak",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Quercus_agrifolia"
+   }
+  },
+  {
+   "count": 11,
+   "taxon": {
+    "id": 9185,
+    "name": "Zonotrichia atricapilla",
+    "preferred_common_name": "Golden-crowned Sparrow",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Golden-crowned_sparrow"
+   }
+  },
+  {
+   "count": 10,
+   "taxon": {
+    "id": 10094,
+    "name": "Junco hyemalis",
+    "preferred_common_name": "Dark-eyed Junco",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Dark-eyed_junco"
+   }
+  },
+  {
+   "count": 10,
+   "taxon": {
+    "id": 51080,
+    "name": "Toxicodendron diversilobum",
+    "preferred_common_name": "Pacific poison oak",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Toxicodendron_diversilobum"
+   }
+  },
+  {
+   "count": 10,
+   "taxon": {
+    "id": 58996,
+    "name": "Clematis ligusticifolia",
+    "preferred_common_name": "Western White Clematis",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Clematis_ligusticifolia"
+   }
+  },
+  {
+   "count": 9,
+   "taxon": {
+    "id": 1409,
+    "name": "Callipepla californica",
+    "preferred_common_name": "California Quail",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/California_quail"
+   }
+  },
+  {
+   "count": 9,
+   "taxon": {
+    "id": 5206,
+    "name": "Buteo lineatus",
+    "preferred_common_name": "Red-shouldered Hawk",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Red-shouldered_hawk"
+   }
+  },
+  {
+   "count": 9,
+   "taxon": {
+    "id": 53437,
+    "name": "Rosa californica",
+    "preferred_common_name": "California Wild Rose",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Rosa_californica"
+   }
+  },
+  {
+   "count": 9,
+   "taxon": {
+    "id": 54605,
+    "name": "Marrubium vulgare",
+    "preferred_common_name": "White Horehound",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Marrubium_vulgare"
+   }
+  },
+  {
+   "count": 8,
+   "taxon": {
+    "id": 53416,
+    "name": "Lonicera hispidula",
+    "preferred_common_name": "Pink Honeysuckle",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lonicera_hispidula"
+   }
+  },
+  {
+   "count": 8,
+   "taxon": {
+    "id": 506118,
+    "name": "Aphelocoma californica",
+    "preferred_common_name": "California Scrub-Jay",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/California_scrub_jay"
+   }
+  },
+  {
+   "count": 7,
+   "taxon": {
+    "id": 13633,
+    "name": "Baeolophus inornatus",
+    "preferred_common_name": "Oak Titmouse",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Oak_titmouse"
+   }
+  },
+  {
+   "count": 7,
+   "taxon": {
+    "id": 73044,
+    "name": "Melozone crissalis",
+    "preferred_common_name": "California Towhee",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/California_towhee"
+   }
+  },
+  {
+   "count": 6,
+   "taxon": {
+    "id": 7576,
+    "name": "Thryomanes bewickii",
+    "preferred_common_name": "Bewick's Wren",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Bewick's_wren"
+   }
+  },
+  {
+   "count": 6,
+   "taxon": {
+    "id": 9420,
+    "name": "Pipilo maculatus",
+    "preferred_common_name": "Spotted Towhee",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Spotted_towhee"
+   }
+  },
+  {
+   "count": 6,
+   "taxon": {
+    "id": 1579017,
+    "name": "Astur cooperii",
+    "preferred_common_name": "Cooper's Hawk",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cooper's_hawk"
+   }
+  },
+  {
+   "count": 5,
+   "taxon": {
+    "id": 5277,
+    "name": "Elanus leucurus",
+    "preferred_common_name": "White-tailed Kite",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/White-tailed_kite"
+   }
+  },
+  {
+   "count": 5,
+   "taxon": {
+    "id": 20044,
+    "name": "Bubo virginianus",
+    "preferred_common_name": "Great Horned Owl",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Great_horned_owl"
+   }
+  },
+  {
+   "count": 5,
+   "taxon": {
+    "id": 48523,
+    "name": "Symphoricarpos albus",
+    "preferred_common_name": "Common Snowberry",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Symphoricarpos_albus"
+   }
+  },
+  {
+   "count": 5,
+   "taxon": {
+    "id": 49011,
+    "name": "Quercus lobata",
+    "preferred_common_name": "valley oak",
+    "iconic_taxon_name": "Plantae",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Quercus_lobata"
+   }
+  },
+  {
+   "count": 5,
+   "taxon": {
+    "id": 67560,
+    "name": "Adelpha californica",
+    "preferred_common_name": "California Sister",
+    "iconic_taxon_name": "Insecta",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Adelpha_californica"
+   }
+  },
+  {
+   "count": 4,
+   "taxon": {
+    "id": 3454,
+    "name": "Zenaida macroura",
+    "preferred_common_name": "Mourning Dove",
+    "iconic_taxon_name": "Aves",
+    "wikipedia_url": "http://en.wikipedia.org/wiki/Mourning_dove"
+   }
+  }
+ ],
+ "descriptions": {
+  "906": {
+   "name": "Wild Turkey",
+   "sci": "Meleagris gallopavo",
+   "title": "Meleagris gallopavo",
+   "sections": [
+    "Taxonomy",
+    "Description",
+    "Habitat",
+    "Behavior",
+    "Flight",
+    "Vocalizations",
+    "Foraging",
+    "Social structure and mating"
+   ],
+   "desc": "An adult male (tom or gobbler) normally weighs from 5 to 11 kg (11 to 24 lb) and measures 100\u2013125 cm (39\u201349 in) in length. The adult female (hen) is typically much smaller at 2.5\u20135.4 kg (5.5\u201311.9 lb) and is 76 to 95 cm (30 to 37 in) long. Per two large studies, the average weight of adult males is 7.6 kg (17 lb) and the average weight of adult females is 4.26 kg (9.4 lb). The record-sized adult male wild turkey, according to the National Wild Turkey Federation, weighed 17.06 kg (37.6 lb), with records of tom turkeys weighing over 13.8 kg (30 lb) uncommon but not rare. Considering its maximum and average weight, it is among the heaviest flying birds in the world.\nThe wings are relatively small, as is typical of the galliform order, and the wingspan ranges from 1.25 to 1.44 m (4 ft 1 in to 4 ft 9 in). The wing chord is only 20 to 21.4 cm (7.9 to 8.4 in). The bill is also relatively small, as adults measure 2 to 3.2 cm (0.79 to 1.26 in) in culmen length. The tarsus of the wild turkey is quite long and sturdy, measuring from 9.7 to 19.1 cm (3.8 to 7.5 in). The tail is also relatively long, ranging from 24.5 to 50.5 cm (9.6 to 19.9 in).\nFully-grown wild turkeys have long, reddish-yellow"
+  },
+  "56960": {
+   "name": "Hayfield Tarweed",
+   "sci": "Hemizonia congesta",
+   "title": "Hemizonia congesta",
+   "sections": [
+    "Description",
+    "Subspecies",
+    "Distribution and habitat",
+    "See also",
+    "References",
+    "External links"
+   ],
+   "desc": "Hemizonia congesta is a spindly, thin-stemmed annual herb growing erect to 10\u201380 centimetres (3.9\u201331.5 in) in height. Like other tarweeds the stem and foliage are glandular and have an odor reminiscent of tar. Most of the long, narrow, pointed leaves are located on the lower portion of the stem below the branching flower stalks.\nThe inflorescences are covered in glandular hairs and hold daisy-like flower heads. Each head has a center of yellowish dark-tipped disc florets and a fringe of bright yellow to white ray florets, often with purplish striping on the undersides. The ray florets are toothed or lobed on the tips, with the middle tooth thinner than the others."
+  },
+  "53359": {
+   "name": "coyote brush",
+   "sci": "Baccharis pilularis",
+   "title": "Baccharis pilularis",
+   "sections": [
+    "Distribution and habitat",
+    "Description",
+    "Cultivation",
+    "Cultivars",
+    "See also",
+    "References",
+    "External links"
+   ],
+   "desc": "The Baccharis pilularis shrub is generally smaller than 3 metres (9.8 ft) in height. Erect plants are generally mixed with (and sometimes grow to become) prostrate plants. Its leaves are smooth, without spines or hairs, and generally sticky to the touch.\nThe stems are prostrate to erect with branches spreading or ascending. The leaves are 8\u201355 millimetres (0.31\u20132.17 in) long and are entire to toothed and oblanceolate to obovate, with three principal veins.\n\nThe flower heads are in a leafy panicle. The involucres are hemispheric to bell shaped. This species is dioecious (pistillate and staminate flowers occur on separate plants). Both staminate and pistillate heads are 3.5\u20135 millimetres (0.14\u20130.20 in) long. Phyllaries are in 4\u20136 series, ovate, and glabrous. The receptacles are convex to conic and honeycombed. The staminate flowers range from 20\u201330 and there are 19\u201343 pistillate flowers.This and other Baccharis species are nectar sources for most of the predatory wasps, native skippers (small butterflies), and native flies in their ranges.\nSubspecies\nBaccharis pilularis subsp. consanguinea (DC.) C.B.Wolf \u2014 primarily in coastal chaparral\nBaccharis pilularis subsp. pilularis \u2014  sandy c"
+  },
+  "48807": {
+   "name": "California bay",
+   "sci": "Umbellularia californica",
+   "title": "Umbellularia californica",
+   "sections": [
+    "Description",
+    "Distribution and habitat",
+    "Ecology",
+    "Uses",
+    "Historical usage",
+    "Modern usage",
+    "\"Myrtlewood\" money",
+    "References"
+   ],
+   "desc": "It is an evergreen tree or shrub growing to up to 30 metres (98 feet) tall with a trunk up to 90 centimetres (35 inches) in diameter. The largest recorded tree is in Mendocino County, California, and measured (as of 1997) 33 m (108 ft) in height with a 36 m (119 ft) spread. The thin bark is smooth and gray-brown when young, later turning reddish brown and scaly.\nThe fragrant leaves are smooth-edged and lance-shaped, 3\u201315 cm (1+1\u20444\u20136 in) long and around a third as wide, similar to the related bay laurel, though usually narrower, and without the crinkled margin of that species. The leaves are green, and lighter on the underside. The bark and leaves have a pungent scent resembling  camphor when bruised, due to a chemical known as umbellulone.\nThe flowers are small, yellow or yellowish-green, produced in small umbels (hence the scientific name Umbellularia, \"little umbel\"). Unlike other \"bay laurels\" of the genus Laurus, Umbellularia has perfect flowers (male and female parts in the same flower).\nThe fruit, also known as \"California bay nut\", is a round and green drupe 2\u20132.5 cm long and 2 cm broad, lightly spotted with yellow, maturing purple. Under the thin, leathery skin, it consists"
+  },
+  "53348": {
+   "name": "California buckeye",
+   "sci": "Aesculus californica",
+   "title": "Aesculus californica",
+   "sections": [
+    "Description",
+    "Distribution and habitat",
+    "Toxicity and uses",
+    "Etymology",
+    "Gallery",
+    "References",
+    "External Links"
+   ],
+   "desc": "Aesculus californica is a large deciduous shrub or small tree, up to 4\u201312 m (13\u201339 ft) tall. It typically is multi-trunked, with a crown as broad or broader than it is high. The bark is light gray and smooth. \nThe leaves are opposite, and palmately compound with five (rarely seven) leaflets. The individual leaflets are 6\u201317 cm (2.4\u20136.7 in) long, with a finely serrated margin and pointed tips. The leaves are dark green above and paler on the underside and may have downy veins. \nThe flowers are borne on dense, erect panicles 15\u201320 cm (6\u20138 in) long and 5\u20138 cm (2\u20133 in) broad. They are fragrant, white to pale pink, and individual flowers are 1-2.5cm long. Each flower has a two-lobed calyx 5-8mm long, and 4 sometimes 5 petals. Five to seven stamens project conspicuously beyond the petals. This species is andromonoecious, with the inflorescences producing both staminate and bisexual flowers on the same plant. Only the bisexual flowers are capable of developing into fruit.\n\nThe fruit is smoot, leathery pear-shaped capsule 5\u20138 cm (2\u20133 in) long. As it matures, the capsule turns brown and splits revealing one large, glossy brown seed, measuring 2\u20137 cm (0.8\u20132.8 in). The seeds are poisonous. Ca"
+  },
+  "53405": {
+   "name": "Toyon",
+   "sci": "Heteromeles arbutifolia",
+   "title": "Heteromeles",
+   "sections": [
+    "Description",
+    "Taxonomy",
+    "Varieties",
+    "Distribution and habitat",
+    "Ecology",
+    "Toxicity",
+    "Uses",
+    "Indigenous Uses"
+   ],
+   "desc": "Toyon typically grows from 2\u20135 meters (7\u201316 ft), rarely up to 10 m in shaded conditions, and has a rounded to irregular top. Its leaves are evergreen, alternate, sharply toothed, have short petioles, and are 5\u201310 centimeters (2\u20134 in) in length and 2\u20134 cm (0.8\u20131.6 in) wide. In the early summer it produces small white flowers 6\u201310 millimeters (1\u20444\u20133\u20448 in) diameter in dense terminal corymbs. Flowering peaks in June.\nThe five petals are rounded. The fruit is a small pome, 5\u201310 mm across, bright red and berry-like, produced in large quantities, developing in August or September and maturing in December."
+  },
+  "120154": {
+   "name": "Western Hardwood Sulphur Shelf",
+   "sci": "Laetiporus gilbertsonii",
+   "title": "Laetiporus gilbertsonii",
+   "sections": [
+    "Taxonomy",
+    "Description",
+    "Similar species",
+    "Distribution and habitat",
+    "Uses"
+   ],
+   "desc": "The yellow to orangish cap is 20\u201330 centimetres (8\u201312 in) wide, becoming lobed and zonate with age. The flesh is soft, white to yellowish, with a mild or sour taste. The spore print is white."
+  },
+  "18209": {
+   "name": "Acorn Woodpecker",
+   "sci": "Melanerpes formicivorus",
+   "title": "Melanerpes formicivorus",
+   "sections": [
+    "Taxonomy",
+    "Description",
+    "Distribution and habitat",
+    "Behaviour and ecology",
+    "Breeding",
+    "Food and feeding",
+    "Threats and status",
+    "Popular culture"
+   ],
+   "desc": "The adult acorn woodpecker has a brownish-black head, back, wings and tail, white forehead, throat, belly and rump. The eyes are initially dark in fledglings, turning to white within a few months. There is a small part on the small of their backs where there are some greenish feathers. The bird is mostly black, with adult males have a red cap starting at the forehead, whereas females have a black area between the forehead and the cap. The white neck, throat, and forehead patches are distinctive identifiers. When flying, they take a few flaps of their wings and drop a foot or so. White circles on their wings are visible when in flight. Acorn woodpeckers have a call that sounds almost like they are laughing.\nMeasurements:\n\nLength: 19\u201323 cm (7.5\u20139.1 in)\nWeight: 65\u201390 g (2.3\u20133.2 oz)\nWingspan: 35\u201343 cm (14\u201317 in)"
+  },
+  "47850": {
+   "name": "coast live oak",
+   "sci": "Quercus agrifolia",
+   "title": "Quercus agrifolia",
+   "sections": [
+    "Description",
+    "Trunk and stem",
+    "Leaf",
+    "Flower and fruit",
+    "Taxonomy",
+    "Recognized varieties",
+    "Hybridity",
+    "Etymology"
+   ],
+   "desc": "Coast live oak typically has a much-branched trunk and reaches a mature height of 10\u201325 meters (33\u201382 feet). Some specimens may attain an age exceeding 1,000 years. Examples of this include the Grand Oak of Cherry Valley, California, the Encino Oak Tree, which died in the 1990s (part of the stump has been preserved) and the Pechanga Great Oak. The tree is extremely drought-tolerant.[3]"
+  },
+  "9185": {
+   "name": "Golden-crowned Sparrow",
+   "sci": "Zonotrichia atricapilla",
+   "title": "Zonotrichia atricapilla",
+   "sections": [
+    "Systematics",
+    "Description",
+    "Similar species",
+    "Distribution and habitat",
+    "Behavior",
+    "Feeding",
+    "Breeding and lifespan",
+    "Voice"
+   ],
+   "desc": "Measuring 15\u201318 cm (6\u20137 in) in length with a wingspan of 24.75 cm (9.74 in) and ranging from 19.0 to 35.4 g (0.67 to 1.25 oz) in mass, the adult golden-crowned sparrow is fairly large for an American sparrow. Like all Zonotrichia sparrows, it has a relatively long, square-tipped tail and a slightly peaked crown. Males and females are similarly plumaged, though males average slightly larger than females. Other than a plain gray nape, the adult's upperparts are grayish-brown, with broad brownish-black streaks on the back and scapulars, and an unstreaked rump. Its underparts are gray, slightly paler on the belly and buffier on the flanks. Its wings and tail are brown, and it shows two white wing bars.  Its legs are pale brown, and its bill is dark, with the upper mandible darker than the lower. Its iris is brown.\nIn the breeding season, the golden-crowned sparrow has a broad yellow central crown stripe which becomes pale gray towards the back of the head."
+  },
+  "10094": {
+   "name": "Dark-eyed Junco",
+   "sci": "Junco hyemalis",
+   "title": "Junco hyemalis",
+   "sections": [
+    "Taxonomy",
+    "Subspecies",
+    "Description",
+    "Distribution and habitat",
+    "Behavior and ecology",
+    "Breeding",
+    "Evolution",
+    "Postglacial theory and diversification"
+   ],
+   "desc": "Adult dark-eyed juncos generally have gray heads, necks, and breasts, gray or brown backs and wings, and a white belly, but show a confusing amount of variation in plumage details. The white outer tail feathers flash distinctively in flight and while hopping on the ground. The bill is usually pale pinkish.Males tend to have darker, more conspicuous markings than females. The dark-eyed junco is 13 to 17.5 cm (5.1 to 6.9 in) long and has a wingspan of 18 to 25 cm (7.1 to 9.8 in). Body mass can vary from 18 to 30 g (0.63 to 1.06 oz). Among standard measurements, the wing chord is 6.6 to 9.3 cm (2.6 to 3.7 in), the tail is 6.1 to 7.3 cm (2.4 to 2.9 in), the bill is 0.9 to 1.3 cm (0.35 to 0.51 in) and the tarsus is 1.9 to 2.3 cm (0.75 to 0.91 in). Juveniles often have pale streaks on their underparts and may even be mistaken for vesper sparrows (Pooecetes gramineus) until they acquire adult plumage at two to three months, but dark-eyed junco fledglings' heads are generally quite uniform in color already, and initially their bills still have conspicuous yellowish edges to the gape, remains of the fleshy wattles that guide the parents when they feed the nestlings.\nThe song is a trill simi"
+  },
+  "51080": {
+   "name": "Pacific poison oak",
+   "sci": "Toxicodendron diversilobum",
+   "title": "Toxicodendron diversilobum",
+   "sections": [
+    "Description",
+    "Distribution and habitat",
+    "Ecology",
+    "Toxicity",
+    "Exposure",
+    "Uses",
+    "Medicinal",
+    "Cultivation"
+   ],
+   "desc": "Toxicodendron diversilobum is extremely variable in growth habit and leaf appearance. It grows as a dense 0.5\u20134 metres (1+1\u20442\u201313 feet) tall shrub in open sunlight, a treelike vine 3\u20139 m (10\u201330 ft) and may be more than 30 m (100 ft) long with an 8\u201320 centimetres (3+1\u20444\u20137+3\u20444 inches) trunk, as dense thickets in shaded areas, or any form in between. It reproduces by spreading rhizomes and by seeds.\nThe plant is winter deciduous, so that after cold weather sets in, the stems are leafless and bear only the occasional cluster of mature fruit. Without leaves the stems may sometimes be identified by occasional black marks where its milky sap may have oozed and dried.\nThe leaves are divided into three (rarely 5, 7, or 9) leaflets, 3.5 to 10 cm (1+1\u20442 to 4 in) long, with scalloped, toothed, or lobed edges. They generally resemble the lobed leaves of a true oak, though tend to be more glossy. Leaves are typically bronze when first unfolding in February to March, bright green in the spring, yellow-green to reddish in the summer, and bright red or pink from late July to October.\nWhite flowers form in the spring, from March to June. If they are fertilized, they develop into greenish-white or tan"
+  }
+ }
+}
