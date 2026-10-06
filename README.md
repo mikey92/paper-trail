@@ -14,7 +14,7 @@ to finish in daylight. Print it and put the phone away.
 
 ![The example card: Rancho San Antonio, a 60-minute walk in October](public/media/card.png)
 
-![Making a card: type a place, Gemma writes twelve tips on the GPU, print](public/media/demo.gif)
+![Making a card: type a place, Gemma writes twelve tips on the GPU, print](public/media/demo-v2.gif)
 
 ## Run it
 
