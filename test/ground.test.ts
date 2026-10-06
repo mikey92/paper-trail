@@ -76,6 +76,15 @@ describe("checkTip", () => {
     expect(checkTip("Look for slaty flight feathers and a rusty gray head.", heron).unsupported).toEqual(["rusty head", "gray head"]);
   });
 
+  it("does not let a colour reach past another colour to a part", () => {
+    const tuft = "The crowded gills are initially yellow but darken to a distinctive green colour as the blackish spores develop.";
+    expect(checkTip("Look for yellow gills and green spores.", tuft).unsupported).toEqual(["green spores"]);
+    const warbler = "Males have a black cheek, while females have brown or gray cheeks.";
+    expect(checkTip("Look for brown cheeks on females.", warbler).ok).toBe(true);
+    const swapped = "Males and females differ, the former being black and the latter having brown or gray cheeks.";
+    expect(checkTip("Look for black cheeks on females.", swapped).unsupported).toEqual(["black cheeks"]);
+  });
+
   it("flags a tone moved to another part", () => {
     expect(checkTip("Look for a dark forehead and red cap.", WOODPECKER).unsupported).toEqual(["dark forehead"]);
   });

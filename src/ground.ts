@@ -128,13 +128,31 @@ export function checkTip(tip: string, source: string): Grounding {
   return { ok: unsupported.length === 0, unsupported: [...new Set(unsupported)] };
 }
 
+const MARK_STEMS = new Set([...MARKS].map(stem));
+const LINKS = new Set(["and", "or", "to"]);
+
 /**
- * Within eight words of each other in one sentence: close enough for "white forehead, throat,
- * belly and rump", too far for "the neck is rusty-gray, with black and white streaking down
- * the front; the head is paler".
+ * Does colour `a` describe part `b` in this sentence? They must be within eight words, and no
+ * other colour may sit between the colour's own phrase ("reddish brown", "yellow to orangish")
+ * and the part. That keeps "white forehead, throat, belly and rump" (white rump) and rejects
+ * "gills … darken to a distinctive green colour as the blackish spores develop" (green spores)
+ * and "the neck is rusty-gray, with black and white streaking … the head" (rusty head).
  */
-function near(sentence: string[], a: string, b: string, window = 8): boolean {
-  return sentence.some((w, i) => w === a && sentence.some((v, j) => v === b && Math.abs(i - j) <= window));
+function near(s: string[], a: string, b: string, window = 8): boolean {
+  const mark = (k: number) => k >= 0 && k < s.length && MARK_STEMS.has(s[k]);
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] !== a) continue;
+    let lo = i;
+    let hi = i;
+    while (mark(hi + 1) || (LINKS.has(s[hi + 1]) && mark(hi + 2))) hi++;
+    while (mark(lo - 1) || (LINKS.has(s[lo - 1]) && mark(lo - 2))) lo--;
+    for (let j = 0; j < s.length; j++) {
+      if (s[j] !== b || Math.abs(i - j) > window || (j >= lo && j <= hi)) continue;
+      const between = j > hi ? s.slice(hi + 1, j) : s.slice(j + 1, lo);
+      if (!between.some((w) => MARK_STEMS.has(w))) return true;
+    }
+  }
+  return false;
 }
 
 export const MAX_WORDS = 18;

@@ -30,6 +30,7 @@ function request(s: Species, sentences: string[]): string {
     ...sentences.map((x) => `- ${x}`),
     "",
     'Write ONE sentence of at most 15 words, starting with "Look for" or "Listen for".',
+    "Name two or three features, each exactly as the source says it: keep every colour with its own part.",
     "Use only words and facts from the source. No numbers. Do not name the species.",
     "Reply with the sentence only.",
   ].join("\n");
