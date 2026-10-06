@@ -1,0 +1,2727 @@
+{
+ "rancho": {
+  "where": {
+   "key": "rancho",
+   "unit": "F",
+   "label": "Rancho San Antonio County Park and Open Space Preserve, US, CA",
+   "lat": 37.33,
+   "lng": -122.12,
+   "radiusKm": 3
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 3,
+  "pool": 189,
+  "weather": {
+   "unit": "F",
+   "high": 70,
+   "low": 46,
+   "rain": 1,
+   "sunrise": "07:12",
+   "sunset": "18:36"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 906,
+     "count": 21,
+     "group": "bird",
+     "common": "Wild Turkey",
+     "scientific": "Meleagris gallopavo",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Wild_turkey"
+    },
+    "sentences": [
+     "Fully-grown wild turkeys have long, reddish-yellow to grayish-green legs.",
+     "The body feathers are generally blackish and dark, sometimes gray-brown, overall, with a coppery sheen that becomes more complex in older males.",
+     "Mature males have a large, featherless, reddish head and red throat, with red wattles on the throat and neck.",
+     "When toms are excited, a fleshy flap on the bill (called a snood) expands, and this, the wattles and the bare skin of the head and neck all become red with enhanced flow of blood to the head.",
+     "Males have a long, dark, fan-shaped tail and glossy, bronze wings."
+    ],
+    "caution": null,
+    "tip": "Look for long, dark tail feathers and red head and throat.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for long, dark tail feathers and red head and throat.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for long, dark tail feathers and red head and throat.",
+       "tip": "Look for long, dark tail feathers and red head and throat.",
+       "unsupported": [],
+       "ms": 2160
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 18209,
+     "count": 13,
+     "group": "bird",
+     "common": "Acorn Woodpecker",
+     "scientific": "Melanerpes formicivorus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Acorn_woodpecker"
+    },
+    "sentences": [
+     "The adult acorn woodpecker has a brownish-black head, back, wings and tail, white forehead, throat, belly and rump.",
+     "The eyes are initially dark in fledglings, turning to white within a few months.",
+     "The bird is mostly black, with adult males have a red cap starting at the forehead, whereas females have a black area between the forehead and the cap.",
+     "The white neck, throat, and forehead patches are distinctive identifiers.",
+     "White circles on their wings are visible when in flight.",
+     "Acorn woodpeckers have a call that sounds almost like they are laughing."
+    ],
+    "caution": null,
+    "tip": "Look for a brownish-black head, white forehead, and red cap in males.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a brownish-black head, white forehead, and red cap in males.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a brownish-black head, white forehead, and red cap in males.",
+       "tip": "Look for a brownish-black head, white forehead, and red cap in males.",
+       "unsupported": [],
+       "ms": 2121
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 10094,
+     "count": 12,
+     "group": "bird",
+     "common": "Dark-eyed Junco",
+     "scientific": "Junco hyemalis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Dark-eyed_junco"
+    },
+    "sentences": [
+     "Adult dark-eyed juncos generally have gray heads, necks, and breasts, gray or brown backs and wings, and a white belly, but show a confusing amount of variation in plumage details.",
+     "The white outer tail feathers flash distinctively in flight and while hopping on the ground.",
+     "The bill is usually pale pinkish.",
+     "Calls include tick sounds and very high-pitched tinkling chips.",
+     "It is known among bird song practitioners as an excellent bird to study for learning \"bird language\".",
+     "The dark-eyed junco (Junco hyemalis) is a species of junco, a group of small, grayish New World sparrows."
+    ],
+    "caution": null,
+    "tip": "Look for gray heads and wings, pale pink bills, and distinctive flashing tails.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for gray heads and wings, pale pink bills, and distinctive flashing tails.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for gray heads and wings, pale pink bills, and distinctive flashing tails.",
+       "tip": "Look for gray heads and wings, pale pink bills, and distinctive flashing tails.",
+       "unsupported": [],
+       "ms": 2148
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 9185,
+     "count": 11,
+     "group": "bird",
+     "common": "Golden-crowned Sparrow",
+     "scientific": "Zonotrichia atricapilla",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Golden-crowned_sparrow"
+    },
+    "sentences": [
+     "Like all Zonotrichia sparrows, it has a relatively long, square-tipped tail and a slightly peaked crown.",
+     "Other than a plain gray nape, the adult's upperparts are grayish-brown, with broad brownish-black streaks on the back and scapulars, and an unstreaked rump.",
+     "Its underparts are gray, slightly paler on the belly and buffier on the flanks.",
+     "Its wings and tail are brown, and it shows two white wing bars.",
+     "Its legs are pale brown, and its bill is dark, with the upper mandible darker than the lower.",
+     "Its iris is brown.",
+     "In the breeding season, the golden-crowned sparrow has a broad yellow central crown stripe which becomes pale gray towards the back of the head.",
+     "The golden-crowned sparrow (Zonotrichia atricapilla) is a large New World sparrow found in the western part of North America."
+    ],
+    "caution": null,
+    "tip": "Look for a square-tipped tail and streaked back, and observe the pale brown legs.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a square-tipped tail and streaked back, and observe the pale brown legs.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a square-tipped tail and streaked back, and observe the pale brown legs.",
+       "tip": "Look for a square-tipped tail and streaked back, and observe the pale brown legs.",
+       "unsupported": [],
+       "ms": 2534
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 5206,
+     "count": 9,
+     "group": "bird",
+     "common": "Red-shouldered Hawk",
+     "scientific": "Buteo lineatus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Red-shouldered_hawk"
+    },
+    "sentences": [
+     "Adults have brownish heads, reddish chests, and pale bellies with reddish bars.",
+     "Their tails, which are quite long by Buteo standards, are marked with narrow white bars.",
+     "Red \"shoulders\" are visible when the birds are perched.",
+     "These hawks' upper parts are dark with pale spots and they have long yellow legs.",
+     "The wings of adults are more heavily barred on the upper side.",
+     "That species is larger and bulkier, with more even-sized, broad wings, and is paler underneath, with a reddish tail often apparent.",
+     "The red-tail is also more likely to soar steadily, with wings in a slight dihedral."
+    ],
+    "caution": null,
+    "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+       "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+       "unsupported": [],
+       "ms": 2271
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 53359,
+     "count": 28,
+     "group": "plant",
+     "common": "Coyote Brush",
+     "scientific": "Baccharis pilularis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Baccharis_pilularis"
+    },
+    "sentences": [
+     "The Baccharis pilularis shrub is generally smaller than 3 metres in height.",
+     "Erect plants are generally mixed with (and sometimes grow to become) prostrate plants.",
+     "Its leaves are smooth, without spines or hairs, and generally sticky to the touch.",
+     "The stems are prostrate to erect with branches spreading or ascending.",
+     "The leaves are 8–55 millimetres long and are entire to toothed and oblanceolate to obovate, with three principal veins.",
+     "The flower heads are in a leafy panicle.",
+     "Baccharis pilularis, called coyote brush (or bush), chaparral broom, and bush baccharis, is an evergreen shrub in the family Asteraceae native to California, Oregon, Washington, and Baja California."
+    ],
+    "caution": null,
+    "tip": "Look for smooth, sticky leaves on prostrate plants, and observe branches spreading.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for smooth, sticky leaves on prostrate plants, and observe branches spreading.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for smooth, sticky leaves on prostrate plants, and observe branches spreading.",
+       "tip": "Look for smooth, sticky leaves on prostrate plants, and observe branches spreading.",
+       "unsupported": [],
+       "ms": 2312
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 53348,
+     "count": 24,
+     "group": "plant",
+     "common": "California Buckeye",
+     "scientific": "Aesculus californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Aesculus_californica"
+    },
+    "sentences": [
+     "The bark is light gray and smooth.",
+     "The leaves are dark green above and paler on the underside and may have downy veins.",
+     "The flowers are borne on dense, erect panicles 15–20 cm long and 5–8 cm broad.",
+     "They are fragrant, white to pale pink, and individual flowers are 1-2.5cm long.",
+     "Only the bisexual flowers are capable of developing into fruit.",
+     "As it matures, the capsule turns brown and splits revealing one large, glossy brown seed, measuring 2–7 cm.",
+     "The seeds are poisonous.",
+     "It is a large shrub or small tree, often with several trunks and a broad, rounded crown.",
+     "It has palmately compound leaves are among the earliest in spring, followed by erect flower clusters of white to pale pink flowers in late spring and large, pear shapes fruit capsules in late summer."
+    ],
+    "caution": "eat",
+    "tip": "Look for a light gray bark, dark green leaves, and fragrant white flowers.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a light gray bark, dark green leaves, and fragrant white flowers.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a light gray bark, dark green leaves, and fragrant white flowers.",
+       "tip": "Look for a light gray bark, dark green leaves, and fragrant white flowers.",
+       "unsupported": [],
+       "ms": 2397
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48807,
+     "count": 23,
+     "group": "plant",
+     "common": "California Bay",
+     "scientific": "Umbellularia californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Umbellularia"
+    },
+    "sentences": [
+     "It is an evergreen tree or shrub growing to up to 30 metres tall with a trunk up to 90 centimetres in diameter.",
+     "The thin bark is smooth and gray-brown when young, later turning reddish brown and scaly.",
+     "The leaves are green, and lighter on the underside.",
+     "The flowers are small, yellow or yellowish-green, produced in small umbels (hence the scientific name Umbellularia, \"little umbel\").",
+     "The fruit, also known as \"California bay nut\", is a round and green drupe 2–2.5 cm long and 2 cm broad, lightly spotted with yellow, maturing purple."
+    ],
+    "caution": null,
+    "tip": "The thin bark is smooth and gray-brown when young, later turning reddish brown and scaly.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The thin bark is smooth and gray-brown when young, later turning reddish brown and scaly.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a tall, gray-brown trunk, smooth bark turning reddish-brown, and small, green fruits.",
+       "tip": "Look for a tall, gray-brown trunk, smooth bark turning reddish-brown, and small, green fruits.",
+       "unsupported": [
+        "gray trunk",
+        "brown trunk",
+        "brown fruits",
+        "green fruits"
+       ],
+       "ms": 2401
+      },
+      {
+       "raw": "Look for a tall, gray-brown trunk, smooth bark turning reddish-brown, and small, green fruits.",
+       "tip": "Look for a tall, gray-brown trunk, smooth bark turning reddish-brown, and small, green fruits.",
+       "unsupported": [
+        "gray trunk",
+        "brown trunk",
+        "brown fruits",
+        "green fruits"
+       ],
+       "ms": 2733
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 56960,
+     "count": 18,
+     "group": "plant",
+     "common": "Hayfield Tarweed",
+     "scientific": "Hemizonia congesta",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Hemizonia_congesta"
+    },
+    "sentences": [
+     "Most of the long, narrow, pointed leaves are located on the lower portion of the stem below the branching flower stalks.",
+     "The inflorescences are covered in glandular hairs and hold daisy-like flower heads.",
+     "Each head has a center of yellowish dark-tipped disc florets and a fringe of bright yellow to white ray florets, often with purplish striping on the undersides."
+    ],
+    "caution": null,
+    "tip": "Look for lower stem leaves, covered in glandular hairs, and daisy-like flower heads.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for lower stem leaves, covered in glandular hairs, and daisy-like flower heads.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for lower stem leaves, covered in glandular hairs, and daisy-like flower heads.",
+       "tip": "Look for lower stem leaves, covered in glandular hairs, and daisy-like flower heads.",
+       "unsupported": [],
+       "ms": 2165
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 53405,
+     "count": 17,
+     "group": "plant",
+     "common": "Toyon",
+     "scientific": "Heteromeles arbutifolia",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Heteromeles"
+    },
+    "sentences": [
+     "In the early summer it produces small white flowers 6–10 millimeters diameter in dense terminal corymbs.",
+     "The five petals are rounded.",
+     "The fruit is a small pome, 5–10 mm across, bright red and berry-like, produced in large quantities, developing in August or September and maturing in December.",
+     "Heteromeles arbutifolia (, more commonly  by Californian botanists), commonly known as toyon, is a perennial evergreen shrub or small tree with distinctive red fruits native to California, Oregon and Mexico."
+    ],
+    "caution": "eat",
+    "tip": "Look for small white flowers in dense terminal corymbs, and red berries developing in December.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for small white flowers in dense terminal corymbs, and red berries developing in December.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for small white flowers in dense terminal corymbs, and red berries developing in December.",
+       "tip": "Look for small white flowers in dense terminal corymbs, and red berries developing in December.",
+       "unsupported": [],
+       "ms": 2267
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 120154,
+     "count": 12,
+     "group": "fungus",
+     "common": "Western Hardwood Sulphur Shelf",
+     "scientific": "Laetiporus gilbertsonii",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Laetiporus_gilbertsonii"
+    },
+    "sentences": [
+     "The yellow to orangish cap is 20–30 centimetres wide, becoming lobed and zonate with age.",
+     "The spore print is white."
+    ],
+    "caution": null,
+    "tip": "Look for a yellow-orangish cap, becoming lobed and zonate with age, and a white spore print.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a yellow-orangish cap, becoming lobed and zonate with age, and a white spore print.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a yellow-orangish cap, becoming lobed and zonate with age, and a white spore print.",
+       "tip": "Look for a yellow-orangish cap, becoming lobed and zonate with age, and a white spore print.",
+       "unsupported": [],
+       "ms": 2155
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 67560,
+     "count": 6,
+     "group": "insect",
+     "common": "California Sister",
+     "scientific": "Adelpha californica",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Adelpha_californica"
+    },
+    "sentences": [
+     "The upper surfaces of the wings of A. californica are a dark brown to black.",
+     "It has two large orange patches near the tip of the forewings and wide postdiscal creamy-white bands on both wings.",
+     "The ventral surfaces of the wings are generally similar but with blue bands along the edges of both wings, as well as blue and orange patterns on the corners near the body.",
+     "The upper surfaces of their wings are dark brown to black with wide cream white bands dissecting both wings and two orange patches near the tips of the forewings."
+    ],
+    "caution": null,
+    "tip": "Look for dark brown to black wing surfaces, and observe orange patches near the tips of the forewings.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for dark brown to black wing surfaces, and observe orange patches near the tips of the forewings.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for dark brown to black wing surfaces, and observe orange patches near the tips of the forewings.",
+       "tip": "Look for dark brown to black wing surfaces, and observe orange patches near the tips of the forewings.",
+       "unsupported": [],
+       "ms": 2317
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "prospect": {
+  "where": {
+   "key": "prospect",
+   "unit": "F",
+   "label": "Prospect Park, Brooklyn, NY, US",
+   "lat": 40.66,
+   "lng": -73.97,
+   "radiusKm": 1
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 1,
+  "pool": 198,
+  "weather": {
+   "unit": "F",
+   "high": 64,
+   "low": 59,
+   "rain": 13,
+   "sunrise": "07:02",
+   "sunset": "18:21"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 1289388,
+     "count": 99,
+     "group": "bird",
+     "common": "Ruby-crowned Kinglet",
+     "scientific": "Corthylio calendula",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ruby-crowned_kinglet"
+    },
+    "sentences": [
+     "The kinglet has a relatively plain face and head, although the male has a scarlet-red crown patch, which is usually concealed by the surrounding feathers.",
+     "The crown patch is rarely orange, yellow, or not present.",
+     "However, both of the vireos are larger, have stouter bills and legs, and lack the kinglet's black bar on the wings.",
+     "Other vocalizations of the ruby-crowned kinglet include alarm calls, simple contact calls, and begging calls produced by chicks.",
+     "The bird has olive-green plumage with two white wing bars and a white eye-ring.",
+     "Males have a red crown patch, which is often concealed."
+    ],
+    "caution": null,
+    "tip": "Look for a scarlet-red crown patch, concealed by feathers.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a scarlet-red crown patch, concealed by feathers.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a scarlet-red crown patch, concealed by feathers.",
+       "tip": "Look for a scarlet-red crown patch, concealed by feathers.",
+       "unsupported": [],
+       "ms": 2199
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 145245,
+     "count": 81,
+     "group": "bird",
+     "common": "Yellow-rumped Warbler",
+     "scientific": "Setophaga coronata",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Yellow-rumped_warbler"
+    },
+    "sentences": [
+     "Within the myrtle warbler group, adult males during the breeding season have gray backs with dark streaks, while females have brown backs; male and female myrtle warblers can also be distinguished by their different cheek colors, with the former's being black and the latter having brown or gray cheeks.",
+     "Yet the color of the coronata and auduboni groups' throat patches differs and distinguishes them, as the Audubon's warbler sports a yellow throat patch while the myrtle warbler has a white throat and eye stripe, and a contrasting black cheek patch."
+    ],
+    "caution": null,
+    "tip": "Look for gray backs and dark streaks in adult males, while females have brown backs and black cheeks.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for gray backs and dark streaks in adult males, while females have brown backs and black cheeks.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for gray backs and dark streaks in adult males, while females have brown backs and black cheeks.",
+       "tip": "Look for gray backs and dark streaks in adult males, while females have brown backs and black cheeks.",
+       "unsupported": [],
+       "ms": 2301
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 13858,
+     "count": 74,
+     "group": "bird",
+     "common": "House Sparrow",
+     "scientific": "Passer domesticus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/House_sparrow"
+    },
+    "sentences": [
+     "The male has a dark grey crown from the top of its bill to its back, and chestnut brown flanking its crown on the sides of its head.",
+     "It has black around its bill, on its throat, and on the spaces between its bill and eyes (lores).",
+     "It has a small white stripe between the lores and crown and small white spots immediately behind the eyes (postoculars), with black patches below and above them.",
+     "Wear and preening expose many of the bright brown and black markings, including most of the black throat and chest patch, called the \"bib\" or \"badge\".",
+     "Its upperparts and head are brown with darker streaks around the mantle and a distinct pale supercilium.",
+     "Its underparts are pale grey-brown.",
+     "Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings."
+    ],
+    "caution": null,
+    "tip": "Look for a dark grey crown, chestnut brown flanking the head, and bright brown and black markings.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a dark grey crown, chestnut brown flanking the head, and bright brown and black markings.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a dark grey crown, chestnut brown flanking the head, and bright brown and black markings.",
+       "tip": "Look for a dark grey crown, chestnut brown flanking the head, and bright brown and black markings.",
+       "unsupported": [],
+       "ms": 2575
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 7107,
+     "count": 73,
+     "group": "bird",
+     "common": "Wood Duck",
+     "scientific": "Aix sponsa",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Wood_duck"
+    },
+    "sentences": [
+     "The adult male has stunning multicolored iridescent plumage and red eyes, with a distinctive white flare down the neck.",
+     "The female, less colorful, has a white eye-ring and a whitish throat.",
+     "The speculum is iridescent blue-green with a white border on the trailing edge.",
+     "The male's call is a rising whistle, jeeeeee; the females utter a drawn-out, rising squeal, do weep do weep, when flushed, and a sharp cr-r-ek, cr-e-ek for an alarm call."
+    ],
+    "caution": null,
+    "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+       "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+       "unsupported": [],
+       "ms": 2173
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 4956,
+     "count": 71,
+     "group": "bird",
+     "common": "Great Blue Heron",
+     "scientific": "Ardea herodias",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Great_blue_heron"
+    },
+    "sentences": [
+     "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs, and a paired red-brown and black stripe up the flanks; the neck is rusty gray, with black-and-white streaking down the front; the head is paler, with a nearly white face, and a pair of black or slate plumes runs from just above the eye to the back of the head.",
+     "Immature birds are duller in color, with a dull blackish-gray crown, and the flank pattern is only weakly defined; they have no plumes, and the bill is dull gray-yellow."
+    ],
+    "caution": null,
+    "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+    "by": "wikipedia",
+    "result": {
+     "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "tip": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "unsupported": [
+        "rusty head",
+        "gray head"
+       ],
+       "ms": 2388
+      },
+      {
+       "raw": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "tip": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "unsupported": [
+        "pale"
+       ],
+       "ms": 2647
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 12890,
+     "count": 71,
+     "group": "bird",
+     "common": "Hermit Thrush",
+     "scientific": "Catharus guttatus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Hermit_thrush"
+    },
+    "sentences": [
+     "The hermit thrush has the white-dark-white underwing pattern characteristic of Catharus thrushes.",
+     "Adults are mainly brown on the upperparts, with reddish tails.",
+     "The underparts are white with dark spots on the breast and grey or brownish flanks.",
+     "They have pink legs and a white eye ring.",
+     "Birds in the east are more olive-brown on the upperparts; western birds are more grey-brown."
+    ],
+    "caution": null,
+    "tip": "Look for a white-dark-white underwing pattern, and observe reddish tails.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a white-dark-white underwing pattern, and observe reddish tails.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a white-dark-white underwing pattern, and observe reddish tails.",
+       "tip": "Look for a white-dark-white underwing pattern, and observe reddish tails.",
+       "unsupported": [],
+       "ms": 2116
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 119048,
+     "count": 284,
+     "group": "plant",
+     "common": "White Snakeroot",
+     "scientific": "Ageratina altissima",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Ageratina_altissima"
+    },
+    "sentences": [
+     "Stems are smooth with opposite leaves spaced well apart, with each pair of leaves positioned at a 90-degree angle from the pair above and below (decussate).",
+     "The flowers are a clean white color and after blooming, small seeds with fluffy white tails are released to blow in the wind.",
+     "The plant can spread either by the wind dispersal of its seeds or by rhizomes.",
+     "There are two different varieties: Ageratina altissima var. altissima  and Ageratina altissima var. roanensis (Appalachian white snakeroot); they differ in the length of the flower phyllaries and shape of the apices."
+    ],
+    "caution": "eat",
+    "tip": "Look for smooth, spaced leaves and fluffy white seeds released by the plant.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for smooth, spaced leaves and fluffy white seeds released by the plant.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for smooth, spaced leaves and fluffy white seeds released by the plant.",
+       "tip": "Look for smooth, spaced leaves and fluffy white seeds released by the plant.",
+       "unsupported": [],
+       "ms": 2233
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 52856,
+     "count": 166,
+     "group": "plant",
+     "common": "Common Mugwort",
+     "scientific": "Artemisia vulgaris",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Artemisia_vulgaris"
+    },
+    "sentences": [
+     "Artemisia vulgaris is an aromatic, herbaceous, perennial plant that grows to 1.5 m in height.",
+     "It spreads through vegetative expansion and the anthropogenic dispersal of root rhizome fragments—the plant rarely reproduces from seeds in temperate regions, as few seeds capable of germinating are produced by plants.",
+     "The stems are purple-looking and angular.",
+     "The pinnate leaves are smooth and of a dark green tint on the upper surface.",
+     "The yellow or reddish-looking flower heads, which appear from July to September, are arranged paniculate branching structure.",
+     "The brown rectangular-shaped fruit has one seed, and has ridges, a narrow base, and tiny bristles on the end."
+    ],
+    "caution": "touch",
+    "tip": "Look for purple stems and angular leaves, and observe the yellow flower heads.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for purple stems and angular leaves, and observe the yellow flower heads.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for purple stems and angular leaves, and observe the yellow flower heads.",
+       "tip": "Look for purple stems and angular leaves, and observe the yellow flower heads.",
+       "unsupported": [],
+       "ms": 2282
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48599,
+     "count": 50,
+     "group": "plant",
+     "common": "American Pokeweed",
+     "scientific": "Phytolacca americana",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Phytolacca_americana"
+    },
+    "sentences": [
+     "A shiny, dark purple berry is held in racemose clusters on pink pedicels with a pink peduncle.",
+     "Immature berries are green, turning white and then blackish purple.",
+     "This pokeweed grows 1 to 3 metres.",
+     "It has simple leaves on green to red or purplish stems and a large, white taproot.",
+     "The flowers are green to white, followed by berries, which ripen through red to purple to almost black and are a food source for songbirds such as gray catbird, northern mockingbird, northern cardinal, and brown thrasher, as well as other birds and some small nonavian animals (i.e., for species that are unaffected by its mammalian toxins)."
+    ],
+    "caution": "touch-eat",
+    "tip": "Look for shiny purple berries on pink pedicels, and observe green to red/purple berries.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for shiny purple berries on pink pedicels, and observe green to red/purple berries.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for shiny purple berries on pink pedicels, and observe green to red/purple berries.",
+       "tip": "Look for shiny purple berries on pink pedicels, and observe green to red/purple berries.",
+       "unsupported": [],
+       "ms": 2444
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 143803,
+     "count": 34,
+     "group": "plant",
+     "common": "Low Smartweed",
+     "scientific": "Persicaria longiseta",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Persicaria_longiseta"
+    },
+    "sentences": [
+     "The hairless, branching stems may root at lower nodes that come in contact with the substrate.",
+     "The inflorescence is an elongate cluster up to 8 centimeters long and contains many pink flowers.",
+     "The fruit is a small, smooth achene."
+    ],
+    "caution": null,
+    "tip": "The hairless, branching stems may root at lower nodes that come in contact with the substrate.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The hairless, branching stems may root at lower nodes that come in contact with the substrate.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for hairy stems that root at lower nodes, and listen for numerous pink flowers.",
+       "tip": "Look for hairy stems that root at lower nodes, and listen for numerous pink flowers.",
+       "unsupported": [
+        "hairy",
+        "numerous",
+        "listen for (nothing to hear)"
+       ],
+       "ms": 1978
+      },
+      {
+       "raw": "Branching stems root at lower nodes, and pink flowers cluster up to 8 cm.",
+       "tip": "Branching stems root at lower nodes, and pink flowers cluster up to 8 cm.",
+       "unsupported": [
+        "8"
+       ],
+       "ms": 2238
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 128032,
+     "count": 29,
+     "group": "plant",
+     "common": "Paper Mulberry",
+     "scientific": "Broussonetia papyrifera",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Paper_mulberry"
+    },
+    "sentences": [
+     "The leaves are variable in shape, even on one individual.",
+     "The blades may be lobed or unlobed, but they usually have toothed edges, lightly hairy, pale undersides, and a rough texture.",
+     "The species has male and female flowers on separate plants.",
+     "The pistillate inflorescence is a spherical head up to about 2 cm wide with greenish female flowers trailing long styles.",
+     "The infructescence is a spherical cluster 2–3 cm wide containing many red or orange fruits.",
+     "The tree is valued for its versatile uses.",
+     "Its inner bark is traditionally processed into barkcloth and is also an important raw material in papermaking."
+    ],
+    "caution": null,
+    "tip": "Look for variable leaf shapes, lobed or unlobed, and pale undersides.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for variable leaf shapes, lobed or unlobed, and pale undersides.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for variable leaf shapes, lobed or unlobed, and pale undersides.",
+       "tip": "Look for variable leaf shapes, lobed or unlobed, and pale undersides.",
+       "unsupported": [],
+       "ms": 2351
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 57692,
+     "count": 23,
+     "group": "fungus",
+     "common": "Giant Puffball",
+     "scientific": "Calvatia gigantea",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Calvatia_gigantea"
+    },
+    "sentences": [
+     "The interior of an immature puffball is white, while that of a mature specimen is greenish brown.",
+     "The spores are yellowish, smooth, and 3–6 μm in size.",
+     "They produce a white spore print when young, while it is olive with an unpleasant smell in age.",
+     "John Lindley has calculated that C. gigantea grows at a rate of sixty million new cells per minute on its way to making seven quintillion spores."
+    ],
+    "caution": null,
+    "tip": "Look for a white interior, greenish-brown mature specimens, and yellowish spores.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a white interior, greenish-brown mature specimens, and yellowish spores.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a white interior, greenish-brown mature specimens, and yellowish spores.",
+       "tip": "Look for a white interior, greenish-brown mature specimens, and yellowish spores.",
+       "unsupported": [],
+       "ms": 2094
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "hampstead": {
+  "where": {
+   "key": "hampstead",
+   "unit": "C",
+   "label": "Hampstead Heath, London, UK",
+   "lat": 51.56,
+   "lng": -0.16,
+   "radiusKm": 2
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 2,
+  "pool": 196,
+  "weather": {
+   "unit": "C",
+   "high": 17,
+   "low": 11,
+   "rain": 29,
+   "sunrise": "07:17",
+   "sunset": "18:16"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 204496,
+     "count": 11,
+     "group": "bird",
+     "common": "Carrion Crow",
+     "scientific": "Corvus corone",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Carrion_crow"
+    },
+    "sentences": [
+     "The bill, legs, and feet are also black.",
+     "Juvenile carrion crows can be identified by their brownish plumage and blue eyes, both of which darken to black and brown as the crow grows older."
+    ],
+    "caution": null,
+    "tip": "The bill, legs, and feet are also black.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The bill, legs, and feet are also black.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a black bill and dark eyes in juveniles.",
+       "tip": "Look for a black bill and dark eyes in juveniles.",
+       "unsupported": [
+        "dark"
+       ],
+       "ms": 1766
+      },
+      {
+       "raw": "Look for black bill and dark eyes in juvenile crows.",
+       "tip": "Look for black bill and dark eyes in juvenile crows.",
+       "unsupported": [
+        "dark"
+       ],
+       "ms": 1930
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 7046,
+     "count": 10,
+     "group": "bird",
+     "common": "Tufted Duck",
+     "scientific": "Aythya fuligula",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Tufted_duck"
+    },
+    "sentences": [
+     "The adult male is all black except for white flanks and a blue-grey bill with golden yellow eyes, along with a thin crest on the back of the head.",
+     "It has a prominent tuft on its head, which gives the species its name.",
+     "The female's call is a harsh, growling \"karr\", usually given in flight.",
+     "The only ducks that are similar are the greater scaup and lesser scaup, but these species lack the tuft and emit a different call.",
+     "The scientific name is derived from Ancient Greek aithuia, an unidentified seabird mentioned by authors such as Hesychius and Aristotle, and Latin fuligo 'soot' and gula 'throat'."
+    ],
+    "caution": null,
+    "tip": "It has a prominent tuft on its head, which gives the species its name.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "It has a prominent tuft on its head, which gives the species its name.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a black-skinned male with a blue-grey bill and a tuft on its head.",
+       "tip": "Look for a black-skinned male with a blue-grey bill and a tuft on its head.",
+       "unsupported": [
+        "skinned"
+       ],
+       "ms": 2461
+      },
+      {
+       "raw": "Look for a black-skinned male with a blue-grey bill and a thin crest.",
+       "tip": "Look for a black-skinned male with a blue-grey bill and a thin crest.",
+       "unsupported": [
+        "skinned"
+       ],
+       "ms": 2595
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 8088,
+     "count": 10,
+     "group": "bird",
+     "common": "Eurasian Jay",
+     "scientific": "Garrulus glandarius",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Eurasian_jay"
+    },
+    "sentences": [
+     "The nominate race has light rufous brown to a pinkish brown body plumage.",
+     "The whitish throat is bordered on each side by a prominent black moustache stripe.",
+     "The forehead and crown are whitish with black stripes.",
+     "The rump is white.",
+     "The complex colouring on the upper surface of the wing includes black and white bars and a prominent bright blue patch with fine black bars.",
+     "The tail is mainly black.",
+     "The Eurasian jay (Garrulus glandarius) is a species of passerine bird in the family Corvidae.",
+     "It has pinkish brown plumage with a black stripe on each side of a whitish throat, a bright blue panel on the upper wing and a black tail."
+    ],
+    "caution": null,
+    "tip": "Look for a rufous-brown body, a prominent black moustache stripe, and a bright blue wing patch.",
+    "by": "gemma-retry",
+    "result": {
+     "tip": "Look for a rufous-brown body, a prominent black moustache stripe, and a bright blue wing patch.",
+     "by": "gemma-retry",
+     "attempts": [
+      {
+       "raw": "Look for a rufous-brown body, a prominent black moustache stripe, and a bright blue patch on the wing.",
+       "tip": "",
+       "unsupported": [],
+       "ms": 2516
+      },
+      {
+       "raw": "Look for a rufous-brown body, a prominent black moustache stripe, and a bright blue wing patch.",
+       "tip": "Look for a rufous-brown body, a prominent black moustache stripe, and a bright blue wing patch.",
+       "unsupported": [],
+       "ms": 2705
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 4954,
+     "count": 9,
+     "group": "bird",
+     "common": "Grey Heron",
+     "scientific": "Ardea cinerea",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Grey_heron"
+    },
+    "sentences": [
+     "Adults have a white head and neck with a broad black supercilium that terminates in the slender, dangling crest, and bluish-black streaks on the front of the neck.",
+     "In immature birds the adult's black stripe on the head is grey, and the white face paler grey; they are generally duller in appearance than adults, with only a small, dark grey crest.",
+     "Standing up to 1 metre tall, adults weigh from 1 to 2 kg.",
+     "They have a white head and neck with a broad black stripe that extends from the eye to the black crest.",
+     "The body and wings are grey above and the underparts are greyish-white, with some black on the flanks."
+    ],
+    "caution": null,
+    "tip": "Look for a white head and a black stripe extending from the eye to the crest.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a white head and a black stripe extending from the eye to the crest.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a white head and a black stripe extending from the eye to the crest.",
+       "tip": "Look for a white head and a black stripe extending from the eye to the crest.",
+       "unsupported": [],
+       "ms": 2305
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 18911,
+     "count": 7,
+     "group": "bird",
+     "common": "Rose-ringed Parakeet",
+     "scientific": "Psittacula krameri",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Rose-ringed_parakeet"
+    },
+    "sentences": [
+     "Rose-ringed parakeets are 37–43 cm in length, including the tail feathers, a large portion of their total length.",
+     "The rose-ringed parakeet is sexually dimorphic; adult males have a pink and black neck ring, and the female, and immature birds of both sexes, either show no neck rings, or display shadow-like pale to dark grey neck rings.",
+     "Both sexes have a distinctive green colour in the wild with a red beak and blue tail.",
+     "It is a noisy species with an unmistakable squawking call."
+    ],
+    "caution": null,
+    "tip": "Look for a pink and black neck ring in adult males, and pale grey rings in females.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a pink and black neck ring in adult males, and pale grey rings in females.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a pink and black neck ring in adult males, and pale grey rings in females.",
+       "tip": "Look for a pink and black neck ring in adult males, and pale grey rings in females.",
+       "unsupported": [],
+       "ms": 2362
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 55969,
+     "count": 9,
+     "group": "plant",
+     "common": "Guelder-rose",
+     "scientific": "Viburnum opulus",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Viburnum_opulus"
+    },
+    "sentences": [
+     "The leaf buds are green, with valvate bud scales.",
+     "The hermaphrodite flowers are white, produced in corymbs 4–11 cm in diameter at the top of the stems.",
+     "Each corymb comprises a ring of outer sterile flowers 1.5–2 cm in diameter with conspicuous petals, surrounding a center of small fertile flowers.",
+     "The flowers are produced in early summer and are pollinated by insects.",
+     "The fruit is a globose bright red drupe 7–10 mm in diameter, containing a single seed.",
+     "The seeds are dispersed by birds.",
+     "Its fruit persists for an average of 200 days, and always bears 1 seed per fruit."
+    ],
+    "caution": "eat",
+    "tip": "Look for green leaf buds, white hermaphrodite flowers, and red drupes.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for green leaf buds, white hermaphrodite flowers, and red drupes.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for green leaf buds, white hermaphrodite flowers, and red drupes.",
+       "tip": "Look for green leaf buds, white hermaphrodite flowers, and red drupes.",
+       "unsupported": [],
+       "ms": 2411
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 127355,
+     "count": 9,
+     "group": "plant",
+     "common": "Ivy-leaved Cyclamen",
+     "scientific": "Cyclamen hederifolium",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyclamen_hederifolium"
+    },
+    "sentences": [
+     "The leaves are 2.5–8 cm long, variable in shape; depending on the specimen, the leaf shape varies from heart-shaped to long and arrow-shaped, usually with 2–3 angled lobes on each side, resembling the juvenile leaves of ivy (Hedera).",
+     "They are naturally variegated, most commonly with a hastate pattern in silver to grey-green and various shades of green.",
+     "The flowers are produced from late summer to autumn before the leaves; they have five petals 1.2–2.5 cm long; usually pink, purple, or white with a streaky magenta V-shaped marking on the throat, but sometimes pure white with no markings.",
+     "The edges of the petals near the tip of the flower are curved outwards into strong auricles.",
+     "The flowers are occasionally fragrant.",
+     "The seeds are yellow-brown, held in a round pod, which opens by 5–10 flaps at maturity."
+    ],
+    "caution": null,
+    "tip": "The edges of the petals near the tip of the flower are curved outwards into strong auricles.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The edges of the petals near the tip of the flower are curved outwards into strong auricles.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for 2.5–8 cm long, variable leaf shapes resembling ivy, and pink/purple flowers.",
+       "tip": "Look for 2.5–8 cm long, variable leaf shapes resembling ivy, and pink/purple flowers.",
+       "unsupported": [
+        "2.5",
+        "8"
+       ],
+       "ms": 2668
+      },
+      {
+       "raw": "Look for leaves with variable shapes, silver-grey-green, and a subtle magenta marking, and observe the five-petaled flowers.",
+       "tip": "",
+       "unsupported": [],
+       "ms": 3054
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 51147,
+     "count": 5,
+     "group": "plant",
+     "common": "Common Hawthorn",
+     "scientific": "Crataegus monogyna",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Crataegus_monogyna"
+    },
+    "sentences": [
+     "The common hawthorn is a shrub or small tree up to about 10 metres tall, with a dense crown.",
+     "The bark is dull brown with vertical orange cracks.",
+     "The younger stems bear sharp thorns, about 12.5 millimetres long.",
+     "The upper surface is dark green above and paler underneath.",
+     "The flowers are white, frequently pink.",
+     "The haw is a small, oval, dark red fruit about 10 mm long, berry-like, but structurally a pome containing a single seed within a stone, the pyrene.",
+     "They are pulpy and delicate in taste.",
+     "Its fruit persists for an average of 107.3 days, and bears an average of 2.8 seeds per fruit."
+    ],
+    "caution": null,
+    "tip": "Look for a dull brown bark with orange cracks, and observe the dark red fruit.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a dull brown bark with orange cracks, and observe the dark red fruit.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a dull brown bark with orange cracks, and observe the dark red fruit.",
+       "tip": "Look for a dull brown bark with orange cracks, and observe the dark red fruit.",
+       "unsupported": [],
+       "ms": 2398
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 55801,
+     "count": 4,
+     "group": "plant",
+     "common": "European Hornbeam",
+     "scientific": "Carpinus betulus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Carpinus_betulus"
+    },
+    "sentences": [
+     "The bark is smooth and greenish-grey, even in old trees.",
+     "The leaves are alternate, 4–9 cm long, with prominent veins giving a distinctive corrugated texture, and a serrated margin.",
+     "It is monoecious, and the wind-pollinated male and female catkins appear in early summer after the leaves."
+    ],
+    "caution": null,
+    "tip": "Look for smooth, greenish-grey bark, and prominent, corrugated leaves.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for smooth, greenish-grey bark, and prominent, corrugated leaves.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for smooth, greenish-grey bark, and prominent, corrugated leaves.",
+       "tip": "Look for smooth, greenish-grey bark, and prominent, corrugated leaves.",
+       "unsupported": [],
+       "ms": 1966
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 56002,
+     "count": 4,
+     "group": "plant",
+     "common": "Wild Teasel",
+     "scientific": "Dipsacus fullonum",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Dipsacus_fullonum"
+    },
+    "sentences": [
+     "Teasels are easily identified with their prickly stem and leaves, and the inflorescence of purple, dark pink or lavender flowers that form a head on the end of the stem(s).",
+     "The first flowers begin opening in a belt around the middle of the spherical or oval flowerhead, and then open sequentially toward the top and bottom, forming two narrow belts as the flowering progresses.",
+     "The dried head persists afterwards, with the small seeds maturing in mid-autumn.",
+     "Sessile leaves merge at the stem, creating a cup-like receptacle where rain water may collect."
+    ],
+    "caution": null,
+    "tip": "Look for prickly stems and purple/dark pink flowers forming a belt around the head.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for prickly stems and purple/dark pink flowers forming a belt around the head.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for prickly stems and purple/dark pink flowers forming a belt around the head.",
+       "tip": "Look for prickly stems and purple/dark pink flowers forming a belt around the head.",
+       "unsupported": [],
+       "ms": 2209
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48767,
+     "count": 19,
+     "group": "fungus",
+     "common": "Sulphur Tuft",
+     "scientific": "Hypholoma fasciculare",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Hypholoma_fasciculare"
+    },
+    "sentences": [
+     "The hemispherical cap ranges from 2–8 cm in diameter.",
+     "It is smooth and sulphur yellow with an orange-brown centre and whitish margin.",
+     "The crowded gills are initially yellow but darken to a distinctive green colour as the blackish spores develop on the yellow flesh.",
+     "It has a purple-brown spore print.",
+     "The stipe is 3–12 cm tall and 3–10 mm wide, light yellow, orange-brown below, often with an indistinct ring zone coloured dark by the spores.",
+     "The spores are purple-black in colour."
+    ],
+    "caution": "eat",
+    "tip": "Look for a smooth, sulphur yellow cap with orange-brown centres and green spores.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a smooth, sulphur yellow cap with orange-brown centres and green spores.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a smooth, sulphur yellow cap with orange-brown centres and green spores.",
+       "tip": "Look for a smooth, sulphur yellow cap with orange-brown centres and green spores.",
+       "unsupported": [],
+       "ms": 2210
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48484,
+     "count": 12,
+     "group": "insect",
+     "common": "Asian Lady Beetle",
+     "scientific": "Harmonia axyridis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Harmonia_axyridis"
+    },
+    "sentences": [
+     "The common color form, f. succinea, is orange or red in colouration with 0–22 black spots of variable size.",
+     "The pronotum is white with variable black patterning, ranging from a few black spots in an M formation to almost entirely black.",
+     "The underside is dark with a wide reddish-brown border.",
+     "Extreme forms may be entirely black, or feature complex patterns of black, orange and red.",
+     "Identification is most simple for the common forms, while less common varieties may take longer to identify.",
+     "They always have reddish-brown legs and are obviously brown on the underside of the abdomen, even in the melanic colour forms."
+    ],
+    "caution": null,
+    "tip": "The underside is dark with a wide reddish-brown border.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The underside is dark with a wide reddish-brown border.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for orange or red coloration, white pronotum, and dark, reddish-brown legs.",
+       "tip": "Look for orange or red coloration, white pronotum, and dark, reddish-brown legs.",
+       "unsupported": [
+        "coloration"
+       ],
+       "ms": 2328
+      },
+      {
+       "raw": "Look for white pronotum, variable black patterning on the underside, and dark, reddish-brown legs.",
+       "tip": "Look for white pronotum, variable black patterning on the underside, and dark, reddish-brown legs.",
+       "unsupported": [
+        "dark legs"
+       ],
+       "ms": 2678
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "stanley": {
+  "where": {
+   "key": "stanley",
+   "unit": "C",
+   "label": "Stanley Park, Vancouver, BC, CA",
+   "lat": 49.3,
+   "lng": -123.14,
+   "radiusKm": 2
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 2,
+  "pool": 193,
+  "weather": {
+   "unit": "C",
+   "high": 13,
+   "low": 7,
+   "rain": 2,
+   "sunrise": "07:27",
+   "sunset": "18:29"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 7107,
+     "count": 89,
+     "group": "bird",
+     "common": "Wood Duck",
+     "scientific": "Aix sponsa",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Wood_duck"
+    },
+    "sentences": [
+     "The adult male has stunning multicolored iridescent plumage and red eyes, with a distinctive white flare down the neck.",
+     "The female, less colorful, has a white eye-ring and a whitish throat.",
+     "The speculum is iridescent blue-green with a white border on the trailing edge.",
+     "The male's call is a rising whistle, jeeeeee; the females utter a drawn-out, rising squeal, do weep do weep, when flushed, and a sharp cr-r-ek, cr-e-ek for an alarm call."
+    ],
+    "caution": null,
+    "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+       "tip": "Look for iridescent plumage on the male, and listen for a rising whistle.",
+       "unsupported": [],
+       "ms": 2120
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 4956,
+     "count": 77,
+     "group": "bird",
+     "common": "Great Blue Heron",
+     "scientific": "Ardea herodias",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Great_blue_heron"
+    },
+    "sentences": [
+     "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs, and a paired red-brown and black stripe up the flanks; the neck is rusty gray, with black-and-white streaking down the front; the head is paler, with a nearly white face, and a pair of black or slate plumes runs from just above the eye to the back of the head.",
+     "Immature birds are duller in color, with a dull blackish-gray crown, and the flank pattern is only weakly defined; they have no plumes, and the bill is dull gray-yellow."
+    ],
+    "caution": null,
+    "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+    "by": "wikipedia",
+    "result": {
+     "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "tip": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "unsupported": [
+        "rusty head",
+        "gray head"
+       ],
+       "ms": 2264
+      },
+      {
+       "raw": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "tip": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "unsupported": [
+        "pale"
+       ],
+       "ms": 2592
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 485176,
+     "count": 75,
+     "group": "bird",
+     "common": "American Wigeon",
+     "scientific": "Mareca americana",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/American_wigeon"
+    },
+    "sentences": [
+     "In silhouette, the wigeon can be distinguished from other dabblers by its round head, short neck, and small bill.",
+     "The breeding male (drake) is a striking bird with a mask of green feathers around its eyes and a cream-colored cap running from the crown of his head to his bill.",
+     "This white patch gives the wigeon its other common name, baldpate (pate is another word for head).",
+     "In flight, drakes can be identified by the large white shoulder patch on each wing.",
+     "Both sexes have a pale blue bill with a black tip, a white belly, and gray legs and feet.",
+     "The wing patch behind the speculum is gray."
+    ],
+    "caution": null,
+    "tip": "Look for a round head and a mask of green around the eyes in flight.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a round head and a mask of green around the eyes in flight.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a round head and a mask of green around the eyes in flight.",
+       "tip": "Look for a round head and a mask of green around the eyes in flight.",
+       "unsupported": [],
+       "ms": 2265
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 7089,
+     "count": 67,
+     "group": "bird",
+     "common": "Canada Goose",
+     "scientific": "Branta canadensis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Canada_goose"
+    },
+    "sentences": [
+     "The black head and neck with a white \"chinstrap\" distinguish the Canada goose from all other goose species except the cackling goose and barnacle goose. (The latter, however, has a black breast and gray rather than brownish body plumage.) Some Canada geese come with a pepper-spotted or brown neck with brown plumage, and these are assumed to be a leucistic variety.",
+     "The Canada goose (Branta canadensis) is a large species of goose with a black head and neck, white cheeks, white under its chin, and a brown body."
+    ],
+    "caution": null,
+    "tip": "Look for a black head and neck, white cheeks, and a brown body.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a black head and neck, white cheeks, and a brown body.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a black head and neck, white cheeks, and a brown body.",
+       "tip": "Look for a black head and neck, white cheeks, and a brown body.",
+       "unsupported": [],
+       "ms": 2132
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 6930,
+     "count": 48,
+     "group": "bird",
+     "common": "Mallard",
+     "scientific": "Anas platyrhynchos",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Mallard"
+    },
+    "sentences": [
+     "The breeding male mallard is unmistakable, with a glossy bottle-green head and a white collar that demarcates the head and neck from the purple-tinged brown breast, grey-brown wings, and a pale grey belly.",
+     "The duckling is able to fly 50–60 days after hatching.",
+     "Its bill soon loses its dark grey colouring, and its sex can finally be distinguished visually by three factors: 1) the bill is yellow in males, but black and orange in females; 2) the breast feathers are reddish-brown in males, but brown in females; and 3) in males, the centre tail feather (drake feather) is curled, but in females, the centre tail feather is straight."
+    ],
+    "caution": null,
+    "tip": "The duckling is able to fly 50–60 days after hatching.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The duckling is able to fly 50–60 days after hatching.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a glossy green head and a pale grey belly in the male, and a yellow bill and brown breast in the female.",
+       "tip": "",
+       "unsupported": [],
+       "ms": 2584
+      },
+      {
+       "raw": "Look for a glossy green head and a pale grey belly in the male, and a yellow bill and brown breast in the female.",
+       "tip": "",
+       "unsupported": [],
+       "ms": 2831
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48252,
+     "count": 47,
+     "group": "plant",
+     "common": "Western Redcedar",
+     "scientific": "Thuja plicata",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Thuja_plicata"
+    },
+    "sentences": [
+     "The bark is thin, gray-brown, and fissured into vertical bands.",
+     "Trees growing in the open may have a crown that reaches the ground, whereas trees densely spaced together will exhibit a crown only at the top, where light can reach the leaves.",
+     "The foliage of individual branchlets turns orange-brown before falling off in autumn.",
+     "The cones are slender, 10 to 18 mm long, and 4 to 5 mm broad, with 8 to 12 thin, overlapping scales.",
+     "They are green to yellow-green, ripening brown in fall about six months after pollination, and open at maturity to shed the seeds.",
+     "The pollen cones are 3 to 4 mm long, red or purple initially, and shed yellow pollen in spring."
+    ],
+    "caution": null,
+    "tip": "The bark is thin, gray-brown, and fissured into vertical bands.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The bark is thin, gray-brown, and fissured into vertical bands.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for thin, gray-brown bark with vertical bands, and branches reaching the ground.",
+       "tip": "Look for thin, gray-brown bark with vertical bands, and branches reaching the ground.",
+       "unsupported": [
+        "branches"
+       ],
+       "ms": 2410
+      },
+      {
+       "raw": "Look for thin, gray-brown bark with vertical bands, and branches reaching the ground.",
+       "tip": "Look for thin, gray-brown bark with vertical bands, and branches reaching the ground.",
+       "unsupported": [
+        "branches"
+       ],
+       "ms": 2574
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 47751,
+     "count": 39,
+     "group": "plant",
+     "common": "Western Sword Fern",
+     "scientific": "Polystichum munitum",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Polystichum_munitum"
+    },
+    "sentences": [
+     "The dark green fronds of this fern grow 50 to 180 centimetres tall, in a tight clump spreading out radially from a round base.",
+     "The round sori occupy two rows on either side of the midrib of each pinna and are covered by a centrally-attached, umbrella-like indusium with fringed edges.",
+     "They produce light yellow spores.",
+     "In young plants, the leaves are often paler green and have shorter pinnae."
+    ],
+    "caution": null,
+    "tip": "They produce light yellow spores.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "They produce light yellow spores.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for dark green fronds, growing 50-180cm tall, in a tight clump.",
+       "tip": "Look for dark green fronds, growing 50-180cm tall, in a tight clump.",
+       "unsupported": [
+        "50",
+        "180"
+       ],
+       "ms": 2281
+      },
+      {
+       "raw": "Look for dark green fronds, growing 50-180cm tall, in a tight clump.",
+       "tip": "Look for dark green fronds, growing 50-180cm tall, in a tight clump.",
+       "unsupported": [
+        "50",
+        "180"
+       ],
+       "ms": 2543
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48441,
+     "count": 38,
+     "group": "plant",
+     "common": "Salal",
+     "scientific": "Gaultheria shallon",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Gaultheria_shallon"
+    },
+    "sentences": [
+     "Gaultheria shallon is 0.4 to 3.05 metres tall, sprawling to erect.",
+     "It is loosely to densely branched and often forms dense, nearly impenetrable thickets.",
+     "The twigs are reddish-brown, with shredding bark.",
+     "The leaves are alternate, evergreen, leathery, thick and egg shaped.",
+     "They are shiny and dark green on the upper surface, and rough and lighter green on the lower.",
+     "Each flower is composed of a deeply five-parted, glandular-haired calyx and an urn-shaped pink to white, glandular to hairy, five-lobed petals (corolla), 7 to 10 millimetres long.",
+     "The fruit is reddish to blue, rough-surfaced, covered in tiny hairs, nearly spherical and 6 to 10 mm in diameter."
+    ],
+    "caution": null,
+    "tip": "Look for reddish-brown twigs and dark green, leathery leaves.",
+    "by": "gemma-retry",
+    "result": {
+     "tip": "Look for reddish-brown twigs and dark green, leathery leaves.",
+     "by": "gemma-retry",
+     "attempts": [
+      {
+       "raw": "Look for tall, reddish-brown twigs and glossy, dark green leaves.",
+       "tip": "Look for tall, reddish-brown twigs and glossy, dark green leaves.",
+       "unsupported": [
+        "glossy"
+       ],
+       "ms": 2354
+      },
+      {
+       "raw": "Look for reddish-brown twigs and dark green, leathery leaves.",
+       "tip": "Look for reddish-brown twigs and dark green, leathery leaves.",
+       "unsupported": [],
+       "ms": 2495
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 51646,
+     "count": 32,
+     "group": "plant",
+     "common": "Thimbleberry",
+     "scientific": "Rubus parviflorus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Rubus_parviflorus"
+    },
+    "sentences": [
+     "The flowers are 2 to 6 cm in diameter, with five white petals and numerous pale yellow stamens.",
+     "Like raspberries, it is not a true berry, but instead an aggregate fruit of numerous drupelets around a central core.",
+     "The plants are similar in many respects to the eastern thimbleberry or purple-flowering raspberry, Rubus odoratus, but the flowers of the latter are purple and the distribution is easterly.",
+     "Rubus parviflorus, the fruit of which is commonly called the thimbleberry, western thimbleberry or redcap, is a species of Rubus with large hairy leaves and no thorns."
+    ],
+    "caution": null,
+    "tip": "The flowers are 2 to 6 cm in diameter, with five white petals and numerous pale yellow stamens.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The flowers are 2 to 6 cm in diameter, with five white petals and numerous pale yellow stamens.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for 2-6 cm diameter white flowers with pale yellow stamens.",
+       "tip": "Look for 2-6 cm diameter white flowers with pale yellow stamens.",
+       "unsupported": [
+        "2",
+        "6"
+       ],
+       "ms": 2210
+      },
+      {
+       "raw": "Look for 5 white petals and pale yellow stamens on the flowers.",
+       "tip": "Look for 5 white petals and pale yellow stamens on the flowers.",
+       "unsupported": [
+        "5"
+       ],
+       "ms": 2380
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 47543,
+     "count": 24,
+     "group": "plant",
+     "common": "Salmonberry",
+     "scientific": "Rubus spectabilis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Rubus_spectabilis"
+    },
+    "sentences": [
+     "The plant has golden or yellowish brown erect or arching stems (also known as \"canes\") that often form thickets, like many other brambles.",
+     "The margins of the leaflets are doubly serrate.",
+     "Studies have found that although both red and yellow-orange morphs have similar physical qualities, the red berries are more commonly consumed by birds, although this is likely not a strong enough selective pressure to determine color morph distribution alone; factors such as soil type (which affects germination), along with other unstudied factors are more likely responsible for the color polymorphism."
+    ],
+    "caution": null,
+    "tip": "Look for erect, golden-yellow stems forming thickets, and doubly serrated margins.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for erect, golden-yellow stems forming thickets, and doubly serrated margins.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for erect, golden-yellow stems forming thickets, and doubly serrated margins.",
+       "tip": "Look for erect, golden-yellow stems forming thickets, and doubly serrated margins.",
+       "unsupported": [],
+       "ms": 2186
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48715,
+     "count": 49,
+     "group": "fungus",
+     "common": "Fly Agaric",
+     "scientific": "Amanita muscaria",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Amanita_muscaria"
+    },
+    "sentences": [
+     "Fly agaric fruiting bodies emerge from the soil looking like white eggs.",
+     "After emerging from the ground, the cap has an irregular distribution of small white to yellow pyramid-shaped warts.",
+     "The bright red cap ranges from 5–30 centimetres in diameter.",
+     "The free gills are white, as is the spore print.",
+     "Between the basal universal veil remnants and gills are remnants of the partial veil (which covers the gills during development) in the form of a white ring.",
+     "Its name may come from its historical use to kill flies or from the effects it causes (a medieval belief held that flies could enter the head and cause madness).",
+     "It is a distinctive, large, white-gilled mushroom typically featuring a bright red cap covered with white warts."
+    ],
+    "caution": "eat",
+    "tip": "Look for white eggs emerging from the soil, and identify the red cap with white warts.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for white eggs emerging from the soil, and identify the red cap with white warts.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for white eggs emerging from the soil, and identify the red cap with white warts.",
+       "tip": "Look for white eggs emerging from the soil, and identify the red cap with white warts.",
+       "unsupported": [],
+       "ms": 2495
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 48484,
+     "count": 14,
+     "group": "insect",
+     "common": "Asian Lady Beetle",
+     "scientific": "Harmonia axyridis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Harmonia_axyridis"
+    },
+    "sentences": [
+     "The common color form, f. succinea, is orange or red in colouration with 0–22 black spots of variable size.",
+     "The pronotum is white with variable black patterning, ranging from a few black spots in an M formation to almost entirely black.",
+     "The underside is dark with a wide reddish-brown border.",
+     "Extreme forms may be entirely black, or feature complex patterns of black, orange and red.",
+     "Identification is most simple for the common forms, while less common varieties may take longer to identify.",
+     "They always have reddish-brown legs and are obviously brown on the underside of the abdomen, even in the melanic colour forms."
+    ],
+    "caution": null,
+    "tip": "The underside is dark with a wide reddish-brown border.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The underside is dark with a wide reddish-brown border.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for orange or red coloration, white pronotum, and dark, reddish-brown legs.",
+       "tip": "Look for orange or red coloration, white pronotum, and dark, reddish-brown legs.",
+       "unsupported": [
+        "coloration"
+       ],
+       "ms": 2318
+      },
+      {
+       "raw": "Look for white pronotum, variable black patterning on the underside, and dark, reddish-brown legs.",
+       "tip": "Look for white pronotum, variable black patterning on the underside, and dark, reddish-brown legs.",
+       "unsupported": [
+        "dark legs"
+       ],
+       "ms": 2530
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "royal": {
+  "where": {
+   "key": "royal",
+   "unit": "C",
+   "label": "Royal National Park, NSW, AU",
+   "lat": -34.11,
+   "lng": 151.03,
+   "radiusKm": 5
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 5,
+  "pool": 194,
+  "weather": {
+   "unit": "C",
+   "high": 22,
+   "low": 16,
+   "rain": 25,
+   "sunrise": "06:19",
+   "sunset": "19:05"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 116834,
+     "count": 28,
+     "group": "bird",
+     "common": "Sulphur-crested Cockatoo",
+     "scientific": "Cacatua galerita",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Sulphur-crested_cockatoo"
+    },
+    "sentences": [
+     "Sulphur-crested cockatoos are 44–55 cm long, with the Australian subspecies larger than subspecies from New Guinea and nearby islands.",
+     "Their plumage is overall white, while the underwing and -tail are tinged yellow.",
+     "The expressive crest is yellow.",
+     "The bill is black, the legs are grey, and the eye-ring is whitish.",
+     "Males typically have almost black eyes, whereas the females have more red or brown eyes, but this requires optimum viewing conditions to be seen.",
+     "C. g. eleonora is similar to  C. g. fitzroyi but is smaller and has broader feathers in the crest, and C. g. triton is similar to C. g. eleonora except it has a smaller bill.",
+     "It is similar in appearance to the three species of corellas found in Australia, but corellas are smaller, lack the prominent yellow crest, and have pale bills."
+    ],
+    "caution": null,
+    "tip": "The bill is black, the legs are grey, and the eye-ring is whitish.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The bill is black, the legs are grey, and the eye-ring is whitish.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a white plumage with yellow wing tinges, and a black bill.",
+       "tip": "Look for a white plumage with yellow wing tinges, and a black bill.",
+       "unsupported": [
+        "wing"
+       ],
+       "ms": 2480
+      },
+      {
+       "raw": "Look for a white plumage with yellow wing tinges, and a black bill.",
+       "tip": "Look for a white plumage with yellow wing tinges, and a black bill.",
+       "unsupported": [
+        "wing"
+       ],
+       "ms": 2677
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 7176,
+     "count": 23,
+     "group": "bird",
+     "common": "Australian Wood Duck",
+     "scientific": "Chenonetta jubata",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Australian_wood_duck"
+    },
+    "sentences": [
+     "This 45–51 cm duck looks like a small goose, and mostly feeds by grazing in flocks.",
+     "The male is grey with a dark brown head, mottled breast, and very thin, white-and-black stripes on sides/flanks.",
+     "The female has white stripes above and below the eye and mottled underparts.",
+     "Both sexes have grey wings with black primaries and a white speculum."
+    ],
+    "caution": null,
+    "tip": "The male is grey with a dark brown head, mottled breast, and very thin, white-and-black stripes on sides/flanks.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The male is grey with a dark brown head, mottled breast, and very thin, white-and-black stripes on sides/flanks.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for grey wings with black primaries and white markings.",
+       "tip": "Look for grey wings with black primaries and white markings.",
+       "unsupported": [
+        "markings"
+       ],
+       "ms": 1907
+      },
+      {
+       "raw": "Grey wings with black primaries and white markings appear.",
+       "tip": "Grey wings with black primaries and white markings appear.",
+       "unsupported": [
+        "markings",
+        "appear"
+       ],
+       "ms": 2059
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 12700,
+     "count": 20,
+     "group": "bird",
+     "common": "Superb Lyrebird",
+     "scientific": "Menura novaehollandiae",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Superb_lyrebird"
+    },
+    "sentences": [
+     "The wings are short and round, and are only capable of weak flight, being mainly used for balance or for gliding from trees to the ground.",
+     "In the centre of the tail are two silvery median feathers.",
+     "The tail of the female is less ornate, with shorter lyrates and plain, broad feathers in place of the filamentaries.",
+     "In both sexes, juveniles have no ornamental tail feathers.",
+     "The tail plumage develops into that of the mature bird through a series of annual moults, with feathers undergoing change in structure and patterning."
+    ],
+    "caution": null,
+    "tip": "Look for short, round wings, and silvery tail feathers.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for short, round wings, and silvery tail feathers.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for short, round wings, and silvery tail feathers.",
+       "tip": "Look for short, round wings, and silvery tail feathers.",
+       "unsupported": [],
+       "ms": 2005
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 14514,
+     "count": 15,
+     "group": "bird",
+     "common": "Green Catbird",
+     "scientific": "Ailuroedus crassirostris",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Green_catbird"
+    },
+    "sentences": [
+     "Green catbirds are a medium-sized stocky bird with long, powerful legs and a long, stout bill.",
+     "The back, wings and rump are brilliant emerald green, with very conspicuous pure white spots at the tips of the tertiaries and secondaries, which, on the tips of coverts, form two white wing-bars.",
+     "The tail is brownish emerald with white tips.",
+     "The head is greenish brown mottled black and finely flecked pale buff.",
+     "The bill is horn coloured and the legs are greyish brown.",
+     "The iris is bright red in direct sun with a partial white eye-ring.",
+     "Very young birds have fluffy grey down on their heads."
+    ],
+    "caution": null,
+    "tip": "Look for a brilliant emerald green back, white spots on the coverts, and a red iris.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a brilliant emerald green back, white spots on the coverts, and a red iris.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a brilliant emerald green back, white spots on the coverts, and a red iris.",
+       "tip": "Look for a brilliant emerald green back, white spots on the coverts, and a red iris.",
+       "unsupported": [],
+       "ms": 2379
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 3658,
+     "count": 14,
+     "group": "bird",
+     "common": "Topknot Pigeon",
+     "scientific": "Lopholaimus antarcticus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Topknot_pigeon"
+    },
+    "sentences": [
+     "The chest and hind neck are notched, showing dark bases giving a streaked appearance.",
+     "The tail is black crossed with a broad grey band.",
+     "The crest is grey from the cere to the forehead, and russet brown on the crown with black sides.",
+     "The mandibles are red with a brown tip, the protuberances at the base of the mandibles are bluish-green.",
+     "The tarsals and feet are purplish red.",
+     "Juveniles are like females but the chest is mottled not streaked, the crest is smaller, with the cere and forehead being light brown, the crown grey.",
+     "The iris is yellow-golden with a bright red outer band."
+    ],
+    "caution": null,
+    "tip": "The iris is yellow-golden with a bright red outer band.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The iris is yellow-golden with a bright red outer band.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for notched chest and hind neck, streaked tails, and grey crests.",
+       "tip": "Look for notched chest and hind neck, streaked tails, and grey crests.",
+       "unsupported": [
+        "streaked tails"
+       ],
+       "ms": 2403
+      },
+      {
+       "raw": "Look for notched chest and hind neck, grey crests, and mottled tails.",
+       "tip": "Look for notched chest and hind neck, grey crests, and mottled tails.",
+       "unsupported": [
+        "mottled tails"
+       ],
+       "ms": 2475
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 143341,
+     "count": 64,
+     "group": "plant",
+     "common": "Broad-leaved Drumsticks",
+     "scientific": "Isopogon anemonifolius",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Isopogon_anemonifolius"
+    },
+    "sentences": [
+     "The leaf tips are pointed.",
+     "Leaves can vary markedly on single plants, with some leaves undivided.",
+     "Leaf surfaces are generally smooth, though occasionally covered with fine hair.",
+     "Its flat leaves distinguish it from the terete (round in cross-section) leaves of Isopogon anethifolius; they are also broader, at 3–5 mm wide compared with the 1 mm wide leaves of the latter species.",
+     "The new growth and leaves of I. anemonifolius may be flushed red to purple, particularly in winter.",
+     "The yellow flowers appear during late spring or early summer and are displayed prominently.",
+     "They are followed by round grey cones, which give the plant its common name drumsticks."
+    ],
+    "caution": null,
+    "tip": "Look for pointed leaf tips on Isopogon anemonifolius.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for pointed leaf tips on Isopogon anemonifolius.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for pointed leaf tips on Isopogon anemonifolius.",
+       "tip": "Look for pointed leaf tips on Isopogon anemonifolius.",
+       "unsupported": [],
+       "ms": 2248
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 400292,
+     "count": 49,
+     "group": "plant",
+     "common": "Red Beard Orchid",
+     "scientific": "Calochilus paludosus",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Calochilus_paludosus"
+    },
+    "sentences": [
+     "Calochilus paludosus is a terrestrial, perennial, deciduous, herb with an underground tuber and a single fleshy, light green to yellowish-green, linear to lance-shaped leaf which is 100–180 mm long and 4–7 mm wide.",
+     "Up to nine greenish flowers with reddish stripes are borne on a flowering stem 150–350 mm tall.",
+     "Calochilus paludosus, commonly known as the red beard orchid or red beardie, is a species of orchid native to Australia and New Zealand.",
+     "It has a single fleshy, light green leaf and up to nine greenish flowers with reddish stripes."
+    ],
+    "caution": null,
+    "tip": "Look for a fleshy, light green leaf and reddish stripes on the flowers.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for a fleshy, light green leaf and reddish stripes on the flowers.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for a fleshy, light green leaf and reddish stripes on the flowers.",
+       "tip": "Look for a fleshy, light green leaf and reddish stripes on the flowers.",
+       "unsupported": [],
+       "ms": 2220
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 320837,
+     "count": 44,
+     "group": "plant",
+     "common": "Fuchsia Heath",
+     "scientific": "Epacris longiflora",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Epacris_longiflora"
+    },
+    "sentences": [
+     "Epacris longiflora is an erect to spreading shrub which grows to a height of 50–200 cm and has stems with prominent short, broad leaf scars.",
+     "The leaves are thin, flat and have margins with minute teeth.",
+     "The flowers are red with a white tip, sometimes all red and have a peduncle up to 2 mm long.",
+     "There are five petals which are fused to form a tube with five lobes at the end.",
+     "Epacris longiflora, commonly known as fuchsia heath or cigarette flower, is a plant in the family Ericaceae and is endemic to eastern Australia.",
+     "It is an erect or spreading shrub with egg-shaped, pointed leaves and red tube-shaped flowers which give the plant its name longiflora and are usually present throughout the year."
+    ],
+    "caution": null,
+    "tip": "Look for red tubes with minute teeth on thin, flat leaves.",
+    "by": "gemma-retry",
+    "result": {
+     "tip": "Look for red tubes with minute teeth on thin, flat leaves.",
+     "by": "gemma-retry",
+     "attempts": [
+      {
+       "raw": "Look for erect, spreading shrubs with red tubes and edges.",
+       "tip": "Look for erect, spreading shrubs with red tubes and edges.",
+       "unsupported": [
+        "edges"
+       ],
+       "ms": 2231
+      },
+      {
+       "raw": "Look for red tubes with minute teeth on thin, flat leaves.",
+       "tip": "Look for red tubes with minute teeth on thin, flat leaves.",
+       "unsupported": [],
+       "ms": 2422
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 338334,
+     "count": 44,
+     "group": "plant",
+     "common": "Gymea Lily",
+     "scientific": "Doryanthes excelsa",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Doryanthes_excelsa"
+    },
+    "sentences": [
+     "The leaves are bright green, fibrous and glabrous.",
+     "At the top of the spike, a head of flowers 30 centimetres in diameter develops, each flower being bright red, trumpet-shaped and about 10 centimetres long.",
+     "The head is surrounded by reddish-brown bracts, sometimes making it difficult to see the flowers from the ground.",
+     "Flowering occurs in spring and is followed by oval-shaped reddish-brown capsules, 7–10 centimetres long.",
+     "The flowers are pollinated by bees and nectar-feeding birds.",
+     "The apex of the spike bears a large cluster of bright red flowers, each 10 centimetres across."
+    ],
+    "caution": null,
+    "tip": "The head is surrounded by reddish-brown bracts, sometimes making it difficult to see the flowers from the ground.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The head is surrounded by reddish-brown bracts, sometimes making it difficult to see the flowers from the ground.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for bright red flowers atop the spike, surrounded by reddish-brown bracts.",
+       "tip": "Look for bright red flowers atop the spike, surrounded by reddish-brown bracts.",
+       "unsupported": [
+        "atop"
+       ],
+       "ms": 2256
+      },
+      {
+       "raw": "Look for bright red flowers atop the spike, surrounded by reddish-brown bracts.",
+       "tip": "Look for bright red flowers atop the spike, surrounded by reddish-brown bracts.",
+       "unsupported": [
+        "atop"
+       ],
+       "ms": 2435
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 321032,
+     "count": 41,
+     "group": "plant",
+     "common": "River Rose",
+     "scientific": "Bauera rubioides",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Bauera_rubioides"
+    },
+    "sentences": [
+     "Bauera rubioides is a scrambling, tangled shrub that typically grows to a height of up to 2 m and has wiry, extensively-branched stems.",
+     "The flowers are borne on pedicels more than 5 mm long and have six to eight toothed sepals 3–4 mm long, six to eight usually pink sometimes white, petals 6–8 mm long, and usually fifty to sixty cream-coloured stamens.",
+     "Bauera rubioides, commonly known as river rose, dog rose or wiry bauera, is a species of flowering plant in the family Cunoniaceae and is endemic to south-eastern Australia.",
+     "It is a scrambling, tangled shrub with wiry branches, trifoliate, usually toothed leaves, and pink or white flowers."
+    ],
+    "caution": null,
+    "tip": "Look for wiry, tangled branches and pink/white flowers on the shrub.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for wiry, tangled branches and pink/white flowers on the shrub.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for wiry, tangled branches and pink/white flowers on the shrub.",
+       "tip": "Look for wiry, tangled branches and pink/white flowers on the shrub.",
+       "unsupported": [],
+       "ms": 2323
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 974661,
+     "count": 9,
+     "group": "fungus",
+     "common": "Southern Cinnabar Polypore",
+     "scientific": "Trametes coccinea",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pycnoporus_coccineus"
+    },
+    "sentences": [
+     "Pycnoporus coccineus is a saprophytic, white-rot decomposer fungus in the family Polyporaceae."
+    ],
+    "caution": null,
+    "tip": "Pycnoporus coccineus is a saprophytic, white-rot decomposer fungus in the family Polyporaceae.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "Pycnoporus coccineus is a saprophytic, white-rot decomposer fungus in the family Polyporaceae.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for white-rot fungal growth on the polypore, a saprophytic fungus.",
+       "tip": "Look for white-rot fungal growth on the polypore, a saprophytic fungus.",
+       "unsupported": [
+        "fungal",
+        "growth"
+       ],
+       "ms": 1916
+      },
+      {
+       "raw": "Look for white-rot fungal growth on the polypore, a saprophytic fungus.",
+       "tip": "Look for white-rot fungal growth on the polypore, a saprophytic fungus.",
+       "unsupported": [
+        "fungal",
+        "growth"
+       ],
+       "ms": 2097
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 122204,
+     "count": 15,
+     "group": "insect",
+     "common": "Red Bull Ant",
+     "scientific": "Myrmecia gulosa",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Myrmecia_gulosa"
+    },
+    "sentences": [
+     "The head and thorax are typically coloured red-brown; the rear half of the abdomen is black and the mandibles brown-yellow.",
+     "Myrmecia gulosa, the red bull ant, also known as the giant bull ant or Bulldog Ant, is a species of bulldog ant from the genus Myrmecia."
+    ],
+    "caution": "bite",
+    "tip": "Look for red-brown head and thorax, black rear abdomen, and brown-yellow mandibles.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for red-brown head and thorax, black rear abdomen, and brown-yellow mandibles.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for red-brown head and thorax, black rear abdomen, and brown-yellow mandibles.",
+       "tip": "Look for red-brown head and thorax, black rear abdomen, and brown-yellow mandibles.",
+       "unsupported": [],
+       "ms": 2112
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ },
+ "everglades": {
+  "where": {
+   "key": "everglades",
+   "unit": "F",
+   "label": "Shark Valley, Everglades National Park, FL, US",
+   "lat": 25.76,
+   "lng": -80.77,
+   "radiusKm": 5
+  },
+  "date": "2026-10-11",
+  "minutes": 60,
+  "radiusKm": 5,
+  "pool": 167,
+  "weather": {
+   "unit": "F",
+   "high": 93,
+   "low": 79,
+   "rain": 29,
+   "sunrise": "07:19",
+   "sunset": "18:59"
+  },
+  "entries": [
+   {
+    "sighting": {
+     "id": 4956,
+     "count": 16,
+     "group": "bird",
+     "common": "Great Blue Heron",
+     "scientific": "Ardea herodias",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Great_blue_heron"
+    },
+    "sentences": [
+     "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs, and a paired red-brown and black stripe up the flanks; the neck is rusty gray, with black-and-white streaking down the front; the head is paler, with a nearly white face, and a pair of black or slate plumes runs from just above the eye to the back of the head.",
+     "Immature birds are duller in color, with a dull blackish-gray crown, and the flank pattern is only weakly defined; they have no plumes, and the bill is dull gray-yellow."
+    ],
+    "caution": null,
+    "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+    "by": "wikipedia",
+    "result": {
+     "tip": "Notable features of great blue herons include slaty (gray with a slight azure blue) flight feathers, red-brown thighs …",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "tip": "Look for slaty flight feathers, red-brown thighs, and a rusty gray head.",
+       "unsupported": [
+        "rusty head",
+        "gray head"
+       ],
+       "ms": 2250
+      },
+      {
+       "raw": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "tip": "Look for pale gray-yellow crown, dull black-and-white flanks, and a rusty gray head.",
+       "unsupported": [
+        "pale"
+       ],
+       "ms": 2612
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 5063,
+     "count": 13,
+     "group": "bird",
+     "common": "Anhinga",
+     "scientific": "Anhinga anhinga",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Anhinga"
+    },
+    "sentences": [
+     "The bill is relatively long (about twice the length of the head), sharply pointed, and yellow, and the webbed feet are yellow as well.",
+     "The male is glossy black-green, including its wings and the base of its wings, while its tail is glossy black-blue.",
+     "The tip of the tail is white.",
+     "The back of the head and the neck have elongated feathers that have been described as gray or light purple-white.",
+     "The upper back of the body and wings are spotted or streaked with white.",
+     "The tail of the anhinga is wider and longer, only the cormorant's bill has a hook-tip, only the anhinga can glide in flight."
+    ],
+    "caution": null,
+    "tip": "The upper back of the body and wings are spotted or streaked with white.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The upper back of the body and wings are spotted or streaked with white.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a long, black-green bill, glossy white tail, and elongated gray/white feathers.",
+       "tip": "Look for a long, black-green bill, glossy white tail, and elongated gray/white feathers.",
+       "unsupported": [
+        "black bill",
+        "green bill",
+        "white feathers"
+       ],
+       "ms": 2438
+      },
+      {
+       "raw": "Look for a yellow bill, glossy white tail, and elongated gray/white feathers.",
+       "tip": "Look for a yellow bill, glossy white tail, and elongated gray/white feathers.",
+       "unsupported": [
+        "yellow bill",
+        "white feathers"
+       ],
+       "ms": 2550
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 144455,
+     "count": 8,
+     "group": "bird",
+     "common": "Great Egret",
+     "scientific": "Ardea alba",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Great_egret"
+    },
+    "sentences": [
+     "The great egret is a large heron with all-white plumage.",
+     "Apart from size, the great egret can be distinguished from other white egrets by its yellow bill and black legs and feet, though the bill may become darker and the lower legs lighter in the breeding season.",
+     "Differentiated from the intermediate egret (Ardea intermedia) by the gape, which extends well beyond the back of the eye in case of the great egret, but ends just behind the eye in case of the intermediate egret.",
+     "Its flight is slow with its neck retracted.",
+     "The great egret walks with its neck extended and wings held close.",
+     "The great egret (Ardea alba), also known as the common egret, large egret, great white egret, or great white heron, is a large, widely distributed egret."
+    ],
+    "caution": null,
+    "tip": "The great egret walks with its neck extended and wings held close.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "The great egret walks with its neck extended and wings held close.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for a large, white heron with a yellow bill and dark legs.",
+       "tip": "Look for a large, white heron with a yellow bill and dark legs.",
+       "unsupported": [
+        "dark"
+       ],
+       "ms": 2391
+      },
+      {
+       "raw": "Look for a large, white heron with a yellow bill and dark legs.",
+       "tip": "Look for a large, white heron with a yellow bill and dark legs.",
+       "unsupported": [
+        "dark"
+       ],
+       "ms": 2571
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 4937,
+     "count": 6,
+     "group": "bird",
+     "common": "Little Blue Heron",
+     "scientific": "Egretta caerulea",
+     "wikipediaUrl": "https://en.wikipedia.org/wiki/Little_blue_heron"
+    },
+    "sentences": [
+     "The adults are darkly colored, with purple-maroon heads and blue bodies.",
+     "During the breeding season, their heads turn dark red.",
+     "They have two-toned bills, which are a light blue at the base, with black tips.",
+     "Their eyes are yellow and their legs are greenish.",
+     "Juveniles are almost completely white, although the upper primaries are somewhat dark in color.",
+     "The lores, which are normally a dull green, become a shade of turquoise during breeding season.",
+     "They also develop long plumes on the crest and back, which can stretch 20–30 centimetres past the tail.",
+     "The legs and feet become black.",
+     "During the breeding season, adults develop different coloration on the head, legs, and feet."
+    ],
+    "caution": null,
+    "tip": "Look for dark heads, blue bodies, and red heads during breeding.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for dark heads, blue bodies, and red heads during breeding.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for dark heads, blue bodies, and red heads during breeding.",
+       "tip": "Look for dark heads, blue bodies, and red heads during breeding.",
+       "unsupported": [],
+       "ms": 2296
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 5206,
+     "count": 6,
+     "group": "bird",
+     "common": "Red-shouldered Hawk",
+     "scientific": "Buteo lineatus",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Red-shouldered_hawk"
+    },
+    "sentences": [
+     "Adults have brownish heads, reddish chests, and pale bellies with reddish bars.",
+     "Their tails, which are quite long by Buteo standards, are marked with narrow white bars.",
+     "Red \"shoulders\" are visible when the birds are perched.",
+     "These hawks' upper parts are dark with pale spots and they have long yellow legs.",
+     "The wings of adults are more heavily barred on the upper side.",
+     "That species is larger and bulkier, with more even-sized, broad wings, and is paler underneath, with a reddish tail often apparent.",
+     "The red-tail is also more likely to soar steadily, with wings in a slight dihedral."
+    ],
+    "caution": null,
+    "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+       "tip": "Look for brownish heads, reddish chests, and pale bellies with reddish bars in the wings.",
+       "unsupported": [],
+       "ms": 2308
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 160544,
+     "count": 9,
+     "group": "plant",
+     "common": "Cocoplum",
+     "scientific": "Chrysobalanus icaco",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Chrysobalanus_icaco"
+    },
+    "sentences": [
+     "Leaf colors range from green to light red.",
+     "The bark is greyish or reddish brown, with white specks.",
+     "The clustered flowers are small, greenish-white, and appear intermittently throughout the year but more abundantly in late spring.",
+     "The fruit that follows (a drupe) is variable, with that of the coastal form being round, up to 5 cm in diameter, white, pale-yellow with a rose blush or dark-purple in color, while that of the inland form is oval, up to 2.5 cm long, and dark-purple.",
+     "'Green Tip' is another example of the inland type that has green new growth."
+    ],
+    "caution": null,
+    "tip": "Look for green tips on inland cocoplum fruits, while coastal forms are pale-yellow.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for green tips on inland cocoplum fruits, while coastal forms are pale-yellow.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for green tips on inland cocoplum fruits, while coastal forms are pale-yellow.",
+       "tip": "Look for green tips on inland cocoplum fruits, while coastal forms are pale-yellow.",
+       "unsupported": [],
+       "ms": 2316
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 128713,
+     "count": 8,
+     "group": "plant",
+     "common": "Southern Swamp Crinum",
+     "scientific": "Crinum americanum",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Crinum_americanum"
+    },
+    "sentences": [
+     "Flowers are fragrant and lily-like with white petals that can sometimes be blushed pink in color.",
+     "The upper portion of the stamen is purple and anthers are also purple in color."
+    ],
+    "caution": null,
+    "tip": "Look for fragrant flowers with white petals and pink blushings, and observe purple stamens.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for fragrant flowers with white petals and pink blushings, and observe purple stamens.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for fragrant flowers with white petals and pink blushings, and observe purple stamens.",
+       "tip": "Look for fragrant flowers with white petals and pink blushings, and observe purple stamens.",
+       "unsupported": [],
+       "ms": 1915
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 69972,
+     "count": 7,
+     "group": "plant",
+     "common": "Pond Apple",
+     "scientific": "Annona glabra",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Annona_glabra"
+    },
+    "sentences": [
+     "The trees grow to up to 12 m.",
+     "They have narrow, gray trunks and sometimes grow in clumps.",
+     "The upper surface is light to dark green.",
+     "The fruit is oblong through spherical and apple-sized or larger, 7–15 cm long and up to 9 cm diameter, and falls when it is green or ripening yellowish.",
+     "A fruit contains 100 or more convex, light yellow-brown seeds, about 1 cm long.",
+     "A. glabra flowers have a short life-span, and have a diameter of 2–3 cm.",
+     "The flowers have three outer petals as well as three inner petals.",
+     "Compared to the pale yellow or cream color of the petals, the inner base of the A. glabra flower is a bright red."
+    ],
+    "caution": null,
+    "tip": "A fruit contains 100 or more convex, light yellow-brown seeds, about 1 cm long.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "A fruit contains 100 or more convex, light yellow-brown seeds, about 1 cm long.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for narrow, gray trunks and clumps of trees, and observe the light-green fruit.",
+       "tip": "Look for narrow, gray trunks and clumps of trees, and observe the light-green fruit.",
+       "unsupported": [
+        "green fruit"
+       ],
+       "ms": 2432
+      },
+      {
+       "raw": "Look for light-green fruit, with a bright red base, and narrow, gray trunks.",
+       "tip": "Look for light-green fruit, with a bright red base, and narrow, gray trunks.",
+       "unsupported": [
+        "green fruit",
+        "bright base",
+        "red base"
+       ],
+       "ms": 2611
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 119145,
+     "count": 7,
+     "group": "plant",
+     "common": "Climbing Hempvine",
+     "scientific": "Mikania scandens",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Mikania_scandens"
+    },
+    "sentences": [
+     "This species is a perennial herb which grows as a branching vine.",
+     "The leaves are oppositely arranged at swollen nodes on the stem.",
+     "The flower heads are clustered in panicles.",
+     "The flower head is about half a centimeter long and is enclosed in narrow, sometimes purple-tinged phyllaries.",
+     "The flowers are pinkish, purplish, or white.",
+     "The fruit is a dark-colored, resinous achene about half a centimeter long, including its pappus of white or purplish bristles."
+    ],
+    "caution": null,
+    "tip": "Look for branching vines, oppositely arranged leaves, and pinkish-purple flowers.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for branching vines, oppositely arranged leaves, and pinkish-purple flowers.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for branching vines, oppositely arranged leaves, and pinkish-purple flowers.",
+       "tip": "Look for branching vines, oppositely arranged leaves, and pinkish-purple flowers.",
+       "unsupported": [],
+       "ms": 2158
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 82504,
+     "count": 5,
+     "group": "plant",
+     "common": "Spatterdock",
+     "scientific": "Nuphar advena",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Nuphar_advena"
+    },
+    "sentences": [
+     "The leaves are mostly emergent, but can also be floating, or submersed.",
+     "The flowers are protogynous, fragrant, nectariferous, solitary, yellow-green, and up to 4 cm wide.",
+     "The fruit is fleshy, ovoid to broadly obovate, ribbed, green, and 2–5 cm long and wide.",
+     "Nuphar advena (spatterdock or cow lily or yellow pond-lily) is a species of Nuphar native throughout the eastern United States and in some parts of Canada, as well as Mexico and Cuba."
+    ],
+    "caution": null,
+    "tip": "Look for emergent leaves, fragrant yellow-green flowers, and fleshy fruit.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for emergent leaves, fragrant yellow-green flowers, and fleshy fruit.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for emergent leaves, fragrant yellow-green flowers, and fleshy fruit.",
+       "tip": "Look for emergent leaves, fragrant yellow-green flowers, and fleshy fruit.",
+       "unsupported": [],
+       "ms": 2149
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 50147,
+     "count": 29,
+     "group": "insect",
+     "common": "Halloween Pennant",
+     "scientific": "Celithemis eponina",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/Halloween_pennant"
+    },
+    "sentences": [
+     "The Halloween pennant's wings are entirely orange-yellow in color with dark brown bands, the Halloween inspiration for its common name.",
+     "The young has yellow markings, including a stripe on its back.",
+     "The adult male and female may develop pale red markings, especially on the face."
+    ],
+    "caution": null,
+    "tip": "Look for orange-yellow wings and dark brown bands on the Halloween pennant.",
+    "by": "gemma",
+    "result": {
+     "tip": "Look for orange-yellow wings and dark brown bands on the Halloween pennant.",
+     "by": "gemma",
+     "attempts": [
+      {
+       "raw": "Look for orange-yellow wings and dark brown bands on the Halloween pennant.",
+       "tip": "Look for orange-yellow wings and dark brown bands on the Halloween pennant.",
+       "unsupported": [],
+       "ms": 2038
+      }
+     ]
+    }
+   },
+   {
+    "sighting": {
+     "id": 26159,
+     "count": 41,
+     "group": "other",
+     "common": "American Alligator",
+     "scientific": "Alligator mississippiensis",
+     "wikipediaUrl": "http://en.wikipedia.org/wiki/American_alligator"
+    },
+    "sentences": [
+     "On average, it is the largest species in the family Alligatoridae, with only the black caiman being possibly larger.",
+     "Dorsally, adult American alligators may be olive, brown, gray, or black.",
+     "However, they are on average one of the most darkly colored modern crocodilians (although other alligatorid family members are also fairly dark), and can reliably be distinguished by color via their more blackish dorsal scales against crocodiles.",
+     "Meanwhile, their undersides are cream-colored.",
+     "When the jaws are closed, the edges of the upper jaws cover the lower teeth, which fit into the jaws' hollows."
+    ],
+    "caution": null,
+    "tip": "Dorsally, adult American alligators may be olive, brown, gray, or black.",
+    "by": "wikipedia",
+    "result": {
+     "tip": "Dorsally, adult American alligators may be olive, brown, gray, or black.",
+     "by": "wikipedia",
+     "attempts": [
+      {
+       "raw": "Look for dark dorsal scales contrasting with cream-colored undersides.",
+       "tip": "Look for dark dorsal scales contrasting with cream-colored undersides.",
+       "unsupported": [
+        "contrasting"
+       ],
+       "ms": 2149
+      },
+      {
+       "raw": "Dark dorsal scales contrast with cream-colored undersides.",
+       "tip": "Dark dorsal scales contrast with cream-colored undersides.",
+       "unsupported": [
+        "contrast"
+       ],
+       "ms": 2241
+      }
+     ]
+    }
+   }
+  ],
+  "model": "Gemma 3 1B"
+ }
+}
