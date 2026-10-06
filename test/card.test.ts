@@ -40,6 +40,10 @@ describe("renderCard", () => {
     expect(html).toContain("This card took 41 seconds of screen time.");
     expect(html).toContain("CC BY-SA 4.0");
     expect(html.match(/class="tip">“/g)).toHaveLength(4);
+    expect(html).toContain("Tips written by Gemma 3 1B in your browser, each checked word by word");
+    const example = renderCard(card, { modelLabel: "Gemma 3 1B", seconds: null, madeWhere: "ahead of time for this example" });
+    expect(example).toContain("Tips written by Gemma 3 1B ahead of time for this example, each checked");
+    expect(example).not.toContain("screen time");
   });
 
   it("escapes everything that came from outside", async () => {

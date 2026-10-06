@@ -218,8 +218,8 @@ async function run(chosen?: Where) {
   }
 }
 
-function show(card: Card, modelLabel: string | null, seconds: number | null) {
-  output.innerHTML = renderCard(card, { modelLabel, seconds });
+function show(card: Card, modelLabel: string | null, seconds: number | null, madeWhere?: string) {
+  output.innerHTML = renderCard(card, { modelLabel, seconds, madeWhere });
 }
 
 function showOthers(list: Where[]) {
@@ -286,8 +286,8 @@ $<HTMLButtonElement>("#example").addEventListener("click", async () => {
   try {
     const res = await fetch("/sample-card.json");
     if (!res.ok) throw new Error(`no example yet (${res.status})`);
-    const sample = (await res.json()) as { card: Card; modelLabel: string; seconds: number | null };
-    show(sample.card, sample.modelLabel, sample.seconds);
+    const sample = (await res.json()) as { card: Card; modelLabel: string; seconds: number | null; madeWhere?: string };
+    show(sample.card, sample.modelLabel, sample.seconds, sample.madeWhere);
     say(`An example: ${sample.card.where.label.split(", ")[0]}, written by ${sample.modelLabel}. Make your own above.`);
     actions.hidden = false;
     output.scrollIntoView({ behavior: "smooth", block: "start" });

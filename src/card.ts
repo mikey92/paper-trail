@@ -77,6 +77,8 @@ export interface Footer {
   modelLabel: string | null;
   /** Seconds from "Make my card" to the last tip. */
   seconds: number | null;
+  /** Where the tips were written, when not in the visitor's own browser (the example card). */
+  madeWhere?: string;
 }
 
 export function renderCard(card: Card, footer: Footer): string {
@@ -94,7 +96,7 @@ export function renderCard(card: Card, footer: Footer): string {
     .join("");
   const quoted = card.entries.filter((e) => e.by === "wikipedia").length;
   const by = footer.modelLabel
-    ? `Tips written by ${esc(footer.modelLabel)} in your browser, each checked word by word against the Wikipedia sentences it was given` +
+    ? `Tips written by ${esc(footer.modelLabel)} ${esc(footer.madeWhere ?? "in your browser")}, each checked word by word against the Wikipedia sentences it was given` +
       (quoted ? `; the ${quoted} in quotation marks are those sentences, because the written tip did not pass.` : ".")
     : "Tips are quoted from Wikipedia.";
   const time = footer.seconds != null ? ` This card took ${footer.seconds} seconds of screen time. Now go outside.` : "";
