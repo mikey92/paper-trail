@@ -20,7 +20,7 @@ const POINTERS = new Set(
   (
     "look looking listen listening watch watching spot spotting find finding notice noticing check search seek scan " +
     "see seen hear heard tell telling recognize recognise identify identified sign signs field tip clue clues key " +
-    "observe observing keep eye eyes ear ears out up down"
+    "observe observing note noting keep eye eyes ear ears out up down"
   ).split(" "),
 );
 

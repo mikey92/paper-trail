@@ -105,6 +105,7 @@ describe("checkTip", () => {
 
   it("lets the tip say how to look", () => {
     expect(checkTip("Observe the red cap and keep an eye out for white circles on the wings.", WOODPECKER).ok).toBe(true);
+    expect(checkTip("Look for a red cap, and note the white throat.", WOODPECKER).ok).toBe(true);
   });
 
   it("accepts a colour shared by two parts named in one sentence", () => {
