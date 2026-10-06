@@ -61,6 +61,8 @@ describe("checkTip", () => {
       "listen for (nothing to hear)",
     ]);
     expect(checkTip("Look for a red cap and listen for a laughing call.", WOODPECKER).ok).toBe(true);
+    // Found reading the v4 run: "…purple flowers, listening for sequential opening" got through.
+    expect(checkTip("Look for a red cap, listening for white circles.", WOODPECKER).unsupported).toEqual(["listen for (nothing to hear)"]);
   });
 
   it("reads 'It is … yellow' with the part named just before", () => {

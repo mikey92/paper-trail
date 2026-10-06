@@ -109,7 +109,7 @@ export function checkTip(tip: string, source: string): Grounding {
   // on a walk, and sizes are what a small model garbles.
   for (const n of numbersIn(tip)) unsupported.push(n);
   for (const m of tip.match(UNSAFE) ?? []) unsupported.push(m.toLowerCase());
-  if (/\b(listen|hear)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
+  if (/\b(listen|listening|hear|hearing)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
   if (unsupported.length === 0) {
     const raw = source.split(/(?<=[.!?])\s+|\n+/).filter((x) => x.trim());
     const sentences = raw.map((x) => words(compoundColours(x)).map(stem));
