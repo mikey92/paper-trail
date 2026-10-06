@@ -123,6 +123,8 @@ describe("cautionOf", () => {
     expect(cautionOf("A puffball.\n\n== Similar species ==\nIt resembles the poisonous common earthball.")).toBeNull();
     expect(cautionOf("A tree.\n\n== Associated species ==\nThe poisonous death cap grows around the trunk.")).toBeNull();
     expect(cautionOf("A fern.\n\n== Utility ==\nHikers rub it on a rash from nettles.")).toBeNull();
+    expect(cautionOf("A bee.\n\n== Pesticide toxicity ==\nNeonicotinoids are toxic to bees.")).toBeNull();
+    expect(cautionOf("A puffball.\n\n== Edibility ==\nYoung ones can be mistaken for poisonous amanitas.")).toBeNull();
   });
 
   it("ignores a section that says the species is not toxic", () => {

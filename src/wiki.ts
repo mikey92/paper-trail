@@ -35,7 +35,9 @@ const TOUCH = /\b(urushiol|dermatitis|rash(es)?|blisters?|skin irritation|irrita
 const EAT = /\b(poisonous|toxic|toxicity|toxins?|poisoning)\b/i;
 const BITE = /\b(venomous|venom)\b/i;
 const NOT_HARMFUL = /\b(non-?toxic|not (toxic|poisonous|venomous))\b/i;
-const HARM_SECTION = /toxic|poison|venom|hazard|danger|safety|edib/i;
+// "Toxicity", "Toxicity and uses", "Poisoning"; not "Pesticide toxicity" (harm done *to* the
+// species) or "Edibility" (mostly about poisonous look-alikes).
+const HARM_SECTION = /^(toxic|poison|venom|hazard|danger|safety)/i;
 
 /**
  * What the article warns about for the species itself: a rash from touching, poison if eaten,
