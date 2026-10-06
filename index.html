@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper Trail</title>
+    <meta name="description" content="A printed field card for this week's walk: what people actually see there this month, with one-line tips written by Gemma in your browser." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f5d3a'/%3E%3Cpath d='M9 23c0-8 5-14 14-15-1 9-7 14-14 15zm0 0 7-7' stroke='%23fff' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main>
+      <header class="site">
+        <p class="kicker">Paper Trail</p>
+        <h1>A field card for this week's walk.</h1>
+        <p class="pitch">
+          Tell it where and when. It finds what people actually reported there in past years at this time of year, asks
+          Gemma, running inside this tab, for one line on how to recognise each, and gives you a single page to print.
+          Then the phone goes back in your pocket.
+        </p>
+      </header>
+
+      <form id="plan" novalidate>
+        <div class="field wide">
+          <label for="place">Where are you walking?</label>
+          <div class="row">
+            <input id="place" name="place" type="text" placeholder="A park, preserve or town" autocomplete="off" spellcheck="false" />
+            <button type="button" id="locate" class="secondary">Use my location</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="date">When</label>
+          <input id="date" name="date" type="date" />
+        </div>
+        <div class="field">
+          <label for="minutes">For how long</label>
+          <select id="minutes" name="minutes">
+            <option value="30">About 30 minutes</option>
+            <option value="60" selected>About an hour</option>
+            <option value="120">Two hours or more</option>
+          </select>
+        </div>
+        <fieldset class="field units">
+          <legend>Temperatures in</legend>
+          <label><input type="radio" name="unit" value="F" /> °F</label>
+          <label><input type="radio" name="unit" value="C" checked /> °C</label>
+        </fieldset>
+        <div class="field wide">
+          <label for="model">Who writes the tips</label>
+          <select id="model" name="model">
+            <option value="gemma-3-1b">Gemma 3 1B: the best tips (0.8 GB, downloaded once)</option>
+            <option value="gemma-3-270m">Gemma 3 270M: quicker, a little plainer (0.3 GB)</option>
+            <option value="none">No model: quote Wikipedia</option>
+          </select>
+          <span id="device" class="hint"></span>
+        </div>
+        <div class="field wide submit">
+          <button id="make" type="submit">Make my card</button>
+          <button id="example" type="button" class="link">or see an example card first</button>
+        </div>
+      </form>
+
+      <section class="progress" aria-label="Progress">
+        <p id="status" role="status" aria-live="polite"></p>
+        <progress id="bar" hidden></progress>
+        <div id="others"></div>
+      </section>
+
+      <div id="actions" hidden>
+        <button id="print" type="button">Print the card</button>
+      </div>
+
+      <div id="output"></div>
+
+      <footer class="site">
+        <h2>How it works</h2>
+        <ol>
+          <li>
+            <b>What's there.</b> iNaturalist's research-grade observations near the place, in the same month of every year,
+            grouped so the card isn't all birds.
+          </li>
+          <li>
+            <b>What it looks like.</b> The description section of each species' Wikipedia article, cut down to the
+            sentences about colours, shapes, sounds and smells.
+          </li>
+          <li>
+            <b>One line each.</b> Gemma 3 turns those sentences into a tip, in a Web Worker on your own GPU (or CPU). Every
+            word of the tip has to appear in the sentences, and every colour has to sit next to the same part; a tip that
+            fails is retried once with the offending words named, then replaced by a quote.
+          </li>
+          <li><b>Paper.</b> Weather and sunset from Open-Meteo, a box to sketch in, and the sources at the bottom.</li>
+        </ol>
+        <p>
+          The page has no server of its own and keeps nothing. A location from your device is rounded to about a kilometre
+          before it is sent to iNaturalist and Open-Meteo; the model never sees it. Code and evaluation:
+          <a href="https://github.com/mikey92/paper-trail">github.com/mikey92/paper-trail</a> (MIT).
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

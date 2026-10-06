@@ -1,0 +1,400 @@
+:root {
+  --bg: #f3efe6;
+  --panel: #fffdf8;
+  --ink: #1f2a22;
+  --muted: #5b665e;
+  --line: #d9d2c3;
+  --accent: #2f5d3a;
+  --accent-ink: #ffffff;
+  --focus: #b5651d;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151a17;
+    --panel: #1d2420;
+    --ink: #e8ece6;
+    --muted: #a7b2aa;
+    --line: #34403a;
+    --accent: #7fb08a;
+    --accent-ink: #10160f;
+    --focus: #e3a15b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151a17;
+  --panel: #1d2420;
+  --ink: #e8ece6;
+  --muted: #a7b2aa;
+  --line: #34403a;
+  --accent: #7fb08a;
+  --accent-ink: #10160f;
+  --focus: #e3a15b;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.site .kicker {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--accent);
+}
+.site h1 {
+  margin: 4px 0 8px;
+  font: 600 clamp(28px, 5vw, 40px) / 1.15 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+.pitch {
+  margin: 0 0 24px;
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.field.wide {
+  grid-column: 1 / -1;
+}
+.field > label,
+legend {
+  font-weight: 600;
+  font-size: 14px;
+}
+fieldset.field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+}
+fieldset.field legend {
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 0;
+}
+.units label {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.row input {
+  flex: 1 1 220px;
+}
+input[type="text"],
+input[type="date"],
+select {
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 44px;
+  width: 100%;
+}
+.row input {
+  width: auto;
+}
+button {
+  font: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  min-height: 44px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+button.link {
+  background: none;
+  border: 0;
+  padding: 4px 2px;
+  min-height: 0;
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-align: left;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: progress;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.submit {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.progress {
+  margin: 16px 0;
+}
+#status {
+  margin: 0;
+  min-height: 1.5em;
+}
+progress {
+  width: 100%;
+  height: 8px;
+  accent-color: var(--accent);
+}
+#others {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: baseline;
+}
+#actions {
+  margin: 0 0 16px;
+}
+
+.site h2 {
+  margin: 40px 0 8px;
+  font-size: 20px;
+}
+.site ol {
+  padding-left: 20px;
+}
+.site li {
+  margin-bottom: 8px;
+}
+.site a {
+  color: var(--accent);
+}
+
+/* ---------- the card: always ink on paper, on screen and in print ---------- */
+
+#output {
+  overflow-x: auto;
+}
+.card {
+  color-scheme: light;
+  background: #fff;
+  color: #111;
+  width: 100%;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.45in 0.5in 0.35in;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15), 0 8px 24px rgb(0 0 0 / 0.12);
+  font: 9.5pt/1.32 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+.card p {
+  margin: 0;
+}
+.card header {
+  border-bottom: 1.5pt solid #111;
+  padding-bottom: 6pt;
+  margin-bottom: 6pt;
+}
+.card .brand {
+  font: 700 7.5pt/1 system-ui, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.card h1 {
+  margin: 3pt 0 0;
+  font-size: 19pt;
+  line-height: 1.1;
+}
+.card .region,
+.card .when {
+  font-size: 9pt;
+}
+.card .weather {
+  margin-top: 3pt;
+  font-size: 9pt;
+}
+.card .lead {
+  font-style: italic;
+  margin-bottom: 6pt;
+}
+.lists {
+  columns: 2;
+  column-gap: 0.3in;
+}
+.group h2 {
+  font: 700 8pt/1 system-ui, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 4pt 0 4pt;
+  break-after: avoid;
+}
+.group .note {
+  font-size: 8pt;
+  font-weight: 700;
+  margin-bottom: 4pt;
+}
+.group ul {
+  list-style: none;
+  margin: 0 0 4pt;
+  padding: 0;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 11pt 1fr;
+  gap: 5pt;
+  margin-bottom: 5pt;
+  break-inside: avoid;
+}
+.box {
+  width: 9pt;
+  height: 9pt;
+  border: 1.1pt solid #111;
+  margin-top: 2pt;
+}
+.name i {
+  color: #444;
+  font-size: 8.5pt;
+}
+.caution {
+  display: inline-block;
+  font: 700 7pt/1.4 system-ui, sans-serif;
+  border: 1pt solid #111;
+  border-radius: 2pt;
+  padding: 0 3pt;
+  white-space: nowrap;
+}
+.tip {
+  margin-top: 1pt;
+}
+.pending .tip {
+  color: #8a8a8a;
+}
+.seen {
+  font-size: 7pt;
+  color: #555;
+}
+.extras {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 0.25in;
+  margin-top: 6pt;
+  break-inside: avoid;
+}
+.sketch {
+  border: 1pt dashed #555;
+  min-height: 1.35in;
+  padding: 3pt 5pt;
+}
+.sketch span,
+.notes span {
+  font: 700 7pt/1 system-ui, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.notes i {
+  display: block;
+  height: 17pt;
+  border-bottom: 0.8pt solid #888;
+}
+.card footer {
+  margin-top: 6pt;
+  padding-top: 4pt;
+  border-top: 0.8pt solid #888;
+  font-size: 6.8pt;
+  line-height: 1.35;
+  color: #333;
+}
+.card footer p + p {
+  margin-top: 2pt;
+}
+
+@media (max-width: 640px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 20px 16px;
+  }
+  .lists {
+    columns: 1;
+  }
+  .extras {
+    grid-template-columns: 1fr;
+  }
+}
+
+@page {
+  margin: 0.4in;
+}
+@media print {
+  body {
+    background: #fff;
+  }
+  main {
+    max-width: none;
+    padding: 0;
+  }
+  .site,
+  form,
+  .progress,
+  #actions {
+    display: none !important;
+  }
+  .card {
+    box-shadow: none;
+    padding: 0;
+    max-width: none;
+  }
+  .lists {
+    columns: 2;
+  }
+  .extras {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}

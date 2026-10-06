@@ -1,0 +1,6 @@
+{
+  // Static site only: the page, its worker script and the example card. No server code.
+  "name": "paper-trail",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist" }
+}
