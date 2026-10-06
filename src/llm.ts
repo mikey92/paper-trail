@@ -117,5 +117,7 @@ export function quoteFor(sentences: string[]): string {
   const ranked = (visual.length ? visual : sentences)
     .map((x, i) => ({ x, i }))
     .sort((a, b) => visualScore(b.x) - visualScore(a.x) || a.i - b.i);
-  return fallbackTip(ranked.map((r) => r.x));
+  // A short sentence must name at least two things to see or hear; otherwise the best one is
+  // cut ("…") rather than quoting "The plant can spread … by its seeds or by rhizomes".
+  return fallbackTip(ranked.filter((r, k) => k === 0 || visualScore(r.x) >= 4).map((r) => r.x));
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { checkTip } from "../src/ground.ts";
-import { sourceText, tipMessages, writeTip, type ChatMessage, type Generate } from "../src/llm.ts";
+import { quoteFor, sourceText, tipMessages, writeTip, type ChatMessage, type Generate } from "../src/llm.ts";
 
 const JUNCO = { common: "Dark-eyed Junco", scientific: "Junco hyemalis" };
 const SENTENCES = [
@@ -71,6 +71,14 @@ describe("writeTip", () => {
     const context = ["The duckling is able to fly 50–60 days after hatching.", "Its body feathers are a mottled brown and the bill is orange."];
     const { generate } = scripted("A tiny blue bird with a crest.", "A tiny blue bird with a crest.");
     expect((await writeTip(generate, JUNCO, context)).tip).toBe("Its body feathers are a mottled brown and the bill is orange.");
+  });
+
+  it("cuts the best sentence rather than quote a short one that says little", () => {
+    const snakeroot = [
+      "The flowers are a clean white color and after blooming, small seeds with fluffy white tails are released to blow in the wind.",
+      "The plant can spread either by the wind dispersal of its seeds or by rhizomes.",
+    ];
+    expect(quoteFor(snakeroot)).toBe("The flowers are a clean white color and after blooming, small seeds with fluffy white tails are released …");
   });
 
   it("treats an empty or rambling answer as a failure", async () => {
