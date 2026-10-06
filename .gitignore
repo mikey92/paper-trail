@@ -3,4 +3,4 @@ dist/
 .wrangler/
 .DS_Store
 *.log
-eval/cache/
+eval/cache*/

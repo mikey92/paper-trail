@@ -165,7 +165,9 @@ function sample(run: string) {
   }
   // No screen-time claim: this card was written on a CPU by the eval, not in a browser.
   const sampleCard = { card, modelLabel: card.model, seconds: null };
-  writeFileSync(new URL("../public/sample-card.json", import.meta.url), JSON.stringify(sampleCard, null, 1));
+  const out = new URL("../public/", import.meta.url);
+  mkdirSync(out, { recursive: true });
+  writeFileSync(new URL("sample-card.json", out), JSON.stringify(sampleCard, null, 1));
   console.log(`wrote public/sample-card.json (${card.entries.length} species)`);
 }
 
