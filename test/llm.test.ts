@@ -81,6 +81,14 @@ describe("writeTip", () => {
     expect(quoteFor(snakeroot)).toBe("The flowers are a clean white color and after blooming, small seeds with fluffy white tails are released …");
   });
 
+  it("counts texture as something to look for when quoting", () => {
+    const brush = [
+      "The leaves are 8–55 millimetres long and are entire to toothed and oblanceolate to obovate, with three principal veins.",
+      "Its leaves are smooth, without spines or hairs, and generally sticky to the touch.",
+    ];
+    expect(quoteFor(brush)).toBe("Its leaves are smooth, without spines or hairs, and generally sticky to the touch.");
+  });
+
   it("treats an empty or rambling answer as a failure", async () => {
     const { generate, seen } = scripted("", "word ".repeat(40));
     const r = await writeTip(generate, JUNCO, SENTENCES);

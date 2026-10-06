@@ -86,6 +86,8 @@ const VISUAL = new RegExp(
       "petals", "bark", "trunk", "stems", "acorns", "seeds", "cones", "needles", "lobed", "toothed", "scent", "fragrant",
       "smell", "call", "calls", "song", "sings", "sounds", "laughing", "trill", "drums", "hops", "flocks", "shelf", "gills",
       "pores", "spores", "clusters", "vine", "shrub", "thickets", "edges", "margin", "underside", "undersides",
+      "smooth", "rough", "sticky", "hairy", "hairs", "spines", "spiny", "prickly", "thorns", "thorny", "waxy", "fuzzy",
+      "velvety", "leathery", "papery", "scaly", "warts",
     ].join("|") +
     ")\\b",
   "gi",
