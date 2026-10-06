@@ -271,5 +271,6 @@
   "model": "Gemma 3 1B"
  },
  "modelLabel": "Gemma 3 1B",
- "seconds": null
+ "seconds": null,
+ "madeWhere": "ahead of time for this example"
 }
