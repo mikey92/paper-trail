@@ -90,6 +90,11 @@ export function colourPairs(tip: string): [string, string][] {
 
 export interface Grounding { ok: boolean; unsupported: string[] }
 
+/** Numbers spelled out count as numbers ("nine reddish-striped flowers", from "up to nine"). */
+const NUMBER_WORDS = new Set(
+  "two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred hundreds thousand thousands dozen dozens".split(" "),
+);
+
 /** "Listen for" needs something to hear: "listen for pink flowers" is not a tip. */
 const SOUND =
   /\b(calls?|calling|songs?|sings?|singing|whistles?|whistling|trills?|sounds?|voice|notes?|chirps?|chatter\w*|drum\w*|buzz\w*|croak\w*|quack\w*|honk\w*|hoot\w*|scream\w*|laugh\w*|cry|cries|rattl\w*|squeal\w*|coo|cooing|gobbl\w*|bugl\w*|howl\w*|hum|humming|click\w*)\b/i;
@@ -108,6 +113,7 @@ export function checkTip(tip: string, source: string): Grounding {
   // No numbers at all, even ones the source has: "persists for 107.3 days" is true and useless
   // on a walk, and sizes are what a small model garbles.
   for (const n of numbersIn(tip)) unsupported.push(n);
+  for (const w of words(tip)) if (NUMBER_WORDS.has(w)) unsupported.push(w);
   for (const m of tip.match(UNSAFE) ?? []) unsupported.push(m.toLowerCase());
   if (/\b(listen|listening|hear|hearing)\b/i.test(tip) && !SOUND.test(tip)) unsupported.push("listen for (nothing to hear)");
   if (unsupported.length === 0) {

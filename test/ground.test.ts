@@ -39,6 +39,12 @@ describe("checkTip", () => {
     expect(r.unsupported).toEqual(expect.arrayContaining(["bright", "yellow", "drums", "trees"]));
   });
 
+  it("flags numbers written as words", () => {
+    // Found reading the v4 run: "observe nine reddish-striped flowers", from "up to nine".
+    const orchid = "Up to nine greenish flowers with reddish stripes are borne on a flowering stem.";
+    expect(checkTip("Look for nine greenish flowers with reddish stripes.", orchid).unsupported).toEqual(["nine"]);
+  });
+
   it("flags any number, even one the source has", () => {
     expect(checkTip("It has 3 white circles on its wings.", WOODPECKER).unsupported).toContain("3");
     expect(checkTip("Dark red fruit persists for 107.3 days.", "Dark red fruit persists for 107.3 days.").unsupported).toEqual(["107.3"]);
